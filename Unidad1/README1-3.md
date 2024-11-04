@@ -58,7 +58,7 @@ cd <nombre_del_repositorio>/unidad1/code/ms-clients
 
 - Reflexiona sobre los componentes y su función en la arquitectura del microservicio.
 - Anota cualquier pregunta o área que desees profundizar en relación con el microservicio o la estructura general de una aplicación en Spring Boot. 
-- Pregunta tu instructor cualquier duda de Java.
+- Pregunta a tu instructor cualquier duda de Java.
 
 
 
