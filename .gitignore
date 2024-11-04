@@ -1,0 +1,75 @@
+# Archivos de sistema y carpetas comunes
+*.class
+*.jar
+*.war
+*.ear
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Carpetas de compilación
+/target/
+/out/
+/bin/
+/build/
+
+# Archivos de configuración de IDE
+# IntelliJ IDEA
+.idea/
+/*.iml
+*.ipr
+*.iws
+*.tmp
+*.swp
+*~.nib
+
+# Eclipse
+.project
+.classpath
+.settings/
+
+# NetBeans
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+# VS Code
+.vscode/
+
+# Archivos de log y temporales
+*.log
+*.tmp
+*.bak
+*.swp
+.DS_Store
+Thumbs.db
+
+# Archivos de Maven
+.mvn/
+!**/src/main/**/mvnw*
+target/
+dependency-reduced-pom.xml
+releases/
+archiva-repository/
+
+# Archivos de sistema
+/.DS_Store
+Thumbs.db
+
+# Variables de entorno
+.env
+*.env
+*.env.local
+*.env.*.local
+
+# Configuraciones de Docker y CI/CD
+docker-compose.override.yml
+**/docker-compose*.yml
+.Dockerfile
+*.dockerfile
+/.circleci/
+.Jenkinsfile
+pipeline_config.groovy

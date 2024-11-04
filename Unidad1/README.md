@@ -7,6 +7,8 @@
 
 - [Práctica 1.3 Clonar, Importar, Analizar un Microservicio en Java](README1-3.md)
 
+    - Esta práctica te guiará en los primeros pasos para entender y manejar microservicios en Java.
+    
 - [Práctica 1.4 Construir Imagen y Contenedor Docker](README1-4.md)
 
 - [Práctica 1.5 Consumir Microservicios](README1-5.md)
