@@ -11,6 +11,8 @@
     
 - [Práctica 1.4 Construir Imagen y Contenedor Docker](README1-4.md)
 
+    - En esta práctica, creas una imagen Docker de la aplicación, lanzas un contenedor desde esa imagen y verificas que la aplicación estuviera disponible en el puerto especificado.
+
 - [Práctica 1.5 Consumir Microservicios](README1-5.md)
 
 - [Práctica 1.6 Docker Registry](README1-6.md)

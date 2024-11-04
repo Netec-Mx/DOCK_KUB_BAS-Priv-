@@ -57,12 +57,12 @@ Al finalizar esta actividad, serás capaz de crear una imagen Docker a partir de
      mvn clean package
      ```
 
-    - **Nota**: Puedes compilarlo y empaquetarlo como se vió en clase, esto es con, mvnw en lugar de mvn.
-    
+    - **Nota**: Puedes compilarlo y empaquetarlo como se vió en clase, esto es con, `mvnw` en lugar de `mvn`.
+
    - Una vez que el archivo JAR esté listo, construye la imagen Docker con el siguiente comando (reemplaza `<nombre_de_imagen>` y `<versión>` por un nombre y versión para la imagen):
 
      ```bash
-     docker build -t <nombre_de_imagen>:<versión> .
+     docker build -t ms-cientes:v1 .
      ```
 
 3. **Verificar la imagen creada**
