@@ -73,14 +73,14 @@ Al finalizar esta actividad, serás capaz de clonar un repositorio de microservi
 
 ## Resultado Esperado
 
-    - Al analizar el microservicio, deberás encontrar carpetas similares a las siguientes:
+- Al analizar el microservicio, deberás encontrar carpetas similares a las siguientes:
 
 
-    ![docker -run hello-world](../images/u1_3_2.png)
+![docker -run hello-world](../images/u1_3_2.png)
 
 
 
-    - **Contesta lo siguiente**
+- **Contesta lo siguiente**
 
         a. ¿Identificaste y comprendiste el propósito de cada uno de los paquetes principales, como entity, repository, service y controller, en la estructura del proyecto?
 
@@ -90,15 +90,13 @@ Al finalizar esta actividad, serás capaz de clonar un repositorio de microservi
 
 
 
-    - Al ejecutar tu proyecto deberás de ver una imagen similar a la siguiente:
+- Al ejecutar tu proyecto deberás de ver una imagen similar a la siguiente:
 
 
-    ![docker -run hello-world](../images/u1_3_1.png)
+![docker -run hello-world](../images/u1_3_1.png)
 
  
-  
-
-    - **Contesta lo siguiente**
+- **Contesta lo siguiente**
 
         a. ¿Identificaste la entidad principal, sus atributos y cómo está mapeada a la base de datos mediante JPA?
 
