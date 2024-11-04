@@ -115,6 +115,6 @@ Al finalizar esta actividad, serás capaz de crear una imagen Docker a partir de
 ![docker build](../images/u1_4_2.png)
 
 
-- Captura de pantall que verifica que el contenedor Docker se encuentre en ejecución, ademas de mostrar los consumos, usando curl.
+- Captura de pantalla que verifica que el contenedor Docker se encuentre en ejecución.
 
-![docker build](../images/u1_4_3.png)
+![docker build](../images/u1_4_4.png)
