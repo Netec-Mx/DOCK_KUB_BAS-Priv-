@@ -15,6 +15,8 @@
 
 - [Práctica 1.5 Consumir Microservicios](README1-5.md)
 
+    - Esta práctica te guiará en la exploración y consumo del microservicio ms-clientes, verificando la configuración del contenedor y usando herramientas como curl, Postman o Insomnia para realizar solicitudes HTTP.
+
 - [Práctica 1.6 Docker Registry](README1-6.md)
 
 - [Práctica 1.7 Optimización](README1-7.md)
