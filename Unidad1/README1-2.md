@@ -8,11 +8,11 @@ Al finalizar esta actividad, serás capaz de verificar y asegurar que todos los 
 
 ## Instrucciones
 
-1. ***Consulta con tu instructor***
+1. **Consulta con tu instructor**
 
 Pregunta a tu instructor cómo acceder al entorno de prácticas del curso y asegúrate de entender todas las instrucciones necesarias para su acceso este día y los días siguientes de clase.
 
-2. ***Configura Git***
+2. **Configura Git**
 
 Asegúrate de tener configurados tu nombre y correo en Git. Esto se puede hacer con los siguientes comandos:
 
@@ -24,7 +24,7 @@ git config --list
 
 ````
 
-3. ***Clona el repositorio del curso***
+3. **Clona el repositorio del curso**
 
 Clona el repositorio proporcionado por el instructor para acceder a los archivos de práctica. Puedes hacerlo con:
 
@@ -34,7 +34,7 @@ git clone <URL_del_repositorio>
 
 ```
 
-4. ***Verifica Maven (Opcional)***
+4. **Verifica Maven (Opcional)**
 
 Confirma que tienes Maven instalado y configurado en tu sistema. Esto es útil en caso de que necesites construir proyectos fuera del entorno de Spring Boot. Verifica la instalación ejecutando:
 
@@ -44,10 +44,10 @@ mvn -v
 
 ```
 
-***Nota:*** Aunque no es indispensable tener Maven configurado fuera del entorno de Spring, puede ser útil para tareas específicas.
+**Nota:** Aunque no es indispensable tener Maven configurado fuera del entorno de Spring, puede ser útil para tareas específicas.
 
 
-5. ***Verifica Gradle (Opcional)***
+5. **Verifica Gradle (Opcional)**
 
 Asegúrate de que Gradle esté instalado y configurado. Para verificar la instalación, utiliza:
 
@@ -55,35 +55,32 @@ Asegúrate de que Gradle esté instalado y configurado. Para verificar la instal
 gradle -v
 ```
 
-6. ***Verifica Java 21***
+6. **Verifica Java 21**
 
 Comprueba que tienes instalada la versión 21 de Java. Puedes verificar la versión ejecutando:
 
 ```bash
- 
 javac --version
 java --version
-
 ```
 
-7. *** Verifica Visual Studio Code (VSC)***
+7. **Verifica Visual Studio Code (VSC)**
 
 Asegúrate de tener Visual Studio Code instalado, ya sea pulsando el ícono en la aplicación en el escritorio o iniciando en la línea de comandos lo siguiente:
 
 ```bash
- 
+# Recuerda que el . significa el actual directorio de trabajo
 code .
-
 ```
 
-8. ***Instala los plugins requeridos en VSC ***
+8. ** Instala los plugins requeridos en VSC **
 
 Verifica que tienes los siguientes plugins instalados en Visual Studio Code para facilitar el desarrollo:
 
-    - Extension Pack for Java v0.29.0
-    - Docker v1.29.3
-    - Kubernetes YAML Formatter v1.1.0
-    - Kubernetes v1.3.18
+- Extension Pack for Java v0.29.0
+- Docker v1.29.3
+- Kubernetes YAML Formatter v1.1.0
+- Kubernetes v1.3.18
 
 
 ## Resultado Esperado
