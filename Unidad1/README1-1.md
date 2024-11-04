@@ -28,12 +28,19 @@ uname -r
 - Habilitar el módulo de overlay y overlay2, ya que Docker utiliza estos sistemas de archivos como el controlador de almacenamiento por defecto.
 
 - Permisos de Usuario
-    - Docker necesita permisos de administrador para su instalación y configuración. Usualmente, los comandos se ejecutan con ***sudo***.
+    - Docker necesita permisos de administrador para su instalación y configuración. Usualmente, los comandos se ejecutan con **sudo**.
 
 
 ## Instrucciones
 
-1. ***Actualiza e instala los paquetes requeridos:***
+1. **Consulta con tu instructor**
+
+Pregunta a tu instructor cómo acceder al entorno de prácticas del curso y asegúrate de entender todas las instrucciones necesarias para su acceso este día y los días siguientes de clase.
+
+    - ¿Cuántas máquinas virtuales tienes?
+    - ¿Cuáles son los sistemas operativos que tienes en cada máquina?
+
+2. ***Actualiza e instala los paquetes requeridos:***
 
 ```bash
 sudo apt update
@@ -41,7 +48,7 @@ sudo apt upgrade
 sudo apt install apt-transport-https ca-certificates curl software-properties-common
 ```
 
-2. ***Agrega la clave de Docker y el repositorio***
+3. ***Agrega la clave de Docker y el repositorio***
 
 ```bash
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
@@ -52,20 +59,20 @@ Luego, agrega el repositorio
 sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
 ```
 
-3. ***Actualiza de nuevo e instala Docker***
+4. ***Actualiza de nuevo e instala Docker***
 ```bash
 sudo apt update
 apt-cache policy docker-ce
 sudo apt install docker-ce
 ```
 
-4. ***Verifica de Docker*** 
+5. ***Verifica de Docker*** 
 
 ```bash
 sudo systemctl status docker
 ```
 
-5. ***Configura adicionalmente***
+6. ***Configura adicionalmente***
 
 ```bash
 docker --version
