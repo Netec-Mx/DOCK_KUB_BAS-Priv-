@@ -127,4 +127,4 @@ Al finalizar esta actividad, serás capaz de crear una imagen Docker a partir de
 
 - Captura de pantalla que verifica que el contenedor Docker se encuentre en ejecución.
 
-![docker build](../images/u1_4_4.png)
+![docker build](../images/u1_4_3.png)
