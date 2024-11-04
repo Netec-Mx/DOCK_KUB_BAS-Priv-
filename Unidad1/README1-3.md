@@ -59,8 +59,6 @@ Al finalizar esta actividad, serás capaz de clonar un repositorio de microservi
     
     - Accede a la consola para revisar cualquier mensaje de error o éxito que confirme la correcta inicialización del servicio.
 
-
-
 5. **Conclusión y análisis**
 
     - Reflexiona sobre los componentes y su función en la arquitectura del microservicio.
@@ -68,6 +66,17 @@ Al finalizar esta actividad, serás capaz de clonar un repositorio de microservi
     - Pregunta a tu instructor cualquier duda de Java.
 
 
+6. **Consume el microservicio**
+
+    - Usando Postman, Insomia o curl consume los endpoints de tu microservicio
+
+    | **Operación**                | **Método HTTP** | **URL**                                      | **Descripción**                                                |
+|------------------------------|-----------------|----------------------------------------------|----------------------------------------------------------------|
+| Obtener todos los clientes   | `GET`           | `http://localhost:9095/api/clients`          | Devuelve una lista de todos los clientes.                       |
+| Obtener un cliente por ID    | `GET`           | `http://localhost:9095/api/clients/{id}`     | Devuelve un cliente específico, identificado por su `id`.       |
+| Crear un nuevo cliente       | `POST`          | `http://localhost:9095/api/clients`          | Crea un nuevo cliente con los datos proporcionados en el cuerpo de la solicitud. |
+| Actualizar un cliente        | `PUT`           | `http://localhost:9095/api/clients/{id}`     | Actualiza los datos de un cliente existente, identificado por su `id`. |
+| Eliminar un cliente          | `DELETE`        | `http://localhost:9095/api/clients/{id}`     | Elimina un cliente específico, identificado por su `id`.        |
 
  
 
