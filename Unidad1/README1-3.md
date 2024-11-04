@@ -15,17 +15,17 @@ Al finalizar esta actividad, serás capaz de clonar un repositorio de microservi
     - Accede al repositorio inicial de las prácticas donde se encuentra el código.
     - Clona el repositorio en tu máquina loca, si aún no lo has hecho, ejecutando el siguiente comando en la terminal:
 
-```bash
- 
-git clone <URL_DEL_REPOSITORIO>
-```
+    ```bash
+    
+    git clone <URL_DEL_REPOSITORIO>
+    ```
 
     - Navega al directorio de la unidad donde se encuentra el código del microservicio:
 
-```bash
- 
-cd <nombre_del_repositorio>/unidad1/code/ms-clients
-```
+    ```bash
+    
+    cd <nombre_del_repositorio>/unidad1/code/ms-clients
+    ```
 
 
 2. **Importar el proyecto en el entorno de desarrollo**
