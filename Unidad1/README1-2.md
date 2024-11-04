@@ -8,7 +8,7 @@ Al finalizar esta actividad, serás capaz de verificar y asegurar que todos los 
 
 ## Instrucciones
 
-Las siguientes instrucciones aplica en tu máquina máquina virtual con Windows Asignada.
+Las siguientes instrucciones aplica en tu máquina máquina virtual con Windows asignada.
 
 1. **Configura Git**
 
@@ -76,10 +76,24 @@ Verifica que tienes los siguientes plugins instalados en Visual Studio Code para
 
 8. **Verifica Conexiones ssh*
 
-Verifica que puedes conectarse vía ssh a las máquinas virtuales Ubuntu.
+Para cada uno de las máquinas virtuales Ubuntu asignadas, verifica que puedes conectarse vía ssh a las máquinas virtuales Ubuntu.
+
+```bash
+# El usuario podría ser mnadmin y la máquina tener la dirección 192.168.0.3
+# La primera vez que e conectas al equipo confirma con **yes** que aceptas la conexión
+# La contraseña podría ser: Netec_123
+
+ssh mnadmin@192.168.0.3
+```
 
 ## Resultado Esperado
 
-Es complemento de YAML para VSC podría serte útil más adelante
+- ssh usuario@ip-maquina-virtual
 
-![Extensión: YAML](../images/u2_1_1.png)
+![SSH](../images/u1_2_2.png)
+
+
+
+- Es complemento de YAML para VSC podría serte útil más adelante
+
+![Extensión: YAML](../images/u1_2_1.png)
