@@ -62,7 +62,7 @@ Al finalizar esta actividad, serás capaz de crear una imagen Docker a partir de
    - Una vez que el archivo JAR esté listo, construye la imagen Docker con el siguiente comando (reemplaza `<nombre_de_imagen>` y `<versión>` por un nombre y versión para la imagen):
 
      ```bash
-     docker build -t ms-cientes:v1 .
+     docker build -t ms-clientes:v1 .
      ```
 
 3. **Verificar la imagen creada**
@@ -78,17 +78,20 @@ Al finalizar esta actividad, serás capaz de crear una imagen Docker a partir de
    - Inicia un contenedor a partir de la imagen creada, mapeando el puerto 8095 del contenedor al puerto 9095 de tu máquina local:
 
      ```bash
-     docker run -p 8095:9095 <nombre_de_imagen>:<versión>
+     docker run -d -p 8095:9095 --name ms-clientes ms-clientes:v1
      ```
 
    - La aplicación debería estar disponible en `http://localhost:8095`.
+
 
 5. **Verificar que el contenedor esté en ejecución**
 
    - Usa el siguiente comando para listar los contenedores en ejecución y confirmar que tu aplicación está desplegada:
 
      ```bash
+
      docker ps
+     docker logs ms-clientes
      ```
 
 6. **Detener el contenedor**
@@ -96,8 +99,22 @@ Al finalizar esta actividad, serás capaz de crear una imagen Docker a partir de
    - Si deseas detener el contenedor en ejecución, identifica el `CONTAINER ID` usando el comando `docker ps`, y luego ejecuta:
 
      ```bash
-     docker stop <CONTAINER_ID>
+     docker stop ms-clientes
      ```
 
 
 ## Resultado Esperado
+
+- Captura de pantalla al construir la imagen Docker
+
+![docker build](../images/u1_4_1.png)
+
+
+- Captura de pantalla que verifica las imagens, verifica los contenedores, crea un nuevo contenedor y verifica el estado del nuevo contenedor.
+
+![docker build](../images/u1_4_2.png)
+
+
+- Captura de pantall que verifica que el contenedor Docker se encuentre en ejecución, ademas de mostrar los consumos, usando curl.
+
+![docker build](../images/u1_4_3.png)
