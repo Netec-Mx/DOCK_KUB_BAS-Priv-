@@ -82,11 +82,11 @@ Al finalizar esta actividad, serás capaz de clonar un repositorio de microservi
 
 - **Contesta lo siguiente**
 
-        a. ¿Identificaste y comprendiste el propósito de cada uno de los paquetes principales, como entity, repository, service y controller, en la estructura del proyecto?
+    a. ¿Identificaste y comprendiste el propósito de cada uno de los paquetes principales, como entity, repository, service y controller, en la estructura del proyecto?
 
-        b. ¿Pudiste explicar el flujo de datos en el microservicio, desde la capa de controlador hasta el repositorio, y cómo interactúan entre sí?
+    b. ¿Pudiste explicar el flujo de datos en el microservicio, desde la capa de controlador hasta el repositorio, y cómo interactúan entre sí?
 
-        c. ¿Entendiste la función de cada endpoint en el controlador y cómo se mapean a las operaciones CRUD en el servicio?
+    c. ¿Entendiste la función de cada endpoint en el controlador y cómo se mapean a las operaciones CRUD en el servicio?
 
 
 
@@ -98,6 +98,6 @@ Al finalizar esta actividad, serás capaz de clonar un repositorio de microservi
  
 - **Contesta lo siguiente**
 
-        a. ¿Identificaste la entidad principal, sus atributos y cómo está mapeada a la base de datos mediante JPA?
+    a. ¿Identificaste la entidad principal, sus atributos y cómo está mapeada a la base de datos mediante JPA?
 
-        b. ¿Cuál es el puerto asignado a este microservicio?
+    b. ¿Cuál es el puerto asignado a este microservicio?
