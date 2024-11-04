@@ -55,8 +55,9 @@ Al finalizar esta actividad, serás capaz de clonar un repositorio de microservi
 
 4. **Ejecutar y verificar la configuración**
 
-        - Si es posible, ejecuta el microservicio desde el IDE para asegurarte de que la configuración inicial es correcta. Puedes hacerlo desde la clase principal del microservicio, generalmente una clase anotada con @SpringBootApplication.
-        - Accede a la consola para revisar cualquier mensaje de error o éxito que confirme la correcta inicialización del servicio.
+    - Si es posible, ejecuta el microservicio desde el IDE para asegurarte de que la configuración inicial es correcta. Puedes hacerlo desde la clase principal del microservicio, generalmente una clase anotada con @SpringBootApplication.
+    
+    - Accede a la consola para revisar cualquier mensaje de error o éxito que confirme la correcta inicialización del servicio.
 
 
 
