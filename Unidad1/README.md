@@ -19,6 +19,8 @@
 
 - [Práctica 1.6 Docker Registry](README1-6.md)
 
+    - En esta práctica, tendrás la imagen almacenada y accesible desde Docker Registry, lista para ser utilizada en futuros despliegues o compartida con otros usuarios.
+
 - [Práctica 1.7 Optimización](README1-7.md)
 
 - [Práctica 1.8 Docker CLI (Opcional)](README1-8.md)

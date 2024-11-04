@@ -8,6 +8,53 @@ Al finalizar esta actividad, serás capaz de utilizar Docker Registry para almac
 
 20 minutos
 
+
+
 ## Instrucciones
 
+
+### 1. Configurar Docker Hub o Docker Registry Local
+
+   - **Opción 1: Docker Hub**
+     1. Si aún no tienes una cuenta en Docker Hub, crea una en [https://hub.docker.com](https://hub.docker.com).
+
+
+     2. Inicia sesión en Docker desde la terminal:
+        ```bash
+
+        docker login
+        ```
+
+     3. Ingresa tu nombre de usuario y contraseña cuando te los solicite.
+
+   - **Opción 2: Docker Registry Local**
+     1. Ejecuta un contenedor de Docker Registry en tu máquina:
+        ```bash
+
+        docker run -d -p 5000:5000 --name registry registry:2
+        ```
+
+     2. Esto ejecutará un registro Docker en el puerto 5000 de tu máquina.
+
+### 2. Etiquetar la Imagen Docker
+
+   - Identifica el nombre de la imagen que creaste en prácticas previas.
+
+   - Etiqueta la imagen para que apunte al Docker Registry que usarás:
+
+     - **Para Docker Hub**:
+       ```bash
+
+       docker tag nombre_imagen tu_usuario/nombre_imagen:tag
+       ```
+
+   - **Docker Registry Local**:
+
+     ```bash
+     docker run -d localhost:5000/nombre_imagen:tag
+     ```
+
+---
+
 ## Resultado Esperado
+
