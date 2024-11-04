@@ -102,6 +102,14 @@ Al finalizar esta actividad, serás capaz de crear una imagen Docker a partir de
      docker stop ms-clientes
      ```
 
+7. **Iniciar el contenedor**
+
+   - Si deseas levantar el contenedor nuevamente, identifica el `CONTAINER ID` usando el comando `docker ps`, y luego ejecuta:
+
+     ```bash
+     docker start ms-clientes
+     ```
+
 
 ## Resultado Esperado
 
@@ -110,9 +118,11 @@ Al finalizar esta actividad, serás capaz de crear una imagen Docker a partir de
 ![docker build](../images/u1_4_1.png)
 
 
+
 - Captura de pantalla que verifica las imagens, verifica los contenedores, crea un nuevo contenedor y verifica el estado del nuevo contenedor.
 
 ![docker build](../images/u1_4_2.png)
+
 
 
 - Captura de pantalla que verifica que el contenedor Docker se encuentre en ejecución.
