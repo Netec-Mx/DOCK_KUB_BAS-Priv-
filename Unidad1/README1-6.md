@@ -75,3 +75,9 @@ Al finalizar esta actividad, serás capaz de utilizar Docker Registry para almac
 
 
 ![docker login ...](../images/u1_6_3.png)
+
+
+-- Imagen en el Docker Hub
+
+
+![docker login ...](../images/u1_6_4.png)
