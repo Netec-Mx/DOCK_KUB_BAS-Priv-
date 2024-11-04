@@ -93,6 +93,7 @@ ssh mnadmin@192.168.0.3
 ![SSH](../images/u1_2_2.png)
 
 
+<br/>
 
 - Es complemento de YAML para VSC podría serte útil más adelante
 
