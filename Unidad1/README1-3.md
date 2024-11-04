@@ -110,3 +110,9 @@ Al finalizar esta actividad, serás capaz de clonar un repositorio de microservi
     a. ¿Identificaste la entidad principal, sus atributos y cómo está mapeada a la base de datos mediante JPA?
 
     b. ¿Cuál es el puerto asignado a este microservicio?
+
+
+- Consumo del servicio **ms-clients**
+
+
+![docker -run hello-world](../images/u1_3_3.png)
