@@ -70,7 +70,7 @@ Al finalizar esta actividad, serás capaz de clonar un repositorio de microservi
 
     - Usando Postman, Insomia o curl consume los endpoints de tu microservicio
 
-    | **Operación**                | **Método HTTP** | **URL**                                      | **Descripción**                                                |
+| **Operación**                | **Método HTTP** | **URL**                                      | **Descripción**                                                |
 |------------------------------|-----------------|----------------------------------------------|----------------------------------------------------------------|
 | Obtener todos los clientes   | `GET`           | `http://localhost:9095/api/clients`          | Devuelve una lista de todos los clientes.                       |
 | Obtener un cliente por ID    | `GET`           | `http://localhost:9095/api/clients/{id}`     | Devuelve un cliente específico, identificado por su `id`.       |
