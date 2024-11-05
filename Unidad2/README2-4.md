@@ -19,6 +19,7 @@ Al finalizar esta actividad, serás capaz de crear un Pod en Kubernetes utilizan
 **Paso 1:** Crear el archivo YAML para el Pod
 
 1. Abre tu editor de texto preferido y crea un archivo llamado mipod.yaml.
+
 2. En este archivo, escribe el siguiente contenido YAML, que define un Pod simple con un contenedor de nginx:
 
 ```yaml
@@ -110,7 +111,7 @@ kubectl exec -it my-pod -- /bin/bash
 
 **Paso 4:** Eliminar el Pod
 
--Una vez que hayas terminado, puedes eliminar el Pod para liberar recursos en el clúster. Ejecuta:
+- Una vez que hayas terminado, puedes eliminar el Pod para liberar recursos en el clúster. Ejecuta:
 
 ```bash
 
@@ -122,9 +123,9 @@ kubectl delete -f my-pod.yaml
 
 -**Notas adicionales**
 
--La creación de recursos en Kubernetes mediante archivos YAML es una práctica recomendada, ya que permite un fácil versionado y reutilización de la configuración.
+- La creación de recursos en Kubernetes mediante archivos YAML es una práctica recomendada, ya que permite un fácil versionado y reutilización de la configuración.
     
--Puedes modificar el archivo **mipod.yaml** para especificar otros contenedores, etiquetas o configuraciones para experimentar con diferentes Pods.
+- Puedes modificar el archivo **mipod.yaml** para especificar otros contenedores, etiquetas o configuraciones para experimentar con diferentes Pods.
 
 
 <br/><br/>
