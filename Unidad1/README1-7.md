@@ -45,6 +45,7 @@ ENTRYPOINT ["java", "-jar", "app.jar"]
  
 time docker build -t ms_clients_original .
 ```
+
 - **Nota:** Si estas en Windows puedes usar una terminal Power Shell con la siguiente instrucción:
 
 ```PowerShell
@@ -53,14 +54,14 @@ Measure-Command { docker build -t ms_clients_original . }
 
 ```
 
-- Verifica el tamaño de la imagen usando:
+    - Verifica el tamaño de la imagen usando:
 
 ```bash
  
 docker images  
 ```
 
-- Registra el tamaño de la imagen y el tiempo de construcción en la tabla como "Antes de Optimización".
+    - Registra el tamaño de la imagen y el tiempo de construcción en la tabla como "Antes de Optimización".
 
 
 ---
