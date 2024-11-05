@@ -39,12 +39,19 @@ spec:
 3. Contesta lo siguiente referente al YAML
 
     a. ¿Qué campo define la versión de la API de Kubernetes utilizada en el archivo de configuración?
+    
     b. ¿Qué campo indica el tipo de recurso que se va a crear en Kubernetes, como un Pod?
+    
     c. ¿Qué campo proporciona información del Pod, incluyendo su nombre y etiquetas?
+    
     d. ¿Qué campo define las especificaciones de un Pod en Kubernetes?
+    
     e. ¿Qué campo dentro de spec contiene una lista de contenedores definidos en el Pod?
+    
     f. ¿Qué campo especifica el nombre del contenedor dentro de un Pod?
+    
     g. ¿Qué campo define la imagen de contenedor que se utilizará?
+    
     h. ¿Qué campo define el puerto expuesto dentro del contenedor?
 
 <br\>
