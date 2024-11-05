@@ -7,6 +7,7 @@ Al finalizar esta actividad, serás capaz de verificar correctamente la instalac
 15 minutos
 
 <br/>
+
 ## Instrucciones
 
 1. **Acceso al Worker Node**
