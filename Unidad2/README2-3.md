@@ -15,20 +15,20 @@ Al finalizar esta actividad, serás capaz de verificar correctamente la instalac
 
 **Paso 1: Intalar paquetería básica**
 
-    - Actualiza los repositorios e instala los paquetes necesarios para el transporte de paquetes HTTPS.
+- Actualiza los repositorios e instala los paquetes necesarios para el transporte de paquetes HTTPS.
 
-    ```bash
+```bash
 sudo apt-get update 
 sudo apt install apt-transport-https curl -y
-    ```
+```
 
 <br/>
 
 **Paso 2: Preconfigurar el Networking**
 
-    - Configura los módulos necesarios para Kubernetes y aplica los parámetros de red.
+- Configura los módulos necesarios para Kubernetes y aplica los parámetros de red.
 
-    ```bash
+```bash
 cat <<EOF | sudo tee /etc/modules-load.d/k8s.conf
 overlay
 br_netfilter
@@ -37,11 +37,11 @@ EOF
 sudo modprobe overlay
 sudo modprobe br_netfilter
 
-    ```
+```
 
-    - Define los parámetros de `sysctl` necesarios para el funcionamiento de Kubernetes
+- Define los parámetros de `sysctl` necesarios para el funcionamiento de Kubernetes
 
-    ```bash
+```bash
 cat <<EOF | sudo tee /etc/sysctl.d/k8s.conf
 net.bridge.bridge-nf-call-iptables  = 1
 net.bridge.bridge-nf-call-ip6tables = 1
@@ -51,22 +51,23 @@ EOF
 # Aplicar parámetros de sysctl
 sudo sysctl --system
 
-    ```
+```
 
-    - Verifica que los módulos estén correctamente cargados
+- Verifica que los módulos estén correctamente cargados
 
-    ```bash
+```bash
 lsmod | grep br_netfilter
 lsmod | grep overlay
 
-    ```
+```
 
-    - Confirma que los parámetros de red estén configurados.
+- Confirma que los parámetros de red estén configurados.
 
-    ```bash
+```bash
+
 sysctl net.bridge.bridge-nf-call-iptables net.bridge.bridge-nf-call-ip6tables net.ipv4.ip_forward
 
-    ```
+```
 
 <br/>
 
