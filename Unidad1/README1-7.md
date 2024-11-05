@@ -192,7 +192,6 @@ time docker run --rm -p 9095:9095 ms_clients_optimized_multistage
 
 
 <br/><br/>
-
 ## Resultado Esperado
 
 <br/><br/>
