@@ -24,8 +24,8 @@
 	 - containerd
 
 ---
-
 ## Control Plane:
+---
 
 1. Instalar paquetería básica
 ```bash
@@ -75,7 +75,7 @@ sysctl net.bridge.bridge-nf-call-iptables net.bridge.bridge-nf-call-ip6tables ne
 sudo swapoff -a
 ```
 
-    - Para persistir la configuración de **swapoff -a** se debe editar el archivo **/etc/fstab**, comentar la linea asignada a swap y luego reiniciar la máquina. 
+- Para persistir la configuración de **swapoff -a** se debe editar el archivo **/etc/fstab**, comentar la linea asignada a swap y luego reiniciar la máquina. 
 
 <br/>
 
