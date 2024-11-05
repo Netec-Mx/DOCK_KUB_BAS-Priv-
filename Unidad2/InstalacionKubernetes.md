@@ -306,14 +306,6 @@ sudo kubeadm join <ip-controlplane>:6443 --token <token> --discovery-token-ca-ce
 
 <br/>
 
-**Referencias:** 
+---
 
-- https://v1-30.docs.kubernetes.io/docs/setup/production-environment/container-runtimes/
-
-- https://docs.docker.com/engine/install/ubuntu/ 
-
-- https://v1-30.docs.kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/
-
-- https://releases.ubuntu.com/20.04.6/ 
-
-- https://cdimage.ubuntu.com/releases/20.04/release/ 
+[Referencias](Referencias.md)
