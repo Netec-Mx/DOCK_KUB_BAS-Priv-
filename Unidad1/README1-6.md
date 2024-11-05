@@ -68,16 +68,16 @@ Al finalizar esta actividad, serás capaz de utilizar Docker Registry para almac
 - Captura de pantalla, finalización del proceso de subida de la imagen a Docker Hub.
 
 
-![docker login ...](../images/u1_6_2.png)
+![docker](../images/u1_6_2.png)
 
 
 - Captura de pantalla, verificación que se puede usar la imagen de Docker Hub para la construcción de un segundo contenedor.
 
 
-![docker login ...](../images/u1_6_3.png)
+![docker](../images/u1_6_3.png)
 
 
 -- Imagen en el Docker Hub
 
 
-![docker login ...](../images/u1_6_4.png)
+![docker](../images/u1_6_4.png)

@@ -85,7 +85,7 @@ Al finalizar esta actividad, serás capaz de clonar un repositorio de microservi
 - Al analizar el microservicio, deberás encontrar carpetas similares a las siguientes:
 
 
-![docker -run hello-world](../images/u1_3_2.png)
+![docker](../images/u1_3_2.png)
 
 
 
@@ -102,7 +102,7 @@ Al finalizar esta actividad, serás capaz de clonar un repositorio de microservi
 - Al ejecutar tu proyecto deberás de ver una imagen similar a la siguiente:
 
 
-![docker -run hello-world](../images/u1_3_1.png)
+![docker](../images/u1_3_1.png)
 
  
 - **Contesta lo siguiente**
@@ -115,4 +115,4 @@ Al finalizar esta actividad, serás capaz de clonar un repositorio de microservi
 - Consumo del servicio **ms-clients**
 
 
-![docker -run hello-world](../images/u1_3_3.png)
+![docker](../images/u1_3_3.png)
