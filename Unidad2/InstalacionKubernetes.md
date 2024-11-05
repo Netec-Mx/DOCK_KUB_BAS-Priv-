@@ -23,7 +23,7 @@
 	 - kube-proxy
 	 - containerd
 
----
+
 ## Control Plane:
 
 1. Instalar paquetería básica
