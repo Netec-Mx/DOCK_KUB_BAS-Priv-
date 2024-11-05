@@ -31,7 +31,6 @@
 - [Práctica 1.8 Docker CLI (Opcional)](README1-8.md) 
 
     - Esta última práctica te permitirá reafirmar las instrucciones de Docker CLI para la gestión de imágenes y contenedores
-    - 
-
+    
 
 
