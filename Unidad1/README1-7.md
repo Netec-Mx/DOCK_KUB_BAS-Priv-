@@ -194,7 +194,6 @@ time docker run --rm -p 9095:9095 ms_clients_optimized_multistage
 <br/><br/>
 ## Resultado Esperado
 
-<br/><br/>
 - Captura de pantalla para la creación de la primera imagen base, en este caso, ms_clientes_original
 
 ![docker -run hello-world](../images/u1_7_1.png)
