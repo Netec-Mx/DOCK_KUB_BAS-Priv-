@@ -15,7 +15,10 @@ Al finalizar esta actividad, serás capaz de verificar correctamente la instalac
      ```bash
      ssh usuario@ip_worker_node
      ```
-   - **Observación**: Asegúrate de que la dirección IP sea correcta y que tengas permisos de usuario con privilegios adecuados en el nodo, wnadmin y contraseña Netec_123.
+   - **Notas**: 
+
+        - Asegúrate de que la dirección IP sea correcta y que tengas permisos de usuario con privilegios adecuados en el nodo, wnadmin y contraseña Netec_123.
+        - Para realizar estas actividades tienes que tener una conexión ssh a ambos nodos (Master & Worker Nodes)
 
 <br/>
 
@@ -45,24 +48,19 @@ Al finalizar esta actividad, serás capaz de verificar correctamente la instalac
      sudo journalctl -u kubelet | grep "Node has joined"
      ```
    - **Observación**: Este mensaje confirma que el Worker Node ha establecido comunicación con el clúster. Si no aparece, revisa los logs de `kubelet` para identificar posibles errores.
-
-<br/>
-
-5. **Comprobar la Configuración de Red**
-   - Verifica que las interfaces de red y el servicio `kube-proxy` funcionan correctamente:
-     ```bash
-     sudo systemctl status kube-proxy
+   ```bash
+     sudo journalctl -u kubelet -n 50
      ```
-   - **Observación**: La red es esencial para la comunicación entre los nodos. Si `kube-proxy` no está en ejecución, revisa la configuración del `cni` (Container Network Interface) y la conectividad de red del nodo.
 
 <br/>
 
-6. **Validar que el nodo puede ejecutar pods**
+5. **Validar que el nodo puede ejecutar pods**
    - En el Master Node, despliega un pod de prueba en el Worker Node:
      ```bash
-     kubectl run nginx-test --image=nginx --restart=Never --node-selector="kubernetes.io/hostname=worker-node-name"
+     kubectl run nginx-test --image=nginx --restart=Never --node-selector="kubernetes.io/hostname=<worker-node-name>"
      ```
    - **Observación**: Cambia `worker-node-name` por el nombre del Worker Node que aparece en `kubectl get nodes`. Luego, verifica el estado del pod con:
+
      ```bash
      kubectl get pod nginx-test
      ```
@@ -79,3 +77,16 @@ Al finalizar esta actividad, serás capaz de verificar correctamente la instalac
 
 
 ## Resultado Esperado
+
+- Captura de pantalla para verificar los nodos del clúster, un mater node y worker node listos.
+![kubectl](../images/u2_2_1.png)
+
+- Captura de pantalla en el nodo worker, `kubelet` activo.
+![kubelet](../images/u2_2_2.png)
+
+- Captura de pantalla con la creación de un pod, el antes y despues de recrear el Pod
+![pod](../images/u2_2_3.png)
+
+- Captura de pantalla con la verificación del nodo donde fue creado el Pod. (10.36.0.1 worker/192.168.0.228)
+![swap](../images/u2_2_4.png)
+
