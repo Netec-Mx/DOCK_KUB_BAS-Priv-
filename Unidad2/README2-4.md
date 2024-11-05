@@ -54,7 +54,8 @@ spec:
     
     h. ¿Qué campo define el puerto expuesto dentro del contenedor?
 
-<br\>
+
+<br/>
 
 **Paso 2:** Aplicar la configuración del Pod
 
@@ -68,7 +69,8 @@ kubectl apply -f mipod.yaml
 
 ```
 
-    -Este comando creará el Pod en el clúster basado en la configuración especificada en el archivo YAML.
+- Este comando creará el Pod en el clúster basado en la configuración especificada en el archivo YAML.
+
 
 3. Verifica que el Pod se ha creado correctamente con el siguiente comando:
 
@@ -78,7 +80,7 @@ kubectl get pods
 
 ```
 
-    -Deberías ver una lista de Pods en el clúster, incluyendo my-pod. El estado del Pod debe aparecer como Running si se ha creado correctamente.
+- Deberías ver una lista de Pods en el clúster, incluyendo my-pod. El estado del Pod debe aparecer como Running si se ha creado correctamente.
 
 
 <br/>
@@ -91,9 +93,9 @@ kubectl get pods
 kubectl describe pod my-pod
 ```
 
-    -Este comando muestra información detallada sobre el Pod, como su IP, eventos, e información de los contenedores.
+- Este comando muestra información detallada sobre el Pod, como su IP, eventos, e información de los contenedores.
 
--Si deseas acceder al contenedor dentro del Pod, puedes ejecutar:
+- Si deseas acceder al contenedor dentro del Pod, puedes ejecutar:
 
 ```bash
 
@@ -101,7 +103,7 @@ kubectl exec -it my-pod -- /bin/bash
 
 ```
  
-    -Esto abrirá una sesión de terminal en el contenedor nginx del Pod.
+- Esto abrirá una sesión de terminal en el contenedor nginx del Pod.
 
 
 <br/>
@@ -116,13 +118,13 @@ kubectl delete -f my-pod.yaml
 
 ```
 
-    - Este comando eliminará el Pod my-pod usando la configuración declarativa.
+- Este comando eliminará el Pod my-pod usando la configuración declarativa.
 
 -**Notas adicionales**
 
-    -La creación de recursos en Kubernetes mediante archivos YAML es una práctica recomendada, ya que permite un fácil versionado y reutilización de la configuración.
+-La creación de recursos en Kubernetes mediante archivos YAML es una práctica recomendada, ya que permite un fácil versionado y reutilización de la configuración.
     
-    -Puedes modificar el archivo **mipod.yaml** para especificar otros contenedores, etiquetas o configuraciones para experimentar con diferentes Pods.
+-Puedes modificar el archivo **mipod.yaml** para especificar otros contenedores, etiquetas o configuraciones para experimentar con diferentes Pods.
 
 
 <br/><br/>
