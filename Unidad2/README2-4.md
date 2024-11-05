@@ -121,11 +121,11 @@ kubectl delete -f my-pod.yaml
 
 - Este comando eliminará el Pod my-pod usando la configuración declarativa.
 
--**Notas adicionales**
+- **Notas adicionales**
 
-- La creación de recursos en Kubernetes mediante archivos YAML es una práctica recomendada, ya que permite un fácil versionado y reutilización de la configuración.
+    - La creación de recursos en Kubernetes mediante archivos YAML es una práctica recomendada, ya que permite un fácil versionado y reutilización de la configuración.
     
-- Puedes modificar el archivo **mipod.yaml** para especificar otros contenedores, etiquetas o configuraciones para experimentar con diferentes Pods.
+    - Puedes modificar el archivo **mipod.yaml** para especificar otros contenedores, etiquetas o configuraciones para experimentar con diferentes Pods.
 
 
 <br/><br/>
