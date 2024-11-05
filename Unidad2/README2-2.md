@@ -56,6 +56,7 @@ Al finalizar esta actividad, serás capaz de verificar correctamente la instalac
    - **Observación**: La red es esencial para la comunicación entre los nodos. Si `kube-proxy` no está en ejecución, revisa la configuración del `cni` (Container Network Interface) y la conectividad de red del nodo.
 
 <br/>
+
 6. **Validar que el nodo puede ejecutar pods**
    - En el Master Node, despliega un pod de prueba en el Worker Node:
      ```bash
@@ -68,6 +69,7 @@ Al finalizar esta actividad, serás capaz de verificar correctamente la instalac
    - Si el pod no se ejecuta en el Worker Node, verifica la configuración de `kubelet` y los permisos del nodo.
 
 <br/>
+
 7. **Eliminar el Pod de Prueba**
    - Una vez verificada la correcta ejecución del pod, elimina el pod de prueba:
      ```bash
