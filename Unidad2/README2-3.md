@@ -197,7 +197,7 @@ sudo kubeadm join <ip-controlplane>:6443 --token <token> --discovery-token-ca-ce
 
 
 **Nota:** 
-    
+
     - Asegúrate de reemplazar `<ip-controlplane>`, `<token>` y `<hash>` con los valores correctos generados en el nodo maestro.
 
 <br/><br/>
