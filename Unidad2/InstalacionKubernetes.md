@@ -25,7 +25,6 @@
 
 ---
 ## Control Plane:
----
 
 1. Instalar paquetería básica
 ```bash
@@ -155,7 +154,7 @@ sudo apt-mark hold kubelet kubeadm kubectl
 
 10. Inicializar control plane
 
-**Nota:** Cambiar la IP por la reportada en el comando `ip add`
+    - **Nota:** Cambiar la IP por la reportada en el comando `ip add`
 
 ```bash
 ip add 
@@ -182,8 +181,6 @@ kubectl apply -f https://reweave.azurewebsites.net/k8s/v1.30/net.yaml
 
 <br/>
 
-
----
 
 ## Worker Node:
 
@@ -307,6 +304,7 @@ sudo apt-mark hold kubelet kubeadm kubectl
 sudo kubeadm join <ip-controlplane>:6443 --token <token> --discovery-token-ca-cert-hash sha256:ec2ee63f8853ad42a9ec0363508d1da7b3983cdef2361efd43e20d7d85953f26
 ```
 
+<br/>
 
 **Referencias:** 
 
