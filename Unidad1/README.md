@@ -2,8 +2,11 @@
 
 
 - [Práctica 1.1 Instalación Docker](README1-1.md)
+    - Esta práctica te permitirá familiarizarte con los pasos de instalación en entornos virtualizados y comprender los requisitos y configuraciones necesarias para ejecutar Docker.
+    
 
 - [Práctica 1.2 Verificacion de Ambiente de Curso](README1-2.md)
+    - Esta práctica te permitirá listar el software con el que cuentas en el ambiente de curso.
 
 - [Práctica 1.3 Clonar, Importar, Analizar un Microservicio en Java](README1-3.md)
 
@@ -26,6 +29,8 @@
     - Esta práctica te permitirá organizar las instrucciones del Dockerfile eficientemente y aplicar técnicas como las compilaciones de varias etapas (multi-stage builds) para obtener imágenes más ligeras y rápidas en despliegues
 
 - [Práctica 1.8 Docker CLI (Opcional)](README1-8.md)
+
+    - 
 
 
 
