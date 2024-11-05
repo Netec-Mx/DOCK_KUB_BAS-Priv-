@@ -20,14 +20,13 @@ Al finalizar esta actividad, serás capaz de optimizar un Dockerfile aplicando p
 
 ### 2. Descarga de Imágenes de Docker Hub
    - Descarga las siguientes imágenes adicionales para familiarizarte con diferentes sistemas y aplicaciones:
-     - `redis`: Sistema de base de datos en memoria.
+ 
      - `mysql`: Sistema de gestión de bases de datos.
      - `node`: Imagen base para aplicaciones Node.js.
      - `python`: Imagen base para aplicaciones Python.
 
    - Ejemplo de comando para cada imagen:
      ```bash
-     docker pull redis
      docker pull mysql
      docker pull node
      docker pull python
@@ -35,11 +34,7 @@ Al finalizar esta actividad, serás capaz de optimizar un Dockerfile aplicando p
 
 ### 3. Construcción de Contenedores
    - Crea un contenedor a partir de cada imagen descargada:
-     - **Redis**:
-       ```bash
-       docker run -d --name redis_container redis
-       ```
-     - **MySQL**:
+      - **MySQL**:
        ```bash
        docker run -d --name mysql_container -e MYSQL_ROOT_PASSWORD=abcd12345 mysql
        ```
