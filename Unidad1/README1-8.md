@@ -61,8 +61,8 @@ Al finalizar esta actividad, serás capaz de optimizar un Dockerfile aplicando p
 ### 5. Inspección Detallada
    - **Puertos HTTP expuestos**: Confirma qué contenedores exponen puertos HTTP:
      ```bash
-     docker port nginx_container
-     docker port httpd_container
+     docker ps
+     docker port mysql_container
      ```
    - **Sistema Operativo**: Inspecciona el sistema operativo de cada contenedor:
      ```bash
@@ -70,18 +70,18 @@ Al finalizar esta actividad, serás capaz de optimizar un Dockerfile aplicando p
      ```
    - **Fecha y Hora**: Muestra la fecha y hora actual en uno de los contenedores:
      ```bash
-     docker exec redis_container date
+     docker exec mysql_container date
      ```
 
 ### 6. Eliminación de Contenedores e Imágenes
    - **Detener y eliminar todos los contenedores**:
      ```bash
-     docker stop $(docker ps -aq)
-     docker rm $(docker ps -aq)
+     docker stop $(docker ps -aq)   #  S.O. Linux
+     docker rm $(docker ps -aq)  # S.O. Linux
      ```
    - **Eliminar todas las imágenes**:
      ```bash
-     docker rmi $(docker images -q)
+     docker rmi $(docker images -q)  # S.O Linux
      ```
 
 ### 7. Reflexión sobre el Docker Daemon y el CLI
@@ -110,3 +110,7 @@ Al finalizar esta actividad, serás capaz de optimizar un Dockerfile aplicando p
 - Contenedores Docker
 
 ![docker ps -a](../images/u1_8_2.png)
+
+- Algunos comandos de Docker CLI
+
+![docker ps -a](../images/u1_8_3.png)
