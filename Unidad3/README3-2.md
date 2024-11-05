@@ -76,7 +76,7 @@ kubectl get statefulsets
 kubectl get pods -l app=web
 ```
 
-Esto mostrará el StatefulSet y los pods con el nombre secuencialmente numerado, por ejemplo, `web-statefulset-0`, `web-statefulset-1`, `web-statefulset-2`.
+- Esto mostrará el StatefulSet y los pods con el nombre secuencialmente numerado, por ejemplo, `web-statefulset-0`, `web-statefulset-1`, `web-statefulset-2`.
 
 
 <br/>
