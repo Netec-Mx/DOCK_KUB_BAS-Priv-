@@ -124,7 +124,7 @@ sudo systemctl restart containerd
 
 ```bash
 sudo apt-get update
-# apt-transport-https may be a dummy package; if so, you can skip that package
+ 
 sudo apt-get install -y apt-transport-https ca-certificates curl gpg
 ```
 
@@ -133,9 +133,12 @@ sudo apt-get install -y apt-transport-https ca-certificates curl gpg
 8. Descargar y agregar repositorios de kubernetes
 
 ```bash
-curl -fsSL https://pkgs.k8s.io/core:/stable:/v1.30/deb/Release.key | sudo gpg --dearmor -o /etc/apt/keyrings/kubernetes-apt-keyring.gpg
+curl -fsSL https://pkgs.k8s.io/core:/stable:/v1.30/deb/Release.key | \
+sudo gpg --dearmor -o /etc/apt/keyrings/kubernetes-apt-keyring.gpg
 # This overwrites any existing configuration in /etc/apt/sources.list.d/kubernetes.list
-echo 'deb [signed-by=/etc/apt/keyrings/kubernetes-apt-keyring.gpg] https://pkgs.k8s.io/core:/stable:/v1.30/deb/ /' | sudo tee /etc/apt/sources.list.d/kubernetes.list    
+echo 'deb [signed-by=/etc/apt/keyrings/kubernetes-apt-keyring.gpg]  \
+https://pkgs.k8s.io/core:/stable:/v1.30/deb/ /' | \
+sudo tee /etc/apt/sources.list.d/kubernetes.list    
 ```
 
 <br/>
@@ -152,7 +155,7 @@ sudo apt-mark hold kubelet kubeadm kubectl
 
 10. Inicializar control plane
 
-** Cambiar la IP por la reportada en el comando `ip add`
+**Nota:** Cambiar la IP por la reportada en el comando `ip add`
 
 ```bash
 ip add 
@@ -181,7 +184,6 @@ kubectl apply -f https://reweave.azurewebsites.net/k8s/v1.30/net.yaml
 
 
 ---
-
 
 ## Worker Node:
 
@@ -229,7 +231,7 @@ sysctl net.bridge.bridge-nf-call-iptables net.bridge.bridge-nf-call-ip6tables ne
 sudo swapoff -a
 ```
 
-    - Para persistir la configuración de **swapoff -a** se debe editar el archivo **/etc/fstab**, comentar la linea asignada a swap y luego reiniciar la máquina. 
+- Para persistir la configuración de **swapoff -a** se debe editar el archivo **/etc/fstab**, comentar la linea asignada a swap y luego reiniciar la máquina. 
 
 <br/>
 
