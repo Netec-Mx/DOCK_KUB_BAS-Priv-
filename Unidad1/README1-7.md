@@ -9,7 +9,7 @@ Al finalizar esta actividad, serás capaz de optimizar un Dockerfile aplicando p
 
 ## Instrucciones
 
-**Paso 1: Clonar el Dockerfile Actual**
+## Paso 1: Clonar el Dockerfile Actual
 
 1. **Crear un Directorio de Trabajo:**
 
@@ -66,13 +66,14 @@ docker images
 
 ---
 
-**Paso 2: Cambiar la Imagen Base para Reducir el Tamaño**
+##Paso 2: Cambiar la Imagen Base para Reducir el Tamaño
+
 
 1. **Cambiar de openjdk:21-jdk-slim a eclipse-temurin:21-jre-jammy:**
 
     - En el Dockerfile, reemplaza **openjdk:21-jdk-slim** con **eclipse-temurin:21-jre-jammy** para usar solo el entorno de ejecución (JRE) en lugar del kit de desarrollo (JDK). Esto reduce el tamaño porque solo necesitas ejecutar el JAR, no compilarlo.
 
-    - Modifica el Dockerfile:
+    - Modifica el `Dockerfile`:
 
 ```dockerfile
  
@@ -89,14 +90,15 @@ ENTRYPOINT ["java", "-jar", "app.jar"]
 
 ```bash
  
-time docker build -t ms_clients_optimized_1 .
+time docker build -t ms_clients_op1 .
 ```
 
     - Verifica el tamaño de la imagen y el tiempo de construcción con los mismos comandos de antes. Registra los resultados en la columna "Después de Optimización".
 
+
 ---
 
-#**Paso 3: Implementar Multi-Stage Build (Compilación en Varias Etapas)**
+##Paso 3: Implementar Multi-Stage Build (Compilación en Varias Etapas)
 
 1. **Configurar Etapa de Compilación en el Dockerfile:**
 
@@ -105,7 +107,6 @@ time docker build -t ms_clients_optimized_1 .
     - Cambia el `Dockerfile` a lo siguiente:
 
 ```dockerfile
-
 
 # Etapa de construcción
 FROM maven:3.8-eclipse-temurin-21 AS builder
@@ -121,7 +122,6 @@ FROM eclipse-temurin:21-jre
 WORKDIR /app
 COPY --from=builder /app/target/ms_clients-0.0.1-SNAPSHOT.jar app.jar
 ENTRYPOINT ["java", "-jar", "app.jar"]
-
  
 ```
 
@@ -131,7 +131,7 @@ ENTRYPOINT ["java", "-jar", "app.jar"]
 
 ```bash
  
-time docker build -t ms_clients_optimized_multistage .
+time docker build -t ms_clients_opt2 .
 ```
 
     - Verifica el tamaño de la imagen resultante y toma nota del tiempo de construcción.
@@ -143,9 +143,9 @@ time docker build -t ms_clients_optimized_multistage .
 
 --- 
 
-# **Paso 4: Verificar el Número de Capas**
+## Paso 4: Verificar el Número de Capas
 
-1. Inspeccionar las Capas de la Imagen:
+1. **Inspeccionar las Capas de la Imagen:**
 
     - Para verificar cuántas capas tiene la imagen, usa el siguiente comando:
 
@@ -159,9 +159,9 @@ docker history ms_clients_optimized_multistage
 
 ---
 
-#**Paso 5: Medir el Tiempo de Inicio del Contenedor**
+## Paso 5: Medir el Tiempo de Inicio del Contenedor
 
-1. Ejecutar el Contenedor y Medir el Tiempo de Inicio:
+1. **Ejecutar el Contenedor y Medir el Tiempo de Inicio:**
 
     - Ejecuta el contenedor y mide el tiempo de inicio para ver cuánto tarda en estar listo en el puerto 9095.
 
@@ -172,13 +172,14 @@ time docker run --rm -p 9095:9095 ms_clients_optimized_multistage
 
     - Puedes observar en el registro de salida cuándo la aplicación está lista para recibir solicitudes y tomar nota del tiempo en segundos.
 
-2. Actualizar la Tabla con el Tiempo de Inicio:
+2. **Actualizar la Tabla con el Tiempo de Inicio:**
 
     - Anota el tiempo de inicio en la tabla.
 
+
 ---
 
-#**Paso 6: Observaciones y Conclusiones**
+##Paso 6: Observaciones y Conclusiones
 
 1. **Multi-Stage Build:** Asegúrate de registrar si se utilizó multi-stage build en la columna correspondiente de la tabla.
 
@@ -189,21 +190,21 @@ time docker run --rm -p 9095:9095 ms_clients_optimized_multistage
     - Escribe una breve conclusión sobre cómo las optimizaciones afectaron el tamaño de la imagen, el tiempo de construcción y el tiempo de inicio.
 
 
+
 ## Resultado Esperado
 
--- Captura de pantalla para la creación de la primera imagen base, en este caso, ms_clientes_original
+- Captura de pantalla para la creación de la primera imagen base, en este caso, ms_clientes_original
 
 ![docker -run hello-world](../images/u1_7_1.png)
 
--- Captura de pantalla para la creación de la segunda imagen, cambiando solo la imagen base de Java, en este caso, ms_clientes_opt1
+- Captura de pantalla para la creación de la segunda imagen, cambiando solo la imagen base de Java, en este caso, ms_clientes_opt1
 
 ![docker -run hello-world](../images/u1_7_2.png)
 
--- Captura de pantalla para la creación de la tercera imagen, aplicando multi-stage, en este caso, ms_clientes_opt2
+- Captura de pantalla para la creación de la tercera imagen, aplicando multi-stage, en este caso, ms_clientes_opt2
 
 ![docker -run hello-world](../images/u1_7_3.png)
 
-
--- Captura de pantalla revisando las étapas de la imagen mx_clientes_opt2
+- Captura de pantalla revisando las étapas de la imagen mx_clientes_opt2
 
 ![docker -run hello-world](../images/u1_7_4.png)
