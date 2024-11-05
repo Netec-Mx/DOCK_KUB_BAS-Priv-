@@ -64,6 +64,9 @@ Al finalizar la actividad, serás capaz de escribir y aplicar un archivo YAML pa
 kubectl apply -f statefulset.yaml
 ```
 
+
+<br/>
+
 ### Paso 3: Verificar la creación del StatefulSet
 
 - Para comprobar que el StatefulSet y sus pods han sido creados correctamente, ejecuta:
