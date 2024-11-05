@@ -20,7 +20,7 @@ Al finalizar esta actividad, serás capaz de verificar correctamente la instalac
 <br/>
 
 2. **Verificar Conexión con el Master Node**
-   - Comprueba si el Worker Node está correctamente unido al clúster usando el siguiente comando en el Master Node:
+   - Comprueba si el Worker Node está correctamente unido al clúster usando el siguiente comando en el **Master Node**:
      ```bash
      kubectl get nodes
      ```
@@ -47,6 +47,7 @@ Al finalizar esta actividad, serás capaz de verificar correctamente la instalac
    - **Observación**: Este mensaje confirma que el Worker Node ha establecido comunicación con el clúster. Si no aparece, revisa los logs de `kubelet` para identificar posibles errores.
 
 <br/>
+
 5. **Comprobar la Configuración de Red**
    - Verifica que las interfaces de red y el servicio `kube-proxy` funcionan correctamente:
      ```bash
