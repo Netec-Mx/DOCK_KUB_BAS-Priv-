@@ -55,15 +55,17 @@ Measure-Command { docker build -t ms_clients_original . }
 ```
 
 
-    - Verifica el tamaño de la imagen usando:
+- Verifica el tamaño de la imagen usando:
 
 ```bash
  
 docker images  
 ```
 
-    - Registra el tamaño de la imagen y el tiempo de construcción en la tabla como "Antes de Optimización".
+- Registra el tamaño de la imagen y el tiempo de construcción en la tabla como "Antes de Optimización".
 
+
+<br/><br/>
 
 ### Paso 2: Cambiar la Imagen Base para Reducir el Tamaño
 
@@ -95,6 +97,7 @@ time docker build -t ms_clients_op1 .
 - Verifica el tamaño de la imagen y el tiempo de construcción con los mismos comandos de antes. Registra los resultados en la columna "Después de Optimización".
 
 
+<br/><br/>
 
 ### Paso 3: Implementar Multi-Stage Build (Compilación en Varias Etapas)
 
@@ -139,6 +142,7 @@ time docker build -t ms_clients_opt2 .
     - Registra los valores en la columna "Después de Optimización".
 
 
+<br/><br/>
 
 ### Paso 4: Verificar el Número de Capas
 
@@ -155,6 +159,7 @@ docker history ms_clients_optimized_multistage
 
 
 
+<br/><br/>
 ### Paso 5: Medir el Tiempo de Inicio del Contenedor
 
 1. **Ejecutar el Contenedor y Medir el Tiempo de Inicio:**
@@ -173,6 +178,7 @@ time docker run --rm -p 9095:9095 ms_clients_optimized_multistage
     - Anota el tiempo de inicio en la tabla.
 
 
+<br/><br/>
 
 ### Paso 6: Observaciones y Conclusiones
 
@@ -185,7 +191,7 @@ time docker run --rm -p 9095:9095 ms_clients_optimized_multistage
     - Escribe una breve conclusión sobre cómo las optimizaciones afectaron el tamaño de la imagen, el tiempo de construcción y el tiempo de inicio.
 
 
-
+<br/><br/>
 
 ## Resultado Esperado
 
