@@ -5,8 +5,7 @@ Al finalizar esta actividad, serás capaz de aplicar comandos y configuraciones 
 
 
 ## Duración aproximada
-30
- minutos
+30 minutos
 
 ## Instrucciones
 

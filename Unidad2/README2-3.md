@@ -2,7 +2,8 @@
 
 ## Objetivo
 
-Al finalizar esta actividad, serás capaz de agregar un Worker Node a un clúster de Kubernetes, conectándolo correctamente al nodo maestro
+Al finalizar esta actividad, serás capaz de verificar correctamente la instalación y configuración de un Worker Node en un clúster de Kubernetes.
+
 
 
 ## Duración aproximada
