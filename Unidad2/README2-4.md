@@ -88,7 +88,7 @@ kubectl get pods
 
 **Paso 3:** Probar el Pod
 
--Puedes verificar los detalles del Pod usando el comando:
+- Puedes verificar los detalles del Pod usando el comando:
 
 ```bash
 kubectl describe pod my-pod
