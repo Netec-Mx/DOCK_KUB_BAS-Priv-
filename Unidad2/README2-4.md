@@ -1,4 +1,4 @@
-Práctica 2.4 Creación Declarativa de un Pod
+# Práctica 2.4 Creación Declarativa de un Pod
 
 ## Objetivo
 
@@ -10,5 +10,7 @@ Al finalizar esta actividad, serás capaz de crear un Pod en Kubernetes utilizan
 15 minutos
 
 ## Instrucciones
+
+
 
 ## Resultado Esperado
