@@ -16,7 +16,7 @@ Al finalizar esta actividad, serás capaz de crear un Pod en Kubernetes utilizan
 
 ## Instrucciones
 
-**Paso 1:** Crear el archivo YAML para el Pod
+**Paso 1: Crear el archivo YAML para el Pod**
 
 1. Abre tu editor de texto preferido y crea un archivo llamado mipod.yaml.
 
@@ -58,7 +58,7 @@ spec:
 
 <br/>
 
-**Paso 2:** Aplicar la configuración del Pod
+**Paso 2: Aplicar la configuración del Pod**
 
 1. Abre la terminal y navega al directorio donde guardaste mipod.yaml.
 
@@ -86,7 +86,7 @@ kubectl get pods
 
 <br/>
 
-**Paso 3:** Probar el Pod
+**Paso 3: Probar el Pod**
 
 - Puedes verificar los detalles del Pod usando el comando:
 
@@ -109,7 +109,7 @@ kubectl exec -it my-pod -- /bin/bash
 
 <br/>
 
-**Paso 4:** Eliminar el Pod
+**Paso 4: Eliminar el Pod**
 
 - Una vez que hayas terminado, puedes eliminar el Pod para liberar recursos en el clúster. Ejecuta:
 
