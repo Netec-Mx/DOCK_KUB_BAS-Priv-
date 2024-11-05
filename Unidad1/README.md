@@ -23,6 +23,8 @@
 
 - [Práctica 1.7 Optimización](README1-7.md)
 
+    - Esta práctica te permitirá organizar las instrucciones del Dockerfile eficientemente y aplicar técnicas como las compilaciones de varias etapas (multi-stage builds) para obtener imágenes más ligeras y rápidas en despliegues
+
 - [Práctica 1.8 Docker CLI (Opcional)](README1-8.md)
 
 
