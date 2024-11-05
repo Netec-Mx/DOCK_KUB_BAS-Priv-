@@ -7,10 +7,9 @@ Al finalizar esta actividad, serás capaz de verificar correctamente la instalac
 15 minutos
 
 
-**Requisitos previos:**  
+## Requisitos previos:
 - La instalación de Kubernetes ya está completada en un sistema Ubuntu Server 20.04.
 
----
 
 ## Instrucciones:
 
@@ -19,7 +18,7 @@ Al finalizar esta actividad, serás capaz de verificar correctamente la instalac
      ```bash
      ssh usuario@direccion-ip-del-master-node
      ```
-    - **Nota:** La contraseña de las máquinas podría ser Netec_123, esta pudiera cambiar, tu instructor la confirmará.
+    - **Nota:** EL usuario y la contraseña de las máquinas podría ser `mnadmin`y `Netec_123` respectivamente, estas podrían cambiar, tu instructor lo coonfirmará.
 
 2. **Verificar el estado del clúster**  
    - Ejecuta el siguiente comando para verificar si el clúster de Kubernetes está activo y en funcionamiento:
@@ -38,7 +37,7 @@ Al finalizar esta actividad, serás capaz de verificar correctamente la instalac
 4. **Comprobar la versión de Kubernetes**  
    - Confirma la versión de Kubernetes instalada en el nodo maestro:
      ```bash
-     kubectl version --short
+     kubectl version 
      ```
    - Anota la versión para validar que es la esperada para tu entorno.
 
@@ -47,22 +46,27 @@ Al finalizar esta actividad, serás capaz de verificar correctamente la instalac
      ```bash
      kubectl cluster-info
      ```
-   - Asegúrate de que los componentes de control del clúster (kube-apiserver, etcd, kube-scheduler, kube-controller-manager) tienen sus URL configuradas correctamente.
+   - Asegúrate de que los componentes de control del clúster (`kube-apiserver`, `etcd`, `kube-scheduler`, `kube-controller-manager`) tienen sus URL configuradas correctamente.
 
 6. **Validar la instalación del kubeconfig**  
    - Verifica que el archivo de configuración `kubeconfig` esté en la ubicación predeterminada y contenga la configuración correcta para el nodo maestro:
      ```bash
+     file ~/.kube/config
      cat ~/.kube/config
+     cat ~/.kube/config | grep -v data
      ```
    - Asegúrate de que la configuración esté correcta para acceder al clúster desde el nodo maestro.
 
 7. **Verificación del SWAP**
     - Ejecuta el siguiente comando para verificar el estado del swap
-      ```bash
+
+    ```bash
      sudo swapon --show
      free -h
-     ```
+    ```
+
     - Si el primer comando no muesta ninguna salida, el swap está deshabilitado.
+    
     - El la salida del segundo comando, el valodr de la columna "Swap" debería ser cero si el swap está desactivado.
 
     - Para asegurarte de que el swap se deshabilite permanentemente después de cada reinicio, verifica el contenido del archivo `/etc/fstab`, la(s) linea(s) con swap deberán de estar comentadas.
@@ -76,4 +80,13 @@ Al finalizar esta actividad, serás capaz de verificar correctamente la instalac
 
 ## Resultado Esperado
 
+- Captura de pantalla con el estado y version en los nodos y los pods en el espacio de nombre kube-system.
 
+![kubectl](../images/u2_1_1.png)
+ 
+- Captura de pantalla con verificaciones sobre kubectl e información del clúster.
+ ![kubectl](../images/u2_1_2.png)
+ 
+- Captura de pantalla con la verificación del SWAP 
+![swap](../images/u2_1_3.png)
+ 
