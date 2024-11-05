@@ -54,6 +54,7 @@ Measure-Command { docker build -t ms_clients_original . }
 
 ```
 
+
     - Verifica el tamaño de la imagen usando:
 
 ```bash
@@ -63,8 +64,6 @@ docker images
 
     - Registra el tamaño de la imagen y el tiempo de construcción en la tabla como "Antes de Optimización".
 
-
----
 
 ### Paso 2: Cambiar la Imagen Base para Reducir el Tamaño
 
@@ -93,10 +92,9 @@ ENTRYPOINT ["java", "-jar", "app.jar"]
 time docker build -t ms_clients_op1 .
 ```
 
-    - Verifica el tamaño de la imagen y el tiempo de construcción con los mismos comandos de antes. Registra los resultados en la columna "Después de Optimización".
+- Verifica el tamaño de la imagen y el tiempo de construcción con los mismos comandos de antes. Registra los resultados en la columna "Después de Optimización".
 
 
----
 
 ### Paso 3: Implementar Multi-Stage Build (Compilación en Varias Etapas)
 
@@ -134,14 +132,13 @@ ENTRYPOINT ["java", "-jar", "app.jar"]
 time docker build -t ms_clients_opt2 .
 ```
 
-    - Verifica el tamaño de la imagen resultante y toma nota del tiempo de construcción.
+- Verifica el tamaño de la imagen resultante y toma nota del tiempo de construcción.
 
 3. **Actualizar la Tabla de Resultados:**
 
     - Registra los valores en la columna "Después de Optimización".
 
 
---- 
 
 ### Paso 4: Verificar el Número de Capas
 
@@ -157,9 +154,8 @@ docker history ms_clients_optimized_multistage
     - Anota el número de capas en la tabla para la imagen antes y después de la optimización.
 
 
----
 
-## Paso 5: Medir el Tiempo de Inicio del Contenedor
+### Paso 5: Medir el Tiempo de Inicio del Contenedor
 
 1. **Ejecutar el Contenedor y Medir el Tiempo de Inicio:**
 
@@ -170,16 +166,15 @@ docker history ms_clients_optimized_multistage
 time docker run --rm -p 9095:9095 ms_clients_optimized_multistage
 ```
 
-    - Puedes observar en el registro de salida cuándo la aplicación está lista para recibir solicitudes y tomar nota del tiempo en segundos.
+- Puedes observar en el registro de salida cuándo la aplicación está lista para recibir solicitudes y tomar nota del tiempo en segundos.
 
 2. **Actualizar la Tabla con el Tiempo de Inicio:**
 
     - Anota el tiempo de inicio en la tabla.
 
 
----
 
-##Paso 6: Observaciones y Conclusiones
+### Paso 6: Observaciones y Conclusiones
 
 1. **Multi-Stage Build:** Asegúrate de registrar si se utilizó multi-stage build en la columna correspondiente de la tabla.
 
@@ -191,20 +186,25 @@ time docker run --rm -p 9095:9095 ms_clients_optimized_multistage
 
 
 
+
 ## Resultado Esperado
 
+<br/><br/>
 - Captura de pantalla para la creación de la primera imagen base, en este caso, ms_clientes_original
 
 ![docker -run hello-world](../images/u1_7_1.png)
 
+<br/><br/>
 - Captura de pantalla para la creación de la segunda imagen, cambiando solo la imagen base de Java, en este caso, ms_clientes_opt1
 
 ![docker -run hello-world](../images/u1_7_2.png)
 
+<br/><br/>
 - Captura de pantalla para la creación de la tercera imagen, aplicando multi-stage, en este caso, ms_clientes_opt2
 
 ![docker -run hello-world](../images/u1_7_3.png)
 
+<br/><br/>
 - Captura de pantalla revisando las étapas de la imagen mx_clientes_opt2
 
 ![docker -run hello-world](../images/u1_7_4.png)
