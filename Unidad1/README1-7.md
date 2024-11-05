@@ -9,7 +9,7 @@ Al finalizar esta actividad, serás capaz de optimizar un Dockerfile aplicando p
 
 ## Instrucciones
 
-## Paso 1: Clonar el Dockerfile Actual
+### Paso 1: Clonar el Dockerfile Actual
 
 1. **Crear un Directorio de Trabajo:**
 
@@ -66,7 +66,7 @@ docker images
 
 ---
 
-##Paso 2: Cambiar la Imagen Base para Reducir el Tamaño
+### Paso 2: Cambiar la Imagen Base para Reducir el Tamaño
 
 
 1. **Cambiar de openjdk:21-jdk-slim a eclipse-temurin:21-jre-jammy:**
@@ -98,7 +98,7 @@ time docker build -t ms_clients_op1 .
 
 ---
 
-##Paso 3: Implementar Multi-Stage Build (Compilación en Varias Etapas)
+### Paso 3: Implementar Multi-Stage Build (Compilación en Varias Etapas)
 
 1. **Configurar Etapa de Compilación en el Dockerfile:**
 
@@ -143,7 +143,7 @@ time docker build -t ms_clients_opt2 .
 
 --- 
 
-## Paso 4: Verificar el Número de Capas
+### Paso 4: Verificar el Número de Capas
 
 1. **Inspeccionar las Capas de la Imagen:**
 
