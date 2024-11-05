@@ -1,4 +1,4 @@
-# Práctica 1.4 Construir Imagen y Contenedor Docker
+# Práctica 3.4 Escribiendo YAML de ResourceQuota.
 
 ## Objetivo
 
