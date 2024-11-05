@@ -14,7 +14,7 @@ Al finalizar la actividad, serás capaz de escribir y aplicar un archivo YAML pa
 
     b. Escribe el siguiente YAML como ejemplo básico para un Deployment en Kubernetes. Este archivo describe la configuración necesaria para desplegar una aplicación.
 
-```yaml
+    ```yaml
 
 apiVersion: apps/v1
 kind: Deployment
@@ -37,7 +37,7 @@ spec:
         image: nginx:1.21  # Imagen del contenedor
         ports:
         - containerPort: 80  # Puerto expuesto dentro del contenedor
-```
+    ```
 
 <br/>
 
@@ -55,17 +55,17 @@ spec:
 
     - Ejecuta el siguiente comando para aplicar el archivo YAML en el clúster:
 
-```bash
+    ```bash
  
 kubectl apply -f deployment.yaml
-```
+    ```
 
 -   Verifica que el Deployment se haya creado correctamente ejecutando:
 
-```bash
+    ```bash
  
 kubectl get deployments
-```
+    ```
 
 <br/>
 
@@ -73,10 +73,10 @@ kubectl get deployments
 
 - Para verificar que los pods se hayan iniciado correctamente:
 
-```bash
+    ```bash
  
 kubectl get pods -l app=mi-aplicacion
-```
+    ```
  
  <br/>
 
@@ -84,22 +84,22 @@ kubectl get pods -l app=mi-aplicacion
 
 - Para obtener más detalles sobre el Deployment creado:
 
-```bash
+    ```bash
  
 kubectl describe deployment mi-aplicacion
-```
+    ```
 
 <br/>
 
 
 6. **Escalar el Deployment (Opcional)**
 
-- Si deseas cambiar el número de réplicas, puedes modificar el valor de replicas en **deployment.yaml** y volver a aplicar el archivo, o bien usar el siguiente comando para escalar el Deployment directamente:
+-   Si deseas cambiar el número de réplicas, puedes modificar el valor de replicas en **deployment.yaml** y volver a aplicar el archivo, o bien usar el siguiente comando para escalar el Deployment directamente:
 
-```bash
+    ```bash
  
 kubectl scale deployment mi-aplicacion --replicas=5
-```
+    ```
  
 
 <br/>
@@ -109,10 +109,10 @@ kubectl scale deployment mi-aplicacion --replicas=5
 
 - Cuando hayas terminado, puedes eliminar el Deployment y sus recursos asociados con:
 
-```bash
+    ```bash
  
 kubectl delete -f deployment.yaml
-```
+    ```
  
 
 <br/>
@@ -121,32 +121,32 @@ kubectl delete -f deployment.yaml
 
 ## Resultado Esperado
 
-- Captura de pantalla
+- Captura de pantalla con el YAML a aplicar en la práctica 3.1, además muestra el antes y después de aplicar el YAML.
 
-![](../images/u3_1_1.png)
-
-<br/>
-
-- Captura de pantalla
-
-![](../images/u3_1_2.png)
+![YAML](../images/u3_1_1.png)
 
 <br/>
 
-- Captura de pantalla
+- Captura de pantalla que muestra la cantidad de replicas de la aplicación y el estado de las mismas.
 
-![](../images/u3_1_3.png)
-
-<br/>
-
-- Captura de pantalla
-
-![](../images/u3_1_4.png)
+![kubectl ](../images/u3_1_2.png)
 
 <br/>
 
-- Captura de pantalla
+- Captura de pantalla que muestra la descripción del despliegue.
 
-![](../images/u3_1_5.png)
+![kubectl](../images/u3_1_3.png)
+
+<br/>
+
+- Captura de pantalla que muestra el antes y después de escalar de tres a cinco replicas.
+
+![kubectl](../images/u3_1_4.png)
+
+<br/>
+
+- Captura de pantalla que muestra el antes y después de eleminiar el deployment.
+
+![kubectl](../images/u3_1_5.png)
 
 <br/>
