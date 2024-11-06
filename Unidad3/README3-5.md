@@ -11,7 +11,7 @@ Al finalizar la actividad, serás capaz de escribir y aplicar un archivo YAML pa
 
 ### 1. Crear el Deployment Base
 
-    - Antes de configurar el HPA, necesitas un Deployment en el clúster de Kubernetes que se pueda escalar. Este Deployment ejecutará una aplicación que consumirá recursos y permitirá observar el autoscaling en acción.
+- Antes de configurar el HPA, necesitas un Deployment en el clúster de Kubernetes que se pueda escalar. Este Deployment ejecutará una aplicación que consumirá recursos y permitirá observar el autoscaling en acción.
 
 ```yaml
 
