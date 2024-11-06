@@ -9,6 +9,75 @@ Al finalizar la actividad, serás capaz de escribir y aplicar un archivo YAML qu
 
 30 minutos
 
+
 ## Instrucciones
 
+1. **Crear un Namespace:**
+
+    - Define y crea un nuevo namespace en el clúster que servirá para aplicar la cuota de recursos. El nombre del namespace debe ser claro y relacionado con su propósito, por ejemplo, `limite-recursos`.
+
+<br/>
+
+2. **Definir la ResourceQuota:**
+
+    - Escribe un archivo YAML para la configuración de la `ResourceQuota`.
+
+    - La configuración debe incluir límites tanto para el uso de **CPU** como de **Memory**.
+
+    - Establece las restricciones de recursos de forma que, dentro de este namespace, los pods no puedan exceder los límites establecidos.
+
+<br/>
+
+3. **Parámetros a configurar:**
+
+
+    - Incluye en la ResourceQuota los siguientes parámetros:
+
+        - **CPU**: Define el límite de CPU en millicores (por ejemplo, 1000m para un núcleo completo).
+
+        - **Memory**: Define el límite de memoria en MiB o GiB (por ejemplo, 512Mi).
+
+    - Establece tanto el límite máximo de recursos como el mínimo si deseas garantizar recursos mínimos para los pods en este namespace.
+
+<br/>
+
+4. **Aplicar la configuración**:
+
+    - Utiliza el comando kubectl apply -f <nombre_del_archivo>.yaml para aplicar el archivo YAML en el clúster.
+
+    - Verifica que la ResourceQuota se haya creado correctamente en el namespace especificado.
+
+<br/>
+
+5. **Validación de la ResourceQuota**:
+
+    - Confirma que la cuota de recursos se haya aplicado correctamente en el namespace usando `kubectl describe resourcequota <nombre_de_la_resourcequota> -n <namespace>`.
+
+    - Revisa que los límites se apliquen cuando intentes crear recursos que excedan las restricciones establecidas.
+
+Al finalizar, revisa los resultados y anota tus observaciones sobre cómo se comportan los pods cuando alcanzan los límites definidos en la **ResourceQuota**.
+
+<br/>
+
 ## Resultado Esperado
+
+- Cuando ejecutas el comando para crear el **test-pod** con recursos que exceden los límites definidos en la **ResourceQuota**, deberías ver una salida de error similar a la siguiente:
+
+
+```text
+Error from server (Forbidden): pods "test-pod" is forbidden: exceeded quota: limite-de-recursos, requested: requests.cpu=600m, requests.memory=300Mi, limits.cpu=1500m, limits.memory=1Gi, used: requests.cpu=0, requests.memory=0, limits.cpu=0, limits.memory=0, limited: requests.cpu=500m, requests.memory=256Mi, limits.cpu=1000m, limits.memory=512Mi
+```
+
+- **Observaciones**:
+
+    - **Error from server (Forbidden)**: Indica que la creación del pod ha sido rechazada debido a una restricción de permisos basada en la ResourceQuota.
+
+    - **exceeded quota: limite-de-recursos**: Señala que el recurso ResourceQuota llamado limite-de-recursos en el namespace limite-recursos está imponiendo el límite.
+
+    - **requested**: Muestra los recursos solicitados por el pod (cpu=600m, memory=300Mi para requests y cpu=1500m, memory=1Gi para limits).
+
+    - **used**: Indica los recursos ya en uso en este namespace. Si no hay otros pods, estos valores deberían ser 0.
+
+    - **limited**: Especifica los valores máximos permitidos por la ResourceQuota para requests y limits.
+
+Esta salida confirmaría que los límites en la **ResourceQuota** están funcionando como se espera, evitando que el Pod se cree con configuraciones que exceden el consumo permitido de CPU y memoria en el namespace limite-recursos.
