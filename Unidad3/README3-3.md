@@ -278,4 +278,10 @@ kubectl get pods -n practica-stateful-deployment
 <br/>
 
 
+- Captura de pantalla que muestra la eliminación del espacio de nombres.
+
+![kubectl]](../images/u3_3_9.png)
+
+<br/>
+
 
