@@ -1,4 +1,4 @@
-# Práctica 2.2 Verificación de Ambiente de Curso
+# Práctica 4.2 Creación de Secrets en K8s
 
 ## Objetivo
 Al finalizar esta práctica, serás capaz de crear Secrets en Kubernetes utilizando YAML

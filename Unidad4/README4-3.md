@@ -1,9 +1,8 @@
-# Práctica 2.3 Agregación de un nuevo Worker Node al Clúster.
+# Práctica 4.3 Configuración de Job e InitContainers
 
 ## Objetivo
 
 Al finalizar esta práctica, serás capaz de configurar Jobs e InitContainers en Kubernetes para ejecutar tareas específicas o configuraciones previas.
-
 
 
 ## Duración aproximada

@@ -1,4 +1,4 @@
-# Práctica 2.1 Verificación de Instalación del Master Node  
+# Práctica 4.1 Configuración de ConfigMaps & Variables de Entorno
 
 ## Objetivo 
 Al finalizar esta práctica, serás capaz de crear y gestionar ConfigMaps a partir de archivos y variables de entorno en Kubernetes.
