@@ -123,6 +123,7 @@ kubectl describe pvc pvc-volume
 
 - Si el **PersistentVolumeClaim** muesta un estado **Pending**, esto indica que Kubernetes no pudo enlazar el PVC con un PV compatible.
 
+<br/>
 
 ### Paso 3. Configura un Pod que use el PersistentVolumeClaim
 
@@ -192,6 +193,7 @@ ls -l /mnt/data
 cat /mnt/data/hola.txt
 ```
 
+<br/>
 
 ### Paso 5. Limpieza
 
