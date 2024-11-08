@@ -1,4 +1,4 @@
-# Prácticas de la Unidad 5. Kubernetes: Volumenes
+# Prácticas de la Unidad 5. Kubernetes: Volumes
 
 - [Práctica 5.1 Introducción a los Volúmenes de K8s ](README5-1.md)
 

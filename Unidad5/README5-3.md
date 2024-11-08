@@ -1,4 +1,4 @@
-# Práctica 2.3 Agregación de un nuevo Worker Node al Clúster.
+# Práctica 5.3 Configuración de Kubernetes Ingress
 
 ## Objetivo
 

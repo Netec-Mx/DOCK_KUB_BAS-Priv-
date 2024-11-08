@@ -1,4 +1,4 @@
-Práctica 4.4 Implementación de Probes & Policies en Pods.
+# Práctica 5.4 Escribiendo y Configurando YAML para Ingress Controller
 
 
 ## Objetivo
