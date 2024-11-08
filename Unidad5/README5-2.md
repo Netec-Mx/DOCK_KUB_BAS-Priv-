@@ -46,7 +46,7 @@ kubectl get ns
 
 <br/>
 
-### Crear recursos en el Namespace
+### 3. Crear un Deployment en el Namespace
 
 Especifica el Namespace en el que quieres crear recursos. Aquí, crearemos un Deployment en el Namespace development.
 
@@ -87,9 +87,9 @@ kubectl get deployments -n development
 
 <br/>
 
-### Crear un Servicio en el Namespace
+### 4. Crear un Servicio en el Namespace
 
-Crea un Service para exponer el Deployment en el Namepace **development**.
+- Crea un Service para exponer el Deployment en el Namepace **development**.
 
 ```yaml
 apiVersion: v1
@@ -108,7 +108,7 @@ spec:
 
 ```
 
-Aplica este archivo para crear el servicio en el espacio de nombres especificado
+- Aplica este archivo para crear el servicio en el espacio de nombres especificado
 
 ```bash
 kubectl apply -f nginx-service.yaml
@@ -118,7 +118,7 @@ kubectl get services -n development
 ```
 
 
-Lista todos los objetos dentro del Namespace
+- Lista todos los objetos dentro del Namespace
 
 ```bash
 kubectl get all -n development
@@ -128,8 +128,8 @@ kubectl get configmaps,secrets -n development
 ```
 
 <br/>
-## Resultado Esperado
 
+## Resultado Esperado
 
 - Captura de pantalla que muestra los Namespaces creados hasta este momento, los predeterminados (default, kube-node-lease. kube-public y kube-system) y algunos otros creados de prácticas pasadas. Ademas se muestra todos los objetos/recursos creado en un Namespace específico.
 
