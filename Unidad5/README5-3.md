@@ -6,7 +6,7 @@ Al finalizar esta práctica, serás capaz de implementar y configurar Kubernetes
 
 ## Objetivo Visual
 
-![Ingress - Objetivo Inicial](../images/u5_3_1.png)
+![Ingress - Objetivo Inicial](../images/u5_3_16.png)
 
 
 ## Duración aproximada
