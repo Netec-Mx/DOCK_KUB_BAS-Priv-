@@ -400,6 +400,7 @@ curl -H "Host: app2.example.com" http://192.168.0.3:32737
 
 5. Revisa el archivo de hosts local para que los nombres de host apunten a la IP del nodo.
 
+<br/>
 
 ### Resumen de comandos
 
