@@ -373,9 +373,8 @@ curl -H "Host: app2.example.com" http://192.168.0.3:32737
 <br/>
 <br/>
 
----
 
-### Resumen de la configuración
+## Resumen de la configuración
 
 1. Creaste dos aplicaciones en diferentes namespaces (app1 y app2).
 
@@ -388,7 +387,7 @@ curl -H "Host: app2.example.com" http://192.168.0.3:32737
 
 <br/>
 
-### Si tienes problemas con la práctica, aquí algunas pistas.
+## Si tienes problemas con la práctica, aquí algunas pistas.
 
 1. Confirma que los recursos Ingress están aplicados en los namespaces correctos.
 
@@ -402,7 +401,7 @@ curl -H "Host: app2.example.com" http://192.168.0.3:32737
 
 <br/>
 
-### Resumen de comandos
+## Resumen de comandos
 
 Cada comando de esta lista se ha usado para configurar, diagnosticar o resolver problemas relacionados con Ingress, servicios y redes en Kubernetes.  
 
