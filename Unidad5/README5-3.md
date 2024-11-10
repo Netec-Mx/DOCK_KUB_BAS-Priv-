@@ -321,18 +321,17 @@ curl -H "Host: app2.example.com" http://192.168.0.3:32737
 ## Resultado Esperado 
 
 
-- Captura de pantalla que muestra la verificacion del controlador Ingress funciona correctamente
+- Captura de pantalla que muestra la verificacion del controlador Ingress funciona correctamente.
 
 ![kubectl](../images/u5_3_2.png)
 
 <br/>
 
-- Captura de pantalla que muestra la verificacion de los espacios de nombres app1 & app2. Además de los dos servicios app1-service & app2-service
+- Captura de pantalla que muestra la verificacion de los espacios de nombres app1 & app2. Además de los dos servicios app1-service & app2-service.
 
 ![kubectl](../images/u5_3_4.png)
 
- 
-<br/>
+ <br/>
 
 - Captura de pantalla que muestra el YAML de Ingress para la aplicación app1.
 
@@ -358,19 +357,46 @@ curl -H "Host: app2.example.com" http://192.168.0.3:32737
 
 <br/>
 
-- Captura de pantalla que muestra un puerto en la columna PORT(S), como **80:<NodePort>/TCP**. Este **NodePort** permite acceder al Ingress Controller usando la IP del nodo de Kubernetes y el puerto asignado.
+- Captura de pantalla que muestra el cambio sobre **ingress-nginx-controller** párámetro **External Traffic Policy: Cluster**.
 
 ![kubectl](../images/u5_3_9.png)
 
 <br/>
-
 
 - La configuración de Ingress en Kubernetes está funcionando correctamente, ya que las pruebas de enrutamiento mediante curl muestran que las solicitudes dirigidas a app1.example.com y app2.example.com reciben las respuestas esperadas desde los servicios correspondientes. Además, la configuración en el archivo /etc/hosts permite la resolución local de nombres de host, facilitando el acceso y verificación del enrutamiento a través del controlador de Ingress expuesto en un puerto específico (NodePort).
 
 ![kubectl](../images/u5_3_10.png)
 
 <br/>
+
+- Captura de pantalla que muestra la configuración de Ingress Controller, con un **External Traffic Policy: Local**
+
+![kubectl](../images/u5_3_14.png)  
+
+
 <br/>
+
+- Captura de pantalla que muestra como con la configuración de Ingress Controller, con un **External Traffic Policy: Local**, deesde la máquina anfitriona no se puede ver la app/servicio.
+
+![kubectl](../images/u5_3_15.png)
+
+<br/>
+
+- Captura de pantalla que muestra la configuración actual de Ingress Controller, con un **External Traficc Policy: Cluster**
+
+![kubectl](../images/u5_3_12.png)
+
+<br/>
+
+- Captura de pantalla que muestra el consumo de las aplicaciones/servicios en la máquina afitriona.
+
+![kubectl](../images/u5_3_11.png)
+
+<br/>
+
+- Captura de pantalla que muestra nuevmente los consumos de las aplicaciones/servicios en el Master Node.
+
+![kubectl](../images/u5_3_13.png)
 <br/>
 
 
