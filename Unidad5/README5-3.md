@@ -370,8 +370,10 @@ curl -H "Host: app2.example.com" http://192.168.0.3:32737
 ![kubectl](../images/u5_3_10.png)
 
 <br/>
-
 <br/>
+<br/>
+
+---
 
 ### Resumen de la configuración
 
@@ -383,8 +385,8 @@ curl -H "Host: app2.example.com" http://192.168.0.3:32737
 
 4. Probaste el enrutamiento accediendo a app1.example.com y app2.example.com.
 
-Este Ingress ahora redirige el tráfico adecuadamente según las reglas de hosts y rutas configuradas.
 
+<br/>
 
 ### Si tienes problemas con la práctica, aquí algunas pistas.
 
