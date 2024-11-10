@@ -332,7 +332,7 @@ curl -H "Host: app2.example.com" http://192.168.0.3:32737
 ![kubectl](../images/u5_3_4.png)
 
  
- br/>
+<br/>
 
 - Captura de pantalla que muestra el YAML de Ingress para la aplicación app1.
 
