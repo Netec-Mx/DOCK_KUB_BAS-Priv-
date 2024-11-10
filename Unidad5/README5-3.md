@@ -469,8 +469,8 @@ kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx
 
 ## Referencias
 
-- ![Ingress NGINX Controller](https://github.com/kubernetes/ingress-nginx)
+- [Ingress NGINX Controller](https://github.com/kubernetes/ingress-nginx)
 
-- ![Kubernetes Ingress with NGINX Ingress Controller Example](https://spacelift.io/blog/kubernetes-ingress)
+- [Kubernetes Ingress with NGINX Ingress Controller Example](https://spacelift.io/blog/kubernetes-ingress)
 
-- ![Ingress Controllers](https://kubernetes.io/docs/concepts/services-networking/ingress-controllers/ )
+- [Ingress Controllers](https://kubernetes.io/docs/concepts/services-networking/ingress-controllers/ )
