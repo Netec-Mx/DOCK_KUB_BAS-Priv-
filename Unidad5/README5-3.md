@@ -357,7 +357,7 @@ curl -H "Host: app2.example.com" http://192.168.0.3:32737
 
 <br/>
 
-- Captura de pantalla que muestra el cambio sobre **ingress-nginx-controller** párámetro **External Traffic Policy: Cluster**.
+- Captura de pantalla de la salida del comando `kubectl get svc -n ingress-nginx`, el cual muestra información sobre todos los servicios (svc) en el espacio de nombres ìngress-nginx`. Este comando es útil para verificar los servicios asociados al controlador de Ingress, incluyendo detalles como el tipo de servicio, por ejemplo, NodePort o LoadBalancer, la dirección IP del clúster, el puerto de acceso y cualquier IP externa asignada.
 
 ![kubectl](../images/u5_3_9.png)
 
