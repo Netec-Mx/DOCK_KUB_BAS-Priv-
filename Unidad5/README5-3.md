@@ -402,6 +402,7 @@ curl -H "Host: app2.example.com" http://192.168.0.3:32737
 
 
 <br/>
+
 ## Resumen de la configuración
 
 1. Creaste dos aplicaciones en diferentes namespaces (app1 y app2).
