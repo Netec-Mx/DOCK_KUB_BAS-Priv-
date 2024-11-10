@@ -181,7 +181,7 @@ kubectl get pods -o wide -l app=specialized
 
 <br/>
 
-Captura de pantalla que muestra el antes y despúes de la creación del **DaemonSet**.
+- Captura de pantalla que muestra el antes y despúes de la creación del **DaemonSet**.
 
 ![kubectl](../images/u5_5_3.png)
 
