@@ -280,24 +280,24 @@ kubectl get svc -n ingress-nginx
 
 - Probablemente tendrás que cambiar de el tipo de servicio a **NodePort**
 
-a. Edita el servicio ingress-nginx-controller para cambiarlo a tipo NodePort, lo que le permitirá exponer el Ingress Controller a través de un puerto específico del nodo:
+  a. Edita el servicio ingress-nginx-controller para cambiarlo a tipo NodePort, lo que le permitirá exponer el Ingress Controller a través de un puerto específico del nodo:
 
-```bash
-kubectl edit svc ingress-nginx-controller -n ingress-nginx
-```
+  ```bash
+  kubectl edit svc ingress-nginx-controller -n ingress-nginx
+  ```
 
-b. En el editor, cambia type: LoadBalancer a type: NodePort, y guarda los cambios. El archivo debería verse algo así:
+  b. En el editor, cambia type: LoadBalancer a type: NodePort, y guarda los cambios. El archivo debería verse algo así:
 
-```yaml
-spec:
-  type: NodePort
-```
+  ```yaml
+  spec:
+    type: NodePort
+  ```
 
-c. Verifica los cambios, con el siguiente comando:
+  c. Verifica los cambios, con el siguiente comando:
 
-```bash
-kubectl get svc -n ingress-nginx
-```
+  ```bash
+  kubectl get svc -n ingress-nginx
+  ```
 
 <br/>
 
