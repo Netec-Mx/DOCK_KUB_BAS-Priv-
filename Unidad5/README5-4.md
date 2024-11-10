@@ -11,44 +11,96 @@ Al finalizar esta práctica, serás capaz de crear archivos YAML para el Ingress
 
 ## Prerrequisitos
 
-- Un clúster de Kubernetes en funcionamiento.
+1. Haber realizado la **Práctica 5.3 Configuración de Kubernetes Ingress**
 
-- Ingress Controller instalado (como NGINX Ingress Controller).
-
-
-- Puedes instalar el NGINX Ingress Controller en el clúster ejecutando:
-
-```bash
-kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/main/deploy/static/provider/cloud/deploy.yaml
-```
-
-- Asegúrate de que el controlador esté en funcionamiento:
-
-```bash
-kubectl get pods -n ingress-nginx
-```
+2. Dado que actualmente tienes configurados Hosts separados para cada aplicación (app1.example.com & app2.example.com ), modificaras el archivo YAML de Ingress para añadir las rutas `/app1` y `/app2` bajo estos host existentes.
 
 <br/>
-
-## Objetivo Visual
-
-
-
-
 
 ## Instrucciones
 
-## Paso 1. Crear Namespaces y aplicaciones de prueba
+## Paso 1. Eliminar rutas actuales
 
-
-<br/>
-
-## Paso 2. Configurar Ingress
-
+1. Elimina todas las rutas de Ingress asociadas a los servicios app1-service y app2-service.
 
 <br/>
 
-## Paso 3. Probar el enrutamiento
+## Paso 2. Actualizar la configuración de Ingress
 
+1. Crea un nuevo YAML de tu Ingress para incluir los nuevos paths pada host: `app1.example.com` y `app2.example.com`. Llama a tu archivo multi-hosts-ingress.yaml, _en esta ocasión tu tendrás que crear el contenido del YAML_
+
+    - Redirige `http://app1.example.com/app1` al servicio app1-servicio y `http://app2.example.com/app2` al servicio app2-servicio  
+
+2. Aplica YAML que creaste en el punto anterior.
+
+<br/>
+
+## Paso 3. Probar las nuevas rutas
+
+1. Utiliza los comandos `curl` para verificar las rutas actualizadas.
+
+    - Verifica la ruta /app1 en app1.example.com
+
+    ```bash
+    curl -H "Host: example.com" http://<ip-master-node>:<puerto>/app1
+    ```
+
+    - Verifica la ruta /app2 en app2.example.com
+
+    ```bash
+    curl -H "Host: example.com" http://<ip-master-node>:<puerto>/app2
+    ```
+
+<br/>
+<br/>
 
 ## Resultado Esperado
+
+- Capturas de pantallas que muestran la configuración previa.
+
+1. Configuración actual de Ingress.
+
+![kubectl](../images/u5_4_1.png)
+
+<br/>
+
+
+2. Configuración de los servicios.
+
+
+![kubectl](../images/u5_4_2.png)
+
+<br/>
+
+
+3. Detalles específicos de un Ingress particular.
+
+
+![kubectl](../images/u5_4_3.png)
+
+<br/>
+
+4. Detalles específicos de un servicio particular.
+
+
+![kubectl](../images/u5_4_4.png)
+
+<br/>
+
+
+- Captura de pantalla que muestra se encuentran los paths en el consumo con la configuración previa a aplicar el nuevo YAML.
+
+![kubectl](../images/u5_4_5.png)
+
+<br/>
+
+- Captura de pantalla que muestra la aplicación del YAML solicitado (al participante).
+
+![kubectl](../images/u5_4_6.png)
+
+<br/>
+
+- Captura de pantalla que muestra el consumo exitoso de las rutas solicitadas, y como las anteriores rutas (las de la práctica previa ya no funcionan)
+
+![kubectl](../images/u5_4_7.png)
+
