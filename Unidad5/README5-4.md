@@ -11,9 +11,7 @@ Al finalizar esta práctica, serás capaz de crear archivos YAML para el Ingress
 
 ## Prerrequisitos
 
-1. Haber realizado la **Práctica 5.3 Configuración de Kubernetes Ingress**
-
-2. Dado que actualmente tienes configurados Hosts separados para cada aplicación (app1.example.com & app2.example.com ), modificaras el archivo YAML de Ingress para añadir las rutas `/app1` y `/app2` bajo estos host existentes.
+- Haber realizado la **Práctica 5.3 Configuración de Kubernetes Ingress**
 
 <br/>
 
@@ -21,13 +19,15 @@ Al finalizar esta práctica, serás capaz de crear archivos YAML para el Ingress
 
 ## Paso 1. Eliminar rutas actuales
 
-1. Elimina todas las rutas de Ingress asociadas a los servicios app1-service y app2-service.
+1. Dado que actualmente tienes configurados Hosts separados para cada aplicación (app1.example.com & app2.example.com).
+
+2. Elimina todas las rutas de Ingress asociadas a los servicios app1-service y app2-service.
 
 <br/>
 
 ## Paso 2. Actualizar la configuración de Ingress
 
-1. Crea un nuevo YAML de tu Ingress para incluir los nuevos paths pada host: `app1.example.com` y `app2.example.com`. Llama a tu archivo multi-hosts-ingress.yaml, _en esta ocasión tu tendrás que crear el contenido del YAML_
+1. Crea un nuevo YAML de tu Ingress para incluir los nuevos paths pada host: `app1.example.com` y `app2.example.com`. Llama a tu archivo `multi-hosts-ingress.yaml`, _en esta ocasión tu tendrás que crear el contenido del YAML_
 
     - Redirige `http://app1.example.com/app1` al servicio app1-servicio y `http://app2.example.com/app2` al servicio app2-servicio  
 
@@ -58,29 +58,21 @@ Al finalizar esta práctica, serás capaz de crear archivos YAML para el Ingress
 
 - Capturas de pantallas que muestran la configuración previa.
 
-1. Configuración actual de Ingress.
+1. Configuración previa a los cambios de Ingress.
 
 ![kubectl](../images/u5_4_1.png)
 
 <br/>
 
 
-2. Configuración de los servicios.
-
-
-![kubectl](../images/u5_4_2.png)
-
-<br/>
-
-
-3. Detalles específicos de un Ingress particular.
+2. Detalles específicos de un Ingress particular.
 
 
 ![kubectl](../images/u5_4_3.png)
 
 <br/>
 
-4. Detalles específicos de un servicio particular.
+3. Detalles específicos de un servicio particular.
 
 
 ![kubectl](../images/u5_4_4.png)
@@ -94,7 +86,7 @@ Al finalizar esta práctica, serás capaz de crear archivos YAML para el Ingress
 
 <br/>
 
-- Captura de pantalla que muestra la aplicación del YAML solicitado (al participante).
+- Captura de pantalla que muestra la aplicación del YAML solicitado en la práctica.
 
 ![kubectl](../images/u5_4_6.png)
 
@@ -102,5 +94,5 @@ Al finalizar esta práctica, serás capaz de crear archivos YAML para el Ingress
 
 - Captura de pantalla que muestra el consumo exitoso de las rutas solicitadas, y como las anteriores rutas (las de la práctica previa ya no funcionan)
 
-![kubectl](../images/u5_4_7.png)
+![kubectl](../images/u5_4_8.png)
 
