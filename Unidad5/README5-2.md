@@ -1,19 +1,19 @@
-# Práctica 5.2 Implementación y Gestión de Namespaces en Kubernetes
+# Práctica 5.2. Implementación y gestión de Namespaces en Kubernetes
 
 ## Objetivo
-Implementar Namespaces en Kubernetes para organizar y gestionar recursos dentro del clúster de forma eficaz
+- Implementar Namespaces en Kubernetes para organizar y gestionar recursos dentro del clúster de forma eficaz.
 
 
 
 ## Duración aproximada
-20 minutos
+- 20 minutos.
 
 
 ## Instrucciones
 
 ### 1. Verificar Namespaces existentes
 
-El siguiente comando mostrará los Namespaces por defecto
+El siguiente comando mostrará los Namespaces por defecto:
 
 ```bash
 kubectl get namespaces
@@ -32,15 +32,15 @@ kubectl get namespaces
 
 ### 2. Crear un nuevo Namespace
 
-Crea un nuevo Namespace llamado **development**
+Crear un nuevo Namespace llamado **development**
 
 ```bash
 kubectl create namespace development
 
-# Verifica el namespace creado correctamente
+# Verificar el namespace creado correctamente
 kubectl get namespaces
 
-# Verifica el namespace con el atajo
+# Verificar el namespace con el atajo
 kubectl get ns
 ```
 
@@ -48,7 +48,7 @@ kubectl get ns
 
 ### 3. Crear un Deployment en el Namespace
 
-Especifica el Namespace en el que quieres crear recursos. Aquí, crearemos un Deployment en el Namespace development.
+Especificar el Namespace en el que quieres crear recursos. Aquí, crearemos un Deployment en el Namespace development.
 
 - Primero, crear un archivo YAML llamado **nginx-development.yaml**
 
@@ -76,7 +76,7 @@ spec:
 
 ```
 
-- Aplica este archivo para desplegar el Deployment en el Namespace **development**
+- Aplicar este archivo para desplegar el Deployment en el Namespace **development**
 
 ```bash
 kubectl apply -f nginx-deployment.yaml
@@ -87,9 +87,9 @@ kubectl get deployments -n development
 
 <br/>
 
-### 4. Crear un Servicio en el Namespace
+### 4. Crear un servicio en el Namespace
 
-- Crea un Service para exponer el Deployment en el Namepace **development**.
+- Crear un Service para exponer el Deployment en el Namepace **development**.
 
 ```yaml
 apiVersion: v1
@@ -108,17 +108,17 @@ spec:
 
 ```
 
-- Aplica este archivo para crear el servicio en el espacio de nombres especificado
+- Aplicar este archivo para crear el servicio en el espacio de nombres especificado.
 
 ```bash
 kubectl apply -f nginx-service.yaml
 
-# Verifica
+# Verificar
 kubectl get services -n development
 ```
 
 
-- Lista todos los objetos dentro del Namespace
+- Lista todos los objetos dentro del Namespace.
 
 ```bash
 kubectl get all -n development
