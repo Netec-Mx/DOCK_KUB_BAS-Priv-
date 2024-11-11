@@ -6,7 +6,7 @@
 
 
 ## Duración aproximada
-20 minutos.
+- 20 minutos.
 
 <br/>
 
@@ -81,9 +81,9 @@ docker images
 
 1. **Cambiar de openjdk:21-jdk-slim a eclipse-temurin:21-jre-jammy:**
 
-    - En el Dockerfile, reemplaza **openjdk:21-jdk-slim** con **eclipse-temurin:21-jre-jammy** para usar solo el entorno de ejecución (JRE) en lugar del kit de desarrollo (JDK). Esto reduce el tamaño porque solo necesitas ejecutar el JAR, no compilarlo.
+    - En el Dockerfile, reemplazar **openjdk:21-jdk-slim** con **eclipse-temurin:21-jre-jammy** para usar solo el entorno de ejecución (JRE) en lugar del kit de desarrollo (JDK). Esto reduce el tamaño porque solo necesitas ejecutar el JAR, no compilarlo.
 
-    - Modifica el `Dockerfile`:
+    - Modificar el `Dockerfile`:
 
 ```dockerfile
  
@@ -112,7 +112,7 @@ time docker build -t ms_clients_op1 .
 
 1. **Configurar etapa de compilación en el Dockerfile:**
 
-    - Modificar el `Dockerfile` para implementar una compilación en varias etapas. En esta configuración, usarás una imagen Maven para compilar el proyecto y luego solo copiarás el archivo JAR compilado a una imagen más ligera.
+    - Modificar el `Dockerfile` para implementar una compilación en varias etapas. En esta configuración, usar una imagen Maven para compilar el proyecto y luego solo copiar el archivo JAR compilado a una imagen más ligera.
 
     - Cambiar el `Dockerfile` a lo siguiente:
 
@@ -226,13 +226,13 @@ time docker run --rm -p 9095:9095 ms_clients_optimized_multistage
 
 <br/>
 
-- Captura de pantalla para la creación de la segunda imagen, cambiando solo la imagen base de Java, en este caso, ms_clientes_opt1
+- Captura de pantalla para la creación de la segunda imagen, cambiar solo la imagen base de Java, en este caso, ms_clientes_opt1
 
 ![docker ](../images/u1_7_2.png)
 
 <br/>
 
-- Captura de pantalla para la creación de la tercera imagen, aplicando multi-stage, en este caso, ms_clientes_opt2
+- Captura de pantalla para la creación de la tercera imagen, aplicar multi-stage, en este caso, ms_clientes_opt2
 
 ![docker ](../images/u1_7_3.png)
 
