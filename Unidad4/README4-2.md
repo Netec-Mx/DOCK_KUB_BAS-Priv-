@@ -1,17 +1,17 @@
-# Práctica 4.2 Creación de Secrets en K8s
+# Práctica 4.2. Creación de Secrets en K8s
 
 ## Objetivo
-Al finalizar esta práctica, serás capaz de crear Secrets en Kubernetes utilizando YAML
+- Crear Secrets en Kubernetes utilizando YAML.
 
 
 ## Duración aproximada
-15 minutos
+- 15 minutos
 
 ## Instrucciones
 
-### 1. Define el Secren en YAML
+### 1. Definir el Secren en YAML
 
--  Crea un archivo YAML llamado **my-secret.yaml** en el cual se definirá el Secret. A continuación, se muestra un ejemplo de cómo definir un Secret con datos de **usuario** y **contraseña** codificados en base64.
+-  Crear un archivo YAML llamado **my-secret.yaml** en el cual se definirá el Secret. A continuación, se muestra un ejemplo de cómo definir un Secret con datos de **usuario** y **contraseña** codificados en base64.
 
 ```yaml
 
@@ -29,28 +29,28 @@ data:
 
 <br/>
 
-### 2. Codifica los datos confidenciales en base64
+### 2. Codificar los datos confidenciales en base64
 
-- Utiliza el siguiente comando para convertir los valores de username y password en base64. En este ejemplo, cambia "username" y "password" por tus valores reales.
+- Utilizar el siguiente comando para convertir los valores de username y password en base64. En este ejemplo, cambia "username" y "password" por tus valores reales.
 
 ```bash
 echo -n 'username' | base64
 echo -n 'password' | base64
 ```
 
-- Copia los valores codificados y pégalos en el archivo **my-secret.yaml** en lugar de `dXNlcm5hbWU=` y `cGFzc3dvcmQ=`.
+- Copiar los valores codificados y pegarlos en el archivo **my-secret.yaml** en lugar de `dXNlcm5hbWU=` y `cGFzc3dvcmQ=`.
 
 <br/>
 
-### 3. Aplica el Secret al clúster
+### 3. Aplicar el Secret al clúster
 
-- Usa el comando `kubectl apply` para crear el Secret en el clúster de Kubernetes
+- Usar el comando `kubectl apply` para crear el Secret en el clúster de Kubernetes:
 
 ```bash
 kubectl apply -f my-secret.yaml
 ```
 
-- Verifica que el Secret se haya creado correctamente ejecutando:
+- Verificar que el Secret se haya creado correctamente ejecutando:
 
 ```bash
 kubectl get secrets my-secret -o yaml
@@ -58,7 +58,7 @@ kubectl get secrets my-secret -o yaml
 
 <br/>
 
-### 4. Accede a los datos del Secret en un Pod.
+### 4. Acceder a los datos del Secret en un Pod.
 
 - Para utilizar el Secret en un Pod, debes hacer referencia al Secret en el archivo YAML del Pod. 
 
@@ -87,7 +87,7 @@ spec:
  
 ```
 
-- Guarda este archivo como **secret-test-pod.yaml** y aplicalo con el siguiente comando:
+- Guardar este archivo como **secret-test-pod.yaml** y aplicarlo con el siguiente comando:
 
 ```bash
 kubectl apply -f secret-test-pod.yaml
@@ -96,9 +96,9 @@ kubectl apply -f secret-test-pod.yaml
 <br/>
 
 
-### 5. Verifica que el Secret sea accesible en el Pod.
+### 5. Verificar que el Secret sea accesible en el Pod.
 
-- Conéctate al Pod y verifica que las variables de entorno estén configuradas correctamente:
+- Conectarse al Pod y verificar que las variables de entorno estén configuradas correctamente:
 
 ```bash
 kubectl exec -it secret-test-pod -- env | grep SECRET_
@@ -108,7 +108,7 @@ kubectl exec -it secret-test-pod -- env | grep SECRET_
 
 ### 6. Limpieza (Opcional)
 
-- Una vez finalizada la práctica, elimina los recursos creados:
+- Una vez finalizada la práctica, eliminar los recursos creados:
 
 
 ```bash
@@ -116,7 +116,7 @@ kubectl delete -f my-secret.yaml
 kubectl delete -f secret-test-pod.yaml
 ```
 
-## Resultado Esperado
+## Resultado esperado
 
 <br/>
 
