@@ -2,7 +2,7 @@
 
 ## Objetivo
 
-Al finalizar esta actividad, serás capaz de clonar un repositorio de microservicio en Java, importarlo en el entorno de desarrollo y analizar su estructura y componentes principales
+- Clonar un repositorio de microservicio en Java, importarlo en el entorno de desarrollo y analizar su estructura y componentes principales
 
 ## Duración aproximada
 
@@ -16,15 +16,15 @@ Al finalizar esta actividad, serás capaz de clonar un repositorio de microservi
 
 1. **Clonar el repositorio**
 
-    - Accede al repositorio inicial de las prácticas donde se encuentra el código.
-    - Clona el repositorio en tu máquina loca, si aún no lo has hecho, ejecutando el siguiente comando en la terminal:
+    - Acceder al repositorio inicial de las prácticas donde se encuentra el código.
+    - Clonar el repositorio en la máquina loca, si aún no lo has hecho, ejecutar el siguiente comando en la terminal:
 
     ```bash
     
     git clone <URL_DEL_REPOSITORIO>
     ```
 
-    - Navega al directorio de la unidad donde se encuentra el código del microservicio:
+    - Navegar al directorio de la unidad donde se encuentra el código del microservicio:
 
     ```bash
     
@@ -37,13 +37,13 @@ Al finalizar esta actividad, serás capaz de clonar un repositorio de microservi
 
 2. **Importar el proyecto en el entorno de desarrollo**
 
-    - Abre tu entorno de desarrollo integrado (IDE), como STS o VSC.
-    - Importa el proyecto:
-        - En STS: Selecciona File > Import..., navega a la carpeta ms-clients y selecciona Open as Project.
+    - Abrir el entorno de desarrollo integrado (IDE), como STS o VSC.
+    - Importar el proyecto:
+        - En STS: Seleccionar File > Import..., navegar a la carpeta ms-clients y seleccionar Open as Project.
 
-        - En VSC: Selecciona Archivo > Abrir Carpeta..., navega a la carpeta ms-clients y selecciona Finish.
+        - En VSC: Seleccionar Archivo > Abrir Carpeta..., navegar a la carpeta ms-clients y seleccionar Finish.
 
-    - Espera a que el IDE cargue al **100%** todas las dependencias de Maven y compile el proyecto.
+    - Esperar a que el IDE cargue al **100%** todas las dependencias de Maven y compile el proyecto.
 
 
 
@@ -52,7 +52,7 @@ Al finalizar esta actividad, serás capaz de clonar un repositorio de microservi
 
 3. **Analizar la estructura del microservicio**
 
-    - Revisa los paquetes principales y los archivos en el proyecto. Identifica los siguientes componentes clave:
+    - Revisar los paquetes principales y los archivos en el proyecto. Identificar los siguientes componentes clave:
 
         - Modelo (entity): Revisa la clase que representa los datos principales (por ejemplo, Client).
         - Repositorio (repository): Examina la interfaz del repositorio que extiende JpaRepository u otra clase de repositorio.
@@ -68,9 +68,9 @@ Al finalizar esta actividad, serás capaz de clonar un repositorio de microservi
 
 4. **Ejecutar y verificar la configuración**
 
-    - Si es posible, ejecuta el microservicio desde el IDE para asegurarte de que la configuración inicial es correcta. Puedes hacerlo desde la clase principal del microservicio, generalmente una clase anotada con @SpringBootApplication.
+    - Si es posible, ejecutar el microservicio desde el IDE para asegurarse de que la configuración inicial es correcta. Puedes hacerlo desde la clase principal del microservicio, generalmente una clase anotada con @SpringBootApplication.
     
-    - Accede a la consola para revisar cualquier mensaje de error o éxito que confirme la correcta inicialización del servicio.
+    - Acceder a la consola para revisar cualquier mensaje de error o éxito que confirme la correcta inicialización del servicio.
 
 
 <br/>
@@ -78,15 +78,15 @@ Al finalizar esta actividad, serás capaz de clonar un repositorio de microservi
 
 5. **Conclusión y análisis**
 
-    - Reflexiona sobre los componentes y su función en la arquitectura del microservicio.
-    - Anota cualquier pregunta o área que desees profundizar en relación con el microservicio o la estructura general de una aplicación en Spring Boot. 
-    - Pregunta a tu instructor cualquier duda de Java.
+    - Reflexionar sobre los componentes y su función en la arquitectura del microservicio.
+    - Anotar cualquier pregunta o área que desees profundizar en relación con el microservicio o la estructura general de una aplicación en Spring Boot. 
+    - Preguntar a el instructor cualquier duda de Java.
 
 
 <br/>
 
 
-6. **Consume el microservicio**
+6. **Consumir el microservicio**
 
     - Usando Postman, Insomia o curl consume los endpoints de tu microservicio
 
