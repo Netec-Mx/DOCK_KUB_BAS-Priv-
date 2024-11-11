@@ -1,17 +1,17 @@
-# Práctica 2.2 Verificación de Instalación del Worker Node  
+# Práctica 2.2. Verificación de instalación del Worker Node  
 
 ## Objetivo
-Al finalizar esta actividad, serás capaz de verificar correctamente la instalación y configuración de un Worker Node en un clúster de Kubernetes.
+- Verificar correctamente la instalación y configuración de un Worker Node en un clúster de Kubernetes.
 
 ## Duración aproximada
-15 minutos
+15 minutos.
 
 <br/>
 
 ## Instrucciones
 
 1. **Acceso al Worker Node**
-   - Ingresa al Worker Node usando SSH:
+   - Ingresar al Worker Node usando SSH:
      ```bash
      ssh usuario@ip_worker_node
      ```
@@ -22,8 +22,8 @@ Al finalizar esta actividad, serás capaz de verificar correctamente la instalac
 
 <br/>
 
-2. **Verificar Conexión con el Master Node**
-   - Comprueba si el Worker Node está correctamente unido al clúster usando el siguiente comando en el **Master Node**:
+2. **Verificar conexión con el Master Node**
+   - Comprobar si el Worker Node está correctamente unido al clúster usando el siguiente comando en el **Master Node**:
      ```bash
      kubectl get nodes
      ```
@@ -31,23 +31,23 @@ Al finalizar esta actividad, serás capaz de verificar correctamente la instalac
 
 <br/>
 
-3. **Verificar el Estado del Servicio Kubelet en el Worker Node**
-   - Ejecuta el siguiente comando en el Worker Node para comprobar el estado del `kubelet`:
+3. **Verificar el estado del servicio Kubelet en el Worker Node**
+   - Ejecutar el siguiente comando en el Worker Node para comprobar el estado del `kubelet`:
      ```bash
      sudo systemctl status kubelet
      ```
-   - **Observación**: El servicio debe estar activo (`active (running)`). Si no lo está, intenta reiniciarlo usando:
+   - **Observación**: El servicio debe estar activo (`active (running)`). Si no lo está, intentar reiniciarlo usando:
      ```bash
      sudo systemctl restart kubelet
      ```
 <br/>
 
-4. **Verificar el Registro en el clúster**
-   - Ejecuta este comando en el Worker Node para verificar que el nodo está registrado:
+4. **Verificar el registro en el clúster**
+   - Ejecutar este comando en el Worker Node para verificar que el nodo está registrado:
      ```bash
      sudo journalctl -u kubelet | grep "Node has joined"
      ```
-   - **Observación**: Este mensaje confirma que el Worker Node ha establecido comunicación con el clúster. Si no aparece, revisa los logs de `kubelet` para identificar posibles errores.
+   - **Observación**: Este mensaje confirma que el Worker Node ha establecido comunicación con el clúster. Si no aparece, revisar los logs de `kubelet` para identificar posibles errores.
    ```bash
      sudo journalctl -u kubelet -n 50
      ```
@@ -55,7 +55,7 @@ Al finalizar esta actividad, serás capaz de verificar correctamente la instalac
 <br/>
 
 5. **Validar que el nodo puede ejecutar pods**
-   - En el Master Node, despliega un pod de prueba en el Worker Node:
+   - En el Master Node, desplegar un pod de prueba en el Worker Node:
      ```bash
      kubectl run nginx-test --image=nginx --restart=Never --node-selector="kubernetes.io/hostname=<worker-node-name>"
      ```
@@ -69,7 +69,7 @@ Al finalizar esta actividad, serás capaz de verificar correctamente la instalac
 <br/>
 
 7. **Eliminar el Pod de Prueba**
-   - Una vez verificada la correcta ejecución del pod, elimina el pod de prueba:
+   - Una vez verificada la correcta ejecución del pod, eliminar el pod de prueba:
      ```bash
      kubectl delete pod nginx-test
      ```
