@@ -1,10 +1,10 @@
 # Práctica 1.2. Verificación de Ambiente de Curso
 
 ## Objetivo
-- Al finalizar esta actividad, serás capaz de verificar y asegurar que todos los componentes necesarios para el curso están instalados y configurados correctamente en el entorno de trabajo.
+- Verificar y asegurar que todos los componentes necesarios para el curso están instalados y configurados correctamente en el entorno de trabajo.
 
 ## Duración aproximada
-25 minutos.
+- 25 minutos.
 
 <br/>
 
@@ -36,7 +36,7 @@ git clone <URL_del_repositorio>
 
 3. **Verificar Maven (Opcional)**
 
-Confirmar que tienes Maven instalado y configurado en tu sistema. Esto es útil en caso de que necesites construir proyectos fuera del entorno de Spring Boot. Verificar la instalación ejecutando:
+Confirmar que tienes Maven instalado y configurado en el sistema. Esto es útil en caso de que necesites construir proyectos fuera del entorno de Spring Boot. Verificar la instalación ejecutando:
 
 ```bash
 mvn -v
@@ -50,7 +50,7 @@ mvn -v
 
 4. **Verificar Gradle (Opcional)**
 
-Asegúrate de que Gradle esté instalado y configurado. Para verificar la instalación, utiliza:
+Asegúrate de que Gradle esté instalado y configurado. Para verificar la instalación, utilizar:
 
 ```bash
 gradle -v
@@ -73,10 +73,10 @@ java --version
 
 6. **Verificar Visual Studio Code (VSC)**
 
-Asegúrate de tener Visual Studio Code instalado, ya sea pulsando el ícono en la aplicación en el escritorio o iniciando en la línea de comandos lo siguiente:
+Asegúrate de tener Visual Studio Code instalado, ya sea pulsando el ícono de la aplicación en el escritorio o iniciando en la línea de comandos lo siguiente:
 
 ```bash
-# Recuerda que el . significa el actual directorio de trabajo
+# Recuerda que el . significa el actual directorio de trabajo.
 code .
 ```
 
@@ -98,11 +98,11 @@ Verificar que tienes los siguientes plugins instalados en Visual Studio Code par
 
 8. **Verificar Conexiones ssh*
 
-Para cada uno de las máquinas virtuales Ubuntu asignadas, verificar que puede conectarse vía ssh a las máquinas virtuales Ubuntu.
+Para cada una de las máquinas virtuales Ubuntu asignadas, verificar que puede conectarse vía ssh a las máquinas virtuales Ubuntu.
 
 ```bash
 # El usuario podría ser mnadmin y la máquina tener la dirección 192.168.0.3
-# La primera vez que e conectas al equipo confirma con **yes** que aceptas la conexión
+# La primera vez que e conectas al equipo confirma con **yes** que aceptas la conexión.
 # La contraseña podría ser: Netec_123
 
 ssh mnadmin@192.168.0.3
@@ -110,7 +110,7 @@ ssh mnadmin@192.168.0.3
 
 <br/> <br/>
 
-## Resultado Esperado
+## Resultado esperado
 
 - ssh usuario@ip-maquina-virtual
 
