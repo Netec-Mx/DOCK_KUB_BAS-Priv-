@@ -1,10 +1,10 @@
-# Práctica 1.5 Consumir Microservicios
+# Práctica 1.5. Consumir Microservicios
 
 ## Objetivo
-Al finalizar esta actividad, serás capaz de consumir microservicios desde una aplicación cliente, utilizando llamadas HTTP para obtener, enviar y manipular datos.
+- Consumir microservicios desde una aplicación cliente, utilizando llamadas HTTP para obtener, enviar y manipular datos.
 
 ## Duración aproximada
-15 minutos
+15 minutos.
 
 <br/>
 
@@ -12,7 +12,7 @@ Al finalizar esta actividad, serás capaz de consumir microservicios desde una a
 
 1. **Verificar el puerto expuesto en el contenedor Docker**
 
-   - Lista los contenedores en ejecución para obtener el `CONTAINER ID` de tu microservicio:
+   - Lista los contenedores en ejecución para obtener el `CONTAINER ID` del microservicio:
 
      ```bash
 
@@ -20,7 +20,7 @@ Al finalizar esta actividad, serás capaz de consumir microservicios desde una a
      docker start ms-clientes # En caso de necesitar levantar el contenedor
      ```
 
-   - Usa el siguiente comando para inspeccionar el contenedor y verificar el puerto HTTP expuesto:
+   - Usar el siguiente comando para inspeccionar el contenedor y verificar el puerto HTTP expuesto:
 
      ```bash
 
@@ -30,7 +30,7 @@ Al finalizar esta actividad, serás capaz de consumir microservicios desde una a
      docker inspect ms-clientes | more
      ```
 
-   - Busca la sección `"Ports"` en la salida para confirmar el mapeo de puertos (interno y externo). El puerto externo será el que podrás usar para realizar las llamadas HTTP (por ejemplo, `9095`).
+   - Buscar la sección `"Ports"` en la salida para confirmar el mapeo de puertos (interno y externo). El puerto externo será el que podrás usar para realizar las llamadas HTTP (por ejemplo, `9095`).
 
 <br/>
 
