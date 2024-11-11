@@ -1,12 +1,12 @@
-# Práctica 1.6 Docker Registry
+# Práctica 1.6. Docker Registry
 
 ## Objetivo
-Al finalizar esta actividad, serás capaz de utilizar Docker Registry para almacenar y gestionar imágenes Docker de manera centralizada
+- Utilizar Docker Registry para almacenar y gestionar imágenes Docker de manera centralizada.
 
 
 ## Duración aproximada
 
-20 minutos
+20 minutos.
 
 <br/>
 
@@ -20,22 +20,22 @@ Al finalizar esta actividad, serás capaz de utilizar Docker Registry para almac
      1. Si aún no tienes una cuenta en Docker Hub, crea una en [https://hub.docker.com](https://hub.docker.com).
 
 
-     2. Inicia sesión en Docker desde la terminal:
+     2. Iniciar sesión en Docker desde la terminal:
         ```bash
 
         docker login
         ```
 
-     3. Ingresa tu nombre de usuario y contraseña cuando te los solicite.
+     3. Ingresar el nombre de usuario y contraseña cuando te los solicite.
 
    - **Opción 2: Docker Registry Local**
-     1. Ejecuta un contenedor de Docker Registry en tu máquina:
+     1. Ejecutar un contenedor de Docker Registry en la máquina:
         ```bash
 
         docker run -d -p 5000:5000 --name registry registry:2
         ```
 
-     2. Esto ejecutará un registro Docker en el puerto 5000 de tu máquina.
+     2. Esto ejecutará un registro Docker en el puerto 5000 de la máquina.
 
 
 <br/>
@@ -43,9 +43,9 @@ Al finalizar esta actividad, serás capaz de utilizar Docker Registry para almac
 
 ### 2. Etiquetar la Imagen Docker
 
-   - Identifica el nombre de la imagen que creaste en prácticas previas.
+   - Identificar el nombre de la imagen que creaste en prácticas previas.
 
-   - Etiqueta la imagen para que apunte al Docker Registry que usarás:
+   - Etiquetar la imagen para que apunte al Docker Registry que usarás:
 
      - **Para Docker Hub**:
        ```bash
