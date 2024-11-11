@@ -26,7 +26,7 @@
 
 ## Control Plane:
 
-1. Instalar paquetería básica
+1. Instalar paquetería básica.
 ```bash
 sudo apt-get update  
 sudo apt install apt-transport-https curl -y
@@ -34,7 +34,7 @@ sudo apt install apt-transport-https curl -y
 
 <br/>
 
-2. Preconfigurar la red 
+2. Preconfigurar la red. 
 
 ```bash
 cat <<EOF | sudo tee /etc/modules-load.d/k8s.conf
@@ -111,7 +111,7 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin 
 
 <br/>
 
-6. Reiniciar containerd
+6. Reiniciar containerd.
 
 ```bash
 sudo systemctl restart containerd
@@ -119,7 +119,7 @@ sudo systemctl restart containerd
 
 <br/>
 
-7. Actualizar e instalar paquetería necesaria
+7. Actualizar e instalar paquetería necesaria.
 
 ```bash
 sudo apt-get update
@@ -129,7 +129,7 @@ sudo apt-get install -y apt-transport-https ca-certificates curl gpg
 
 <br/>
 
-8. Descargar y agregar repositorios de kubernetes
+8. Descargar y agregar repositorios de kubernetes.
 
 ```bash
 curl -fsSL https://pkgs.k8s.io/core:/stable:/v1.30/deb/Release.key | \
@@ -142,7 +142,7 @@ sudo tee /etc/apt/sources.list.d/kubernetes.list
 
 <br/>
 
-9. Instalar kubelet, kubeadm y kubectl
+9. Instalar kubelet, kubeadm y kubectl.
 
 ```bash
 sudo apt-get update
@@ -152,7 +152,7 @@ sudo apt-mark hold kubelet kubeadm kubectl
 
 <br/>
 
-10. Inicializar control plane
+10. Inicializar control plane.
 
     - **Nota:** Cambiar la IP por la reportada en el comando `ip add`
 
@@ -163,7 +163,7 @@ sudo kubeadm init --pod-network-cidr=10.244.0.0/16 --apiserver-advertise-address
 
 <br/>
 
-11. Habilitar cluster para cualquier usuario
+11. Habilitar cluster para cualquier usuario.
 
 ```bash
 mkdir -p $HOME/.kube 
@@ -173,7 +173,7 @@ sudo chown $(id -u):$(id -g) $HOME/.kube/config
 
 <br/>
 
-12. Instalar weave como network add-on de Kubernetes
+12. Instalar weave como network add-on de Kubernetes.
 
 ```bash
 kubectl apply -f https://reweave.azurewebsites.net/k8s/v1.30/net.yaml
@@ -184,7 +184,7 @@ kubectl apply -f https://reweave.azurewebsites.net/k8s/v1.30/net.yaml
 
 ## Worker Node:
 
-1. Instalar paquetería básica
+1. Instalar paquetería básica.
 
 ```bash
 sudo apt-get update 
@@ -193,7 +193,7 @@ sudo apt install apt-transport-https curl -y
 
 <br/>
 
-2. Preconfigurar networking
+2. Preconfigurar networking.
 
 ```bash
 cat <<EOF | sudo tee /etc/modules-load.d/k8s.conf
@@ -232,7 +232,7 @@ sudo swapoff -a
 
 <br/>
 
-4. Instalar containerd
+4. Instalar containerd.
 
 ``` bash
 # Add Docker's official GPG key: 
@@ -266,7 +266,7 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin 
 
 <br/>
 
-6. Reiniciar containerd
+6. Reiniciar containerd.
 
 ```bash
 sudo systemctl restart containerd
@@ -274,7 +274,7 @@ sudo systemctl restart containerd
 
 <br/>
 
-7. Actualizar e instalar paquetería necesaria
+7. Actualizar e instalar paquetería necesaria.
 
 ```bash
 sudo apt-get update
@@ -284,7 +284,7 @@ sudo apt-get install -y apt-transport-https ca-certificates curl gpg
 
 <br/>
 
-8. Descargar y agregar repositorios de kubernetes
+8. Descargar y agregar repositorios de kubernetes.
 ```bash
 curl -fsSL https://pkgs.k8s.io/core:/stable:/v1.30/deb/Release.key | sudo gpg --dearmor -o /etc/apt/keyrings/kubernetes-apt-keyring.gpg
 # This overwrites any existing configuration in /etc/apt/sources.list.d/kubernetes.list
@@ -293,7 +293,7 @@ echo 'deb [signed-by=/etc/apt/keyrings/kubernetes-apt-keyring.gpg] https://pkgs.
 
 <br/>
 
-9. Instalar kubelet, kubeadm y kubectl
+9. Instalar kubelet, kubeadm y kubectl.
 
 ```bash
 sudo apt-get update
@@ -301,7 +301,7 @@ sudo apt-get install -y kubelet kubeadm kubectl
 sudo apt-mark hold kubelet kubeadm kubectl
 ```
 
-10. Unir Worker node a Control Plane
+10. Unir Worker node a Control Plane.
 
 ```bash
 sudo kubeadm join <ip-controlplane>:6443 --token <token> --discovery-token-ca-cert-hash sha256:ec2ee63f8853ad42a9ec0363508d1da7b3983cdef2361efd43e20d7d85953f26
