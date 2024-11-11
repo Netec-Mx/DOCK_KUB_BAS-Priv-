@@ -1,14 +1,14 @@
-# Práctica 5.1 Introducción a los Volúmenes de K8s
+# Práctica 5.1. Introducción a los volumes de K8s
 
 ## Objetivo 
-Al finalizar esta práctica, serás capaz de configurar diferentes tipos de volúmenes y reclamos de almacenamiento en Kubernetes, integrando recursos de almacenamiento en los pods y garantizando la persistencia de datos.
+- Configurar diferentes tipos de volúmenes y reclamos de almacenamiento en Kubernetes, integrando recursos de almacenamiento en los pods y garantizando la persistencia de datos.
 
 ## Duración aproximada
-35 minutos
+- 35 minutos.
 
 ## Instrucciones
 
-### Paso 1. Configura un volumen hostPath
+### Paso 1. Configurar un volumen hostPath
 
 1. Un volumen **hostPath** monta un directorio del nodo en el que se está ejecutando el Pod directamente en el contenedor. Este tipo de volumen es útil para tareas como almacenar logs localmente.
 
@@ -49,7 +49,7 @@ kubectl apply -f hostpath-pod.yaml
 
 <br/>
 
-### Paso 2. Configura un **PersistentVolume** (PV) y un **PersistenVolumeClaim** (PVC)
+### Paso 2. Configurar un **PersistentVolume** (PV) y un **PersistenVolumeClaim** (PVC)
 
 - Los **PersistentVolumes** son unidades de almacenamiento disponibles para los clústeres de Kubernetes. 
 
@@ -121,7 +121,7 @@ kubectl describe pvc pvc-volume
 
 - Al verificar el estado de PVs y PVCs, deben de mostrar un estado de **Bound**.
 
-- Si el **PersistentVolumeClaim** muesta un estado **Pending**, esto indica que Kubernetes no pudo enlazar el PVC con un PV compatible.
+- Si el **PersistentVolumeClaim** muestra un estado **Pending**, esto indica que Kubernetes no pudo enlazar el PVC con un PV compatible.
 
 <br/>
 
