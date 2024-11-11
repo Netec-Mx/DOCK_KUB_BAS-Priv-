@@ -1,11 +1,11 @@
-# Práctica 4.1 Configuración de ConfigMaps & Variables de Entorno
+# Práctica 4.1. Configuración de ConfigMaps & Variables de entorno
 
 ## Objetivo 
-Al finalizar esta práctica, serás capaz de crear y gestionar ConfigMaps a partir de archivos y variables de entorno en Kubernetes.
+- Al finalizar esta práctica, serás capaz de crear y gestionar ConfigMaps a partir de archivos y variables de entorno en Kubernetes.
 
 
 ## Duración aproximada
-15 minutos
+- 15 minutos.
 
 ## Instrucciones
 
@@ -13,7 +13,7 @@ Al finalizar esta práctica, serás capaz de crear y gestionar ConfigMaps a part
 
 #### 1. Crear un archivo de configuración
 
-- Crea un archivo de configuración con las variables de entorno que quieras almacenar en el ConfigMap. Usa el siguiente contenido de ejemplo y guárdalo como **app-config.properties**:
+- Crear un archivo de configuración con las variables de entorno que quieras almacenar en el ConfigMap. Usa el siguiente contenido de ejemplo y guárdalo como **app-config.properties**:
 
 ```plaintext
 DATABASE_URL=jdbc:mysql://localhost:3306/mydb
@@ -24,7 +24,7 @@ APP_ENV=development
 
 #### 2. Crear el ConfigMap desde el archivo
 
-- Usa el siguiente comando para crear el ConfigMap en Kubernetes a partir del archivo **app-config.properties**:
+- Usar el siguiente comando para crear el ConfigMap en Kubernetes a partir del archivo **app-config.properties**:
 
 ```bash
 kubectl create configmap app-config --from-file=app-config.properties
@@ -32,7 +32,7 @@ kubectl create configmap app-config --from-file=app-config.properties
 
 #### 3. Verificar el ConfigMap
 
-- Confirma que el ConfigMap fue creado correctamente con el siguiente comando:
+- Confirmar que el ConfigMap fue creado correctamente con el siguiente comando:
 
 ```bash
 kubectl get configmap app-config -o yaml
@@ -42,7 +42,7 @@ kubectl get configmap app-config -o yaml
 
 ### Paso 2. Crear un ConfigMap desde variables de entorno directamente en el comando
 
-- Puedes crear un ConfigMap a partir de valores de **clave-valor** sin necesidad de un archivo intermedio. Usa el siguiente comando para crear otro ConfigMap con variables definidas en línea:
+- Puedes crear un ConfigMap a partir de valores de **clave-valor** sin necesidad de un archivo intermedio. Usar el siguiente comando para crear otro ConfigMap con variables definidas en línea:
 
 ```bash
 kubectl create configmap inline-config --from-literal=APP_MODE=debug --from-literal=LOG_LEVEL=info
@@ -52,9 +52,9 @@ kubectl create configmap inline-config --from-literal=APP_MODE=debug --from-lite
 
 ### Paso 3. Configurar un Pod que utilice los ConfigMaps
 
-1. **Escribe un archivo YAML para el Pod**
+1. **Escribir un archivo YAML para el Pod**
 
-- Este archivo YAML describe un Pod que usa las variables de los ConfigMaps como variables de entorno. Guárdalo como **pod-configmap.yaml**:
+- Este archivo YAML describe un Pod que usa las variables de los ConfigMaps como variables de entorno. Guardar como **pod-configmap.yaml**:
 
 
 ```yaml
@@ -81,7 +81,7 @@ spec:
 
 2. **Aplicar el Pod en el clúster**
 
-- Usa el siguiente comando para aplicar el archivo YAML y crear el Pod:
+- Usar el siguiente comando para aplicar el archivo YAML y crear el Pod:
 
 
 ```bash
@@ -90,7 +90,7 @@ kubectl apply -f pod-configmap.yaml
 
 3. **Verificar el Pod**
 
-- Verifica que el Pod esté creado y en ejecución:
+- Verificar que el Pod esté creado y en ejecución:
 
 ```bash
 kubectl get pod app-pod
@@ -98,7 +98,7 @@ kubectl get pod app-pod
 
 4. **Verificar las variables de entorno dentro del contenedor**
 
-- Puedes ingresar al contenedor y verificar que ls variables de entorno están configuradas:
+- Puedes ingresar al contenedor y verificar que los variables de entorno están configuradas:
 
 
 ```bash
@@ -117,7 +117,7 @@ Si necesitas cambiar alguna variable en el **ConfigMap**, puedes editarlo direct
 
 1. **Editar el ConfigMap**
 
-- Usa el siguiente comando para editar el ConfigMap *inline-config* y agrega o cambia las variables según sea necesario
+- Usar el siguiente comando para editar el ConfigMap *inline-config* y agregar o cambiar las variables según sea necesario.
 
 
 ```bash
@@ -136,7 +136,7 @@ kubectl apply -f pod-configmap.yaml
 
 ### Paso 5. Limpieza (Opcional)
 
-- Para eliminar los recursos creados, utiliza los siguientes comandos:
+- Para eliminar los recursos creados, utilizar los siguientes comandos:
 
 
 ```bash
