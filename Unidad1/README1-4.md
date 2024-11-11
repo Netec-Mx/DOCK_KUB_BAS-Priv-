@@ -2,14 +2,13 @@
 
 ## Objetivo
 
-- Al finalizar esta actividad, serás capaz de crear una imagen Docker a partir de un Dockerfile y desplegar un contenedor basado en esa imagen.
+- Crear una imagen Docker a partir de un Dockerfile y desplegar un contenedor basado en esa imagen.
 
 ## Duración aproximada
 
-30 minutos.
+- 30 minutos.
 
 <br/>
-
 
 ### Instrucciones
 
@@ -22,19 +21,19 @@
    - Abrir el archivo `Dockerfile` y escribir las siguientes instrucciones básicas:
 
      ```dockerfile
-     # Utilizar una imagen base de Java (ajusta la versión si es necesario)
+     # Utilizar una imagen base de Java (ajusta la versión si es necesario).
      FROM openjdk:21-jdk-slim
 
-     # Crear un directorio para la aplicación
+     # Crear un directorio para la aplicación.
      WORKDIR /app
 
-     # Copiar el archivo JAR generado al contenedor
+     # Copiar el archivo JAR generado al contenedor.
      COPY target/ms_clients-0.0.1-SNAPSHOT.jar app.jar
 
-     # Exponer el puerto que usa la aplicación
+     # Exponer el puerto que usa la aplicación.
      EXPOSE 9095
 
-     # Comando para ejecutar la aplicación
+     # Comando para ejecutar la aplicación.
      ENTRYPOINT ["java", "-jar", "app.jar"]
      ```
 
@@ -124,9 +123,9 @@
 <br/>
 <br/>
 
-## Resultado Esperado
+## Resultado esperado
 
-- Captura de pantalla al construir la imagen Docker
+- Captura de pantalla al construir la imagen Docker.
 
 ![docker build](../images/u1_4_1.png)
 
