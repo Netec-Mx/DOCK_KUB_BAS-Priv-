@@ -6,6 +6,8 @@ Al finalizar esta actividad, serás capaz de verificar y asegurar que todos los 
 ## Duración aproximada
 25 minutos
 
+<br/>
+
 ## Instrucciones
 
 Las siguientes instrucciones aplica en tu máquina máquina virtual con Windows asignada.
@@ -20,6 +22,8 @@ git config --global user.email "tuemail@example.com"
 git config --list
 ````
 
+<br/>
+
 2. **Clona el repositorio del curso**
 
 Clona el repositorio proporcionado por el instructor para acceder a los archivos de práctica. Puedes hacerlo con:
@@ -27,6 +31,8 @@ Clona el repositorio proporcionado por el instructor para acceder a los archivos
 ```bash
 git clone <URL_del_repositorio>
 ```
+
+<br/>
 
 3. **Verifica Maven (Opcional)**
 
@@ -39,6 +45,9 @@ mvn -v
 **Nota:** Aunque no es indispensable tener Maven configurado fuera del entorno de Spring, puede ser útil para tareas específicas.
 
 
+<br/>
+
+
 4. **Verifica Gradle (Opcional)**
 
 Asegúrate de que Gradle esté instalado y configurado. Para verificar la instalación, utiliza:
@@ -46,6 +55,9 @@ Asegúrate de que Gradle esté instalado y configurado. Para verificar la instal
 ```bash
 gradle -v
 ```
+
+<br/>
+
 
 5. **Verifica Java 21**
 
@@ -56,6 +68,9 @@ javac --version
 java --version
 ```
 
+<br/>
+
+
 6. **Verifica Visual Studio Code (VSC)**
 
 Asegúrate de tener Visual Studio Code instalado, ya sea pulsando el ícono en la aplicación en el escritorio o iniciando en la línea de comandos lo siguiente:
@@ -65,6 +80,9 @@ Asegúrate de tener Visual Studio Code instalado, ya sea pulsando el ícono en l
 code .
 ```
 
+<br/>
+
+
 7. **Instala los plugins requeridos en VSC**
 
 Verifica que tienes los siguientes plugins instalados en Visual Studio Code para facilitar el desarrollo:
@@ -73,6 +91,10 @@ Verifica que tienes los siguientes plugins instalados en Visual Studio Code para
     - Docker v1.29.3
     - Kubernetes YAML Formatter v1.1.0
     - Kubernetes v1.3.18
+
+
+<br/>
+
 
 8. **Verifica Conexiones ssh*
 
@@ -86,6 +108,8 @@ Para cada uno de las máquinas virtuales Ubuntu asignadas, verifica que puedes c
 ssh mnadmin@192.168.0.3
 ```
 
+<br/> <br/>
+
 ## Resultado Esperado
 
 - ssh usuario@ip-maquina-virtual
@@ -94,6 +118,7 @@ ssh mnadmin@192.168.0.3
 
 
 <br/>
+
 
 - Es complemento de YAML para VSC podría serte útil más adelante
 

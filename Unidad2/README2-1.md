@@ -10,6 +10,8 @@ Al finalizar esta actividad, serás capaz de verificar correctamente la instalac
 ## Requisitos previos:
 - La instalación de Kubernetes ya está completada en un sistema Ubuntu Server 20.04.
 
+<br/>
+
 
 ## Instrucciones:
 
@@ -20,12 +22,18 @@ Al finalizar esta actividad, serás capaz de verificar correctamente la instalac
      ```
     - **Nota:** EL usuario y la contraseña de las máquinas podría ser `mnadmin`y `Netec_123` respectivamente, estas podrían cambiar, tu instructor lo coonfirmará.
 
+<br/>
+
+
 2. **Verificar el estado del clúster**  
    - Ejecuta el siguiente comando para verificar si el clúster de Kubernetes está activo y en funcionamiento:
      ```bash
      kubectl get nodes
      ```
    - Asegúrate de ver el nodo maestro en la lista con el estado "Ready".
+
+<br/>
+
 
 3. **Comprobar el estado de los componentes del nodo maestro**  
    - Para confirmar que todos los componentes del nodo maestro están operativos, ejecuta:
@@ -34,6 +42,10 @@ Al finalizar esta actividad, serás capaz de verificar correctamente la instalac
      ```
    - Verifica que todos los pods del sistema están en estado "Running" o "Completed".
 
+
+<br/>
+
+
 4. **Comprobar la versión de Kubernetes**  
    - Confirma la versión de Kubernetes instalada en el nodo maestro:
      ```bash
@@ -41,12 +53,19 @@ Al finalizar esta actividad, serás capaz de verificar correctamente la instalac
      ```
    - Anota la versión para validar que es la esperada para tu entorno.
 
+
+<br/>
+
+
 5. **Verificar configuración de red**  
    - Ejecuta el siguiente comando para verificar la configuración de red del nodo maestro:
      ```bash
      kubectl cluster-info
      ```
    - Asegúrate de que los componentes de control del clúster (`kube-apiserver`, `etcd`, `kube-scheduler`, `kube-controller-manager`) tienen sus URL configuradas correctamente.
+
+<br/>
+
 
 6. **Validar la instalación del kubeconfig**  
    - Verifica que el archivo de configuración `kubeconfig` esté en la ubicación predeterminada y contenga la configuración correcta para el nodo maestro:
@@ -56,6 +75,10 @@ Al finalizar esta actividad, serás capaz de verificar correctamente la instalac
      cat ~/.kube/config | grep -v data
      ```
    - Asegúrate de que la configuración esté correcta para acceder al clúster desde el nodo maestro.
+
+
+<br/>
+
 
 7. **Verificación del SWAP**
     - Ejecuta el siguiente comando para verificar el estado del swap
@@ -73,9 +96,15 @@ Al finalizar esta actividad, serás capaz de verificar correctamente la instalac
 
 
 
+<br/>
+
+
 8. **Finalizar**  
    - Tras verificar todos los puntos anteriores, confirma que el nodo maestro está correctamente configurado y listo para operar en el clúster de Kubernetes.
 
+
+
+<br/>
 
 
 ## Resultado Esperado
@@ -83,10 +112,18 @@ Al finalizar esta actividad, serás capaz de verificar correctamente la instalac
 - Captura de pantalla con el estado y version en los nodos y los pods en el espacio de nombre kube-system.
 
 ![kubectl](../images/u2_1_1.png)
+
+<br/>
+
  
 - Captura de pantalla con verificaciones sobre kubectl e información del clúster.
+
  ![kubectl](../images/u2_1_2.png)
+
+<br/>
+
  
 - Captura de pantalla con la verificación del SWAP 
+
 ![swap](../images/u2_1_3.png)
  

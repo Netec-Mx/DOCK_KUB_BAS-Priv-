@@ -14,11 +14,15 @@ Al finalizar esta actividad, serás capaz de crear un Pod en Kubernetes utilizan
 - Contar con acceso a la CLI de Kubernetes (kubectl) desde tu terminal y permisos para aplicar configuraciones en el clúster.
 - Conocer los conceptos básicos de YAML y la estructura de archivos de configuración de Kubernetes.
 
+<br/>
+
 ## Instrucciones
 
 **Paso 1: Crear el archivo YAML para el Pod**
 
 1. Abre tu editor de texto preferido y crea un archivo llamado mipod.yaml.
+
+<br/>
 
 2. En este archivo, escribe el siguiente contenido YAML, que define un Pod simple con un contenedor de nginx:
 
@@ -36,6 +40,8 @@ spec:
       ports:
         - containerPort: 80
 ```
+
+<br/>
 
 3. Contesta lo siguiente referente al YAML
 
@@ -62,6 +68,8 @@ spec:
 
 1. Abre la terminal y navega al directorio donde guardaste mipod.yaml.
 
+<br/>
+
 2. Ejecuta el siguiente comando para aplicar la configuración en el clúster de Kubernetes:
 
 ```bash
@@ -72,6 +80,7 @@ kubectl apply -f mipod.yaml
 
 - Este comando creará el Pod en el clúster basado en la configuración especificada en el archivo YAML.
 
+<br/>
 
 3. Verifica que el Pod se ha creado correctamente con el siguiente comando:
 

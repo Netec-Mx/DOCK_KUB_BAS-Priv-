@@ -8,6 +8,10 @@ Al finalizar esta actividad, serás capaz de clonar un repositorio de microservi
 
 45 minutos
 
+
+<br/>
+
+
 ## Instrucciones
 
 1. **Clonar el repositorio**
@@ -28,6 +32,9 @@ Al finalizar esta actividad, serás capaz de clonar un repositorio de microservi
     ```
 
 
+<br/>
+
+
 2. **Importar el proyecto en el entorno de desarrollo**
 
     - Abre tu entorno de desarrollo integrado (IDE), como STS o VSC.
@@ -38,6 +45,9 @@ Al finalizar esta actividad, serás capaz de clonar un repositorio de microservi
 
     - Espera a que el IDE cargue al **100%** todas las dependencias de Maven y compile el proyecto.
 
+
+
+<br/>
 
 
 3. **Analizar la estructura del microservicio**
@@ -52,6 +62,9 @@ Al finalizar esta actividad, serás capaz de clonar un repositorio de microservi
     - Familiarízate con la estructura de carpetas, especialmente las carpetas src/main/java y src/main/resources.
 
 
+<br/>
+
+
 
 4. **Ejecutar y verificar la configuración**
 
@@ -59,11 +72,18 @@ Al finalizar esta actividad, serás capaz de clonar un repositorio de microservi
     
     - Accede a la consola para revisar cualquier mensaje de error o éxito que confirme la correcta inicialización del servicio.
 
+
+<br/>
+
+
 5. **Conclusión y análisis**
 
     - Reflexiona sobre los componentes y su función en la arquitectura del microservicio.
     - Anota cualquier pregunta o área que desees profundizar en relación con el microservicio o la estructura general de una aplicación en Spring Boot. 
     - Pregunta a tu instructor cualquier duda de Java.
+
+
+<br/>
 
 
 6. **Consume el microservicio**
@@ -80,6 +100,10 @@ Al finalizar esta actividad, serás capaz de clonar un repositorio de microservi
 
  
 
+<br/>
+<br/>
+
+
 ## Resultado Esperado
 
 - Al analizar el microservicio, deberás encontrar carpetas similares a las siguientes:
@@ -88,6 +112,8 @@ Al finalizar esta actividad, serás capaz de clonar un repositorio de microservi
 ![docker](../images/u1_3_2.png)
 
 
+
+<br/>
 
 - **Contesta lo siguiente**
 
@@ -98,11 +124,17 @@ Al finalizar esta actividad, serás capaz de clonar un repositorio de microservi
     c. ¿Entendiste la función de cada endpoint en el controlador y cómo se mapean a las operaciones CRUD en el servicio?
 
 
+<br/>
+
+
 
 - Al ejecutar tu proyecto deberás de ver una imagen similar a la siguiente:
 
 
 ![docker](../images/u1_3_1.png)
+
+
+<br/>
 
  
 - **Contesta lo siguiente**
@@ -110,6 +142,9 @@ Al finalizar esta actividad, serás capaz de clonar un repositorio de microservi
     a. ¿Identificaste la entidad principal, sus atributos y cómo está mapeada a la base de datos mediante JPA?
 
     b. ¿Cuál es el puerto asignado a este microservicio?
+
+
+<br/>
 
 
 - Consumo del servicio **ms-clients**

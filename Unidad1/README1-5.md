@@ -6,6 +6,7 @@ Al finalizar esta actividad, serás capaz de consumir microservicios desde una a
 ## Duración aproximada
 15 minutos
 
+<br/>
 
 ## Instrucciones
 
@@ -30,6 +31,9 @@ Al finalizar esta actividad, serás capaz de consumir microservicios desde una a
      ```
 
    - Busca la sección `"Ports"` en la salida para confirmar el mapeo de puertos (interno y externo). El puerto externo será el que podrás usar para realizar las llamadas HTTP (por ejemplo, `9095`).
+
+<br/>
+
 
 2. **Consumir el microservicio**
 
@@ -133,12 +137,15 @@ Al finalizar esta actividad, serás capaz de consumir microservicios desde una a
        - URL: `http://localhost:8095/api/clients/{id}`
 
 
+<br/>
+
+
 3. **Verificar respuestas**
 
    - Confirma que cada operación devuelve la respuesta esperada (por ejemplo, una lista de clientes, detalles de un cliente específico, o un mensaje de éxito al crear, actualizar o eliminar un cliente).
 
 
----
+<br/><br/>
 
 ## Resultado Esperado
 
@@ -146,6 +153,10 @@ Al finalizar esta actividad, serás capaz de consumir microservicios desde una a
 - Captura de pantalla sobre el área del reporte de `docker inspect`
 
 ![docker build](../images/u1_5_2.png)
+
+
+<br/>
+
 
 - Captura de pantalla sobre verificación del contenedor Docker y el consumo del microservicio usando curt y el método POST
 

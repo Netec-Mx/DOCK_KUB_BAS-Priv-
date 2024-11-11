@@ -11,8 +11,6 @@ Al finalizar esta actividad, serás capaz de verificar correctamente la instalac
 
 ## Instrucciones
 
-<br/>
-
 **Paso 1: Intalar paquetería básica**
 
 - Actualiza los repositorios e instala los paquetes necesarios para el transporte de paquetes HTTPS.

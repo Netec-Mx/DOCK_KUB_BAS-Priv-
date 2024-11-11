@@ -75,17 +75,25 @@ Al finalizar esta actividad, serás capaz de verificar correctamente la instalac
      ```
 
 
+<br/>
+
 
 ## Resultado Esperado
 
 - Captura de pantalla para verificar los nodos del clúster, un mater node y worker node listos.
 ![kubectl](../images/u2_2_1.png)
 
+<br/>
+
 - Captura de pantalla en el nodo worker, `kubelet` activo.
 ![kubelet](../images/u2_2_2.png)
 
+<br/>
+
 - Captura de pantalla con la creación de un pod, el antes y despues de recrear el Pod
 ![pod](../images/u2_2_3.png)
+
+<br/>
 
 - Captura de pantalla con la verificación del nodo donde fue creado el Pod. (10.36.0.1 worker/192.168.0.228)
 ![swap](../images/u2_2_4.png)

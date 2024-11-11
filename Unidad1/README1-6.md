@@ -8,6 +8,7 @@ Al finalizar esta actividad, serás capaz de utilizar Docker Registry para almac
 
 20 minutos
 
+<br/>
 
 
 ## Instrucciones
@@ -36,6 +37,10 @@ Al finalizar esta actividad, serás capaz de utilizar Docker Registry para almac
 
      2. Esto ejecutará un registro Docker en el puerto 5000 de tu máquina.
 
+
+<br/>
+
+
 ### 2. Etiquetar la Imagen Docker
 
    - Identifica el nombre de la imagen que creaste en prácticas previas.
@@ -54,7 +59,10 @@ Al finalizar esta actividad, serás capaz de utilizar Docker Registry para almac
      docker run -d localhost:5000/nombre_imagen:tag
      ```
 
----
+
+<br/>
+
+
 
 ## Resultado Esperado
 
@@ -65,16 +73,25 @@ Al finalizar esta actividad, serás capaz de utilizar Docker Registry para almac
 ![docker login ...](../images/u1_6_1.png)
 
 
+<br/>
+
+
 - Captura de pantalla, finalización del proceso de subida de la imagen a Docker Hub.
 
 
 ![docker](../images/u1_6_2.png)
 
 
+<br/>
+
+
 - Captura de pantalla, verificación que se puede usar la imagen de Docker Hub para la construcción de un segundo contenedor.
 
 
 ![docker](../images/u1_6_3.png)
+
+
+<br/>
 
 
 -- Imagen en el Docker Hub

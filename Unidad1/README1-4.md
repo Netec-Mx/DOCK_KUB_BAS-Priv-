@@ -8,15 +8,8 @@ Al finalizar esta actividad, serás capaz de crear una imagen Docker a partir de
 
 30 minutos
 
-## Instrucciones
+<br/>
 
-# Práctica 1.4: Construir Imagen y Contenedor Docker
-
-## Objetivo
-
-Al finalizar esta actividad, serás capaz de crear una imagen Docker a partir de un Dockerfile y desplegar un contenedor basado en esa imagen.
-
----
 
 ### Instrucciones
 
@@ -47,6 +40,9 @@ Al finalizar esta actividad, serás capaz de crear una imagen Docker a partir de
 
    - Guarda el archivo `Dockerfile`.
 
+
+<br/>
+
 2. **Construir la imagen Docker**
 
    - Abre la terminal en el directorio raíz de tu proyecto.
@@ -65,6 +61,9 @@ Al finalizar esta actividad, serás capaz de crear una imagen Docker a partir de
      docker build -t ms-clientes:v1 .
      ```
 
+
+<br/>
+
 3. **Verificar la imagen creada**
 
    - Ejecuta el siguiente comando para ver la lista de imágenes y confirmar que tu imagen fue creada exitosamente:
@@ -72,6 +71,8 @@ Al finalizar esta actividad, serás capaz de crear una imagen Docker a partir de
      ```bash
      docker images
      ```
+
+<br/>
 
 4. **Desplegar un contenedor basado en la imagen**
 
@@ -84,6 +85,9 @@ Al finalizar esta actividad, serás capaz de crear una imagen Docker a partir de
    - La aplicación debería estar disponible en `http://localhost:8095`.
 
 
+<br/>
+
+
 5. **Verificar que el contenedor esté en ejecución**
 
    - Usa el siguiente comando para listar los contenedores en ejecución y confirmar que tu aplicación está desplegada:
@@ -94,6 +98,8 @@ Al finalizar esta actividad, serás capaz de crear una imagen Docker a partir de
      docker logs ms-clientes
      ```
 
+<br/>
+
 6. **Detener el contenedor**
 
    - Si deseas detener el contenedor en ejecución, identifica el `CONTAINER ID` usando el comando `docker ps`, y luego ejecuta:
@@ -101,6 +107,10 @@ Al finalizar esta actividad, serás capaz de crear una imagen Docker a partir de
      ```bash
      docker stop ms-clientes
      ```
+
+
+<br/>
+
 
 7. **Iniciar el contenedor**
 
@@ -111,6 +121,9 @@ Al finalizar esta actividad, serás capaz de crear una imagen Docker a partir de
      ```
 
 
+<br/>
+<br/>
+
 ## Resultado Esperado
 
 - Captura de pantalla al construir la imagen Docker
@@ -119,11 +132,15 @@ Al finalizar esta actividad, serás capaz de crear una imagen Docker a partir de
 
 
 
+<br/>
+
 - Captura de pantalla que verifica las imagens, verifica los contenedores, crea un nuevo contenedor y verifica el estado del nuevo contenedor.
 
 ![docker build](../images/u1_4_2.png)
 
 
+
+<br/>
 
 - Captura de pantalla que verifica que el contenedor Docker se encuentre en ejecución.
 

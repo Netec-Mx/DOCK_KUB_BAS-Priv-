@@ -11,12 +11,17 @@ Al finalizar esta actividad, serás capaz de optimizar un Dockerfile aplicando p
 
 ## Instrucciones
 
+<br/>
+
 ### 1. Preparación Inicial
    - Abre una terminal y asegúrate de que Docker esté en funcionamiento.
    - Verifica la versión de Docker:
      ```bash
      docker --version
      ```
+
+<br/>
+
 
 ### 2. Descarga de Imágenes de Docker Hub
    - Descarga las siguientes imágenes adicionales para familiarizarte con diferentes sistemas y aplicaciones:
@@ -31,6 +36,9 @@ Al finalizar esta actividad, serás capaz de optimizar un Dockerfile aplicando p
      docker pull node
      docker pull python
      ```
+
+<br/>
+
 
 ### 3. Construcción de Contenedores
    - Crea un contenedor a partir de cada imagen descargada:
@@ -48,6 +56,9 @@ Al finalizar esta actividad, serás capaz de optimizar un Dockerfile aplicando p
        ```
    - Ahora tendrás varios contenedores corriendo simultáneamente, cada uno asociado con un sistema o aplicación diferente.
 
+<br/>
+
+
 ### 4. Visualización de Imágenes y Contenedores
    - Lista todas las imágenes disponibles en tu sistema:
      ```bash
@@ -57,6 +68,9 @@ Al finalizar esta actividad, serás capaz de optimizar un Dockerfile aplicando p
      ```bash
      docker ps -a
      ```
+
+<br/>
+
 
 ### 5. Inspección Detallada
    - **Puertos HTTP expuestos**: Confirma qué contenedores exponen puertos HTTP:
@@ -73,6 +87,9 @@ Al finalizar esta actividad, serás capaz de optimizar un Dockerfile aplicando p
      docker exec mysql_container date
      ```
 
+<br/>
+
+
 ### 6. Eliminación de Contenedores e Imágenes
    - **Detener y eliminar todos los contenedores**:
      ```bash
@@ -84,22 +101,32 @@ Al finalizar esta actividad, serás capaz de optimizar un Dockerfile aplicando p
      docker rmi $(docker images -q)  # S.O Linux
      ```
 
+<br/>
+
+
 ### 7. Reflexión sobre el Docker Daemon y el CLI
    - Reflexiona sobre cómo la separación entre el Docker Daemon y el cliente CLI permite gestionar contenedores en otros servidores desde una máquina local.
 
 
----
+<br/>
 
-## Preguntas al Finalizar la Práctica
+### Preguntas al Finalizar la Práctica
 
 1. ¿Cuántas imágenes Docker se generaron?
+
 2. ¿Cuántos contenedores Docker existen al finalizar la práctica?
+
 3. ¿Cuáles son los puertos HTTP expuestos?
+
 4. ¿Qué sistema operativo tiene cada contenedor creado en esta práctica?
+
 5. ¿Cuál es la fecha y hora reportada en uno de los contenedores en ejecución?
+
 6. Explica cómo la separación entre el Docker Daemon y el cliente CLI permite la interacción con contenedores en otros servidores.
 
----
+
+<br/>
+<br/>
 
 ## Resultado Esperado
 
@@ -107,9 +134,15 @@ Al finalizar esta actividad, serás capaz de optimizar un Dockerfile aplicando p
 
 ![docker images](../images/u1_8_1.png)
 
+<br/>
+
+
 - Contenedores Docker
 
 ![docker ps -a](../images/u1_8_2.png)
+
+<br/>
+
 
 - Algunos comandos de Docker CLI
 

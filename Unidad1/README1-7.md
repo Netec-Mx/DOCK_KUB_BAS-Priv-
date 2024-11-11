@@ -7,6 +7,8 @@ Al finalizar esta actividad, serás capaz de optimizar un Dockerfile aplicando p
 ## Duración aproximada
 20 minutos
 
+<br/>
+
 ## Instrucciones
 
 ### Paso 1: Clonar el Dockerfile Actual
@@ -24,6 +26,9 @@ cp -p <dir_proyecto>/pom.xml .
 cp -p <dir_proyecto>/target/ms_clients-0.0.1-SNAPSHOT.jar .
 ```
 
+<br/>
+
+
 2. **Copiar el Dockerfile Actual:**
 
     - Crea un archivo Dockerfile en este directorio y copia el contenido actual:
@@ -37,6 +42,9 @@ EXPOSE 9096
 ENTRYPOINT ["java", "-jar", "app.jar"]
 
 ```
+
+<br/>
+
 
 3. **Construir y Medir la Imagen Original:**
 
@@ -65,7 +73,7 @@ docker images
 - Registra el tamaño de la imagen y el tiempo de construcción en la tabla como "Antes de Optimización".
 
 
-<br/><br/>
+<br/>
 
 ### Paso 2: Cambiar la Imagen Base para Reducir el Tamaño
 
@@ -97,7 +105,7 @@ time docker build -t ms_clients_op1 .
 - Verifica el tamaño de la imagen y el tiempo de construcción con los mismos comandos de antes. Registra los resultados en la columna "Después de Optimización".
 
 
-<br/><br/>
+<br/>
 
 ### Paso 3: Implementar Multi-Stage Build (Compilación en Varias Etapas)
 
@@ -126,6 +134,10 @@ ENTRYPOINT ["java", "-jar", "app.jar"]
  
 ```
 
+
+<br/>
+
+
 2. **Construir la Imagen Multi-Stage:**
 
     - Guarda el archivo y construye la imagen.
@@ -137,12 +149,16 @@ time docker build -t ms_clients_opt2 .
 
 - Verifica el tamaño de la imagen resultante y toma nota del tiempo de construcción.
 
+
+<br/>
+
+
 3. **Actualizar la Tabla de Resultados:**
 
     - Registra los valores en la columna "Después de Optimización".
 
 
-<br/><br/>
+<br/>
 
 ### Paso 4: Verificar el Número de Capas
 
@@ -159,7 +175,8 @@ docker history ms_clients_optimized_multistage
 
 
 
-<br/><br/>
+<br/>
+
 ### Paso 5: Medir el Tiempo de Inicio del Contenedor
 
 1. **Ejecutar el Contenedor y Medir el Tiempo de Inicio:**
@@ -173,16 +190,23 @@ time docker run --rm -p 9095:9095 ms_clients_optimized_multistage
 
 - Puedes observar en el registro de salida cuándo la aplicación está lista para recibir solicitudes y tomar nota del tiempo en segundos.
 
+<br/>
+
+
 2. **Actualizar la Tabla con el Tiempo de Inicio:**
 
     - Anota el tiempo de inicio en la tabla.
 
 
-<br/><br/>
+<br/>
 
 ### Paso 6: Observaciones y Conclusiones
 
 1. **Multi-Stage Build:** Asegúrate de registrar si se utilizó multi-stage build en la columna correspondiente de la tabla.
+
+
+<br/>
+
 
 2. **Comparación y Análisis:**
 
@@ -192,23 +216,27 @@ time docker run --rm -p 9095:9095 ms_clients_optimized_multistage
 
 
 <br/><br/>
+
 ## Resultado Esperado
 
 - Captura de pantalla para la creación de la primera imagen base, en este caso, ms_clientes_original
 
 ![docker ](../images/u1_7_1.png)
 
-<br/><br/>
+<br/>
+
 - Captura de pantalla para la creación de la segunda imagen, cambiando solo la imagen base de Java, en este caso, ms_clientes_opt1
 
 ![docker ](../images/u1_7_2.png)
 
-<br/><br/>
+<br/>
+
 - Captura de pantalla para la creación de la tercera imagen, aplicando multi-stage, en este caso, ms_clientes_opt2
 
 ![docker ](../images/u1_7_3.png)
 
-<br/><br/>
+<br/>
+
 - Captura de pantalla revisando las étapas de la imagen mx_clientes_opt2
 
 ![docker ](../images/u1_7_4.png)
