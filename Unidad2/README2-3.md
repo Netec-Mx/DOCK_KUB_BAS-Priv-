@@ -1,19 +1,19 @@
-# Práctica 2.3 Agregación de un nuevo Worker Node al Clúster.
+# Práctica 2.3. Agregación de un nuevo Worker Node al Clúster
 
 ## Objetivo
 
-Al finalizar esta actividad, serás capaz de verificar correctamente la instalación y configuración de un Worker Node en un clúster de Kubernetes.
+- Verificar correctamente la instalación y configuración de un Worker Node en un clúster de Kubernetes.
 
 
 ## Duración aproximada
 
-30 minutos
+30 minutos.
 
 ## Instrucciones
 
 **Paso 1: Intalar paquetería básica**
 
-- Actualiza los repositorios e instala los paquetes necesarios para el transporte de paquetes HTTPS.
+- Actualizar los repositorios e instalar los paquetes necesarios para el transporte de paquetes HTTPS.
 
 ```bash
 sudo apt-get update 
@@ -24,7 +24,7 @@ sudo apt install apt-transport-https curl -y
 
 **Paso 2: Preconfigurar el Networking**
 
-- Configura los módulos necesarios para Kubernetes y aplica los parámetros de red.
+- Configurar los módulos necesarios para Kubernetes y aplicar los parámetros de red.
 
 ```bash
 cat <<EOF | sudo tee /etc/modules-load.d/k8s.conf
@@ -37,7 +37,7 @@ sudo modprobe br_netfilter
 
 ```
 
-- Define los parámetros de `sysctl` necesarios para el funcionamiento de Kubernetes
+- Definir los parámetros de `sysctl` necesarios para el funcionamiento de Kubernetes.
 
 ```bash
 cat <<EOF | sudo tee /etc/sysctl.d/k8s.conf
@@ -51,7 +51,7 @@ sudo sysctl --system
 
 ```
 
-- Verifica que los módulos estén correctamente cargados
+- Verificar que los módulos estén correctamente cargados.
 
 ```bash
 lsmod | grep br_netfilter
@@ -59,7 +59,7 @@ lsmod | grep overlay
 
 ```
 
-- Confirma que los parámetros de red estén configurados.
+- Confirmar que los parámetros de red estén configurados.
 
 ```bash
 
@@ -71,20 +71,20 @@ sysctl net.bridge.bridge-nf-call-iptables net.bridge.bridge-nf-call-ip6tables ne
 
 **Paso 3: Deshabilitar el Swap**
 
-- Desactiva el uso de swap temporalmente
+- Desactivar el uso de swap temporalmente.
 
 ```bash
 
 sudo swapoff -a
 ```
 
-- Para que esta configuración sea permanente, edita el archivo `/etc/fstab` y comenta la línea correspondiente a swap. Luego, reinicia la máquina.
+- Para que esta configuración sea permanente, editar el archivo `/etc/fstab` y comentar la línea correspondiente a swap. Luego, reiniciar la máquina.
 
 <br/>
 
 **Paso 4: Intalar containerd**
 
-- Añade la clave GPG oficial de Docker.
+- Añadir la clave GPG oficial de Docker.
 
 ```bash
 
@@ -95,7 +95,7 @@ sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyring
 sudo chmod a+r /etc/apt/keyrings/docker.asc 
 ```
 
-- Agrega el repositorio de Docker a las fuentes de `apt`
+- Agregar el repositorio de Docker a las fuentes de `apt`
 
 ```bash
 echo \
@@ -104,7 +104,7 @@ echo \
   sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 ```
 
-- Actualiza los paquetes e instala `docker-ce`, `docker-ce-cli`, `containerd.io`, `docker-buildx-plugin` y `docker-compose-plugin`.
+- Actualizar los paquetes e instalar `docker-ce`, `docker-ce-cli`, `containerd.io`, `docker-buildx-plugin` y `docker-compose-plugin`.
 
 ```bash
 
@@ -116,7 +116,7 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin 
 
 **Paso 5: Habilitar containerd como Runtime de Contenedor**
 
-- Modifica el archivo de configuración de containerd para habilitar `SystemdCgroup`.
+- Modificar el archivo de configuración de containerd para habilitar `SystemdCgroup`.
 
 ```bash
 [plugins."io.containerd.grpc.v1.cri".containerd.runtimes.runc]
@@ -128,7 +128,7 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin 
 
 **Paso 6: Reiniciar containerd**
 
-- Reinicia el servicio de containerd para aplicar los cambios.
+- Reiniciar el servicio de containerd para aplicar los cambios.
 
 ```bash
 
@@ -139,7 +139,7 @@ sudo systemctl restart containerd
 
 **Paso 7: Actualizar e instalar paquetería necesaria**
 
-- Actualiza los repositorios e instala los paquetes necesarios para Kubernetes.
+- Actualizar los repositorios e instalar los paquetes necesarios para Kubernetes.
 
 ```bash
 
@@ -151,7 +151,7 @@ sudo apt-get install -y apt-transport-https ca-certificates curl gpg
 
 **Paso 8: Descargar y agregar repositorios de Kubernetes**
 
-- Añade la clave GPG del repositorio de Kubernetes y configura la fuente de apt para Kubernetes.
+- Añadir la clave GPG del repositorio de Kubernetes y configurar la fuente de apt para Kubernetes.
 
 ```bash
 
@@ -163,7 +163,7 @@ echo 'deb [signed-by=/etc/apt/keyrings/kubernetes-apt-keyring.gpg] https://pkgs.
 
 **Paso 9: Instalar kubelet, kubeadm y kubectl**
 
-- Actualiza los repositorios e instala los componentes principales de Kubernetes.
+- Actualizar los repositorios e instalar los componentes principales de Kubernetes.
 
 ```bash
 
@@ -177,7 +177,7 @@ sudo apt-mark hold kubelet kubeadm kubectl
 
 **Paso 10: Unir el Worker Node al Control Plane**
 
-- Utiliza el comando `kubeadm join` para unir este Worker Node al clúster. Desde el nodo maestro, genera el comando de unión:
+- Utilizar el comando `kubeadm join` para unir este Worker Node al clúster. Desde el nodo maestro, generar el comando de unión:
 
 ```bash
 
@@ -185,7 +185,7 @@ kubeadm token create --print-join-command
 
 ```
 
-- Ejecuta el comando generado en el**Worker Node** para unirte al clúster:
+- Ejecutar el comando generado en el**Worker Node** para unirte al clúster:
 
 ```bash
 
