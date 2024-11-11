@@ -1,8 +1,8 @@
-# Práctica 5.3 Configuración de Kubernetes Ingress
+# Práctica 5.3. Configuración de Kubernetes Ingress
 
 ## Objetivo
 
-Al finalizar esta práctica, serás capaz de implementar y configurar Kubernetes Ingress, incluyendo el uso de reglas de enrutamiento basadas en rutas y hosts para dirigir el tráfico de red hacia aplicaciones específicas en el clúster.
+- Implementar y configurar Kubernetes Ingress, incluyendo el uso de reglas de enrutamiento basadas en rutas y hosts para dirigir el tráfico de red hacia aplicaciones específicas en el clúster.
 
 ## Objetivo Visual
 
@@ -11,17 +11,14 @@ Al finalizar esta práctica, serás capaz de implementar y configurar Kubernetes
 
 ## Duración aproximada
 
-45 minutos
-
-
-
+- 45 minutos.
 
 
 ## Instrucciones
 
 ### Paso 1. Ingress
 
-- Ingress Controller instalado (como NGINX Ingress Controller)
+- Ingress Controller instalado (como NGINX Ingress Controller).
 
 - Puedes installar el NGINX Ingress Controller en el clúster ejecutando el siguiente comando:
 
@@ -30,7 +27,7 @@ kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/main
 
 ```
 
-- Verifica que el controlador esté en funcionamiento
+- Verificar que el controlador esté en funcionamiento.
 
 ```bash
 kubectl get pods -n ingress-nginx
@@ -39,7 +36,7 @@ kubectl get pods -n ingress-nginx
 
 ### Paso 2. Crear namespaces y las aplicaciones de prueba
 
-1. Crea dos espacios de nombres para alojar tus aplicaciones, de forma imperativa puedes usar los dos comandos siguientes:
+1. Crear dos espacios de nombres para alojar tus aplicaciones, de forma imperativa puedes usar los dos comandos siguientes:
 
 ```bash
 kubectl create namespace app1
@@ -48,9 +45,9 @@ kubectl create namespace app2
 
 <br/>
 
-2. Despliega aplicaciones de prueba en estos espacios de nombres
+2. Desplegar aplicaciones de prueba en estos espacios de nombres:
 
-- YAML para el Deployment de app1 (app1-deployment.yaml)
+- YAML para el Deployment de app1 (app1-deployment.yaml).
 
 
 ```yaml
@@ -79,7 +76,7 @@ spec:
 
 ```
 
-- YAML para el Deployment de app2 (app2-deployment)
+- YAML para el Deployment de app2 (app2-deployment).
 
 ```yaml
 apiVersion: apps/v1
@@ -108,7 +105,7 @@ spec:
 
 ```
 
-- YAML para el Service de app1 (app1-service.yaml)
+- YAML para el Service de app1 (app1-service.yaml).
 
 
 ```yaml
@@ -127,7 +124,7 @@ spec:
   type: ClusterIP
 ```
 
-- YAML para el Service de app2 (app2-service.yaml)
+- YAML para el Service de app2 (app2-service.yaml).
 
 
 ```yaml
@@ -149,7 +146,7 @@ spec:
 
 <br/>
 
-3. Aplica todos los YAMLs
+3. Aplica todos los YAMLs.
 
 ```bas
 kubectl apply -f app1-deployment.yaml
@@ -163,7 +160,7 @@ kubectl apply -f app2-service.yaml
 
 ### Paso 3. Configurar Ingress
 
-1. YAML que deine las reglas para enrutar el tráficos hacia la aplicaciones app1, en función de la ruta y el host (app1-ingres.yaml)
+1. YAML que define las reglas para enrutar el tráficos hacia la aplicaciones app1, en función de la ruta y el host (app1-ingres.yaml).
 
 
 ```yaml
@@ -190,7 +187,7 @@ spec:
 
 ```
 
-2. YAML que deine las reglas para enrutar el tráficos hacia la aplicaciones app1, en función de la ruta y el host (app2-ingres.yaml).
+2. YAML que define las reglas para enrutar el tráficos hacia la aplicaciones app1, en función de la ruta y el host (app2-ingres.yaml).
 
 ```yaml
 apiVersion: networking.k8s.io/v1
@@ -218,7 +215,7 @@ spec:
 
 <br/>
 
-3. Aplica los archivos YAML
+3. Aplicar los archivos YAML.
 
 ```bash
 kubectl apply -f app1-ingress.yaml
@@ -227,15 +224,15 @@ kubectl apply -f app2-ingress.yaml
 
 <br/>
 
-4. Verificar Ingress
+4. Verificar Ingress.
 
-- Lista todos los Ingress en el clúster. Esto confirma que los objetos Ingres están creados y activos en sus respectivos NameSpaces.
+- Listar todos los Ingress en el clúster. Esto confirma que los objetos Ingres están creados y activos en sus respectivos NameSpaces.
 
 ```bash
 kubectl get ingress --all-namespaces
 ```
 
-- Describe el Ingress para ver sus detalles. Este comando muestra la configuración específica de cada Ingress, incluyendo reglas y rutas:
+- Describir el Ingress para ver sus detalles. Este comando muestra la configuración específica de cada Ingress, incluyendo reglas y rutas:
 
 ```bash
 # kubectl describe ingress <nombre-del-ingress> -n <namespace>
@@ -244,19 +241,19 @@ kubectl describe ingress app2-ingress -n app2
 
 ```
 
-- Verifica los Pods del controlador de Ingress. Asegúrate de que el controlador de Ingress (como ingress-nginx) está ejecutándose correctamente:
+- Verificar los Pods del controlador de Ingress. Asegurarse de que el controlador de Ingress (como ingress-nginx) está ejecutándose correctamente:
 
 ```bash
 kubectl get pods -n ingress-nginx
 ```
 
-- En caso de errores verificar las bitácoras puede ser útil, utiliza el siguiente comando:
+- En caso de errores, verificar las bitácoras puede ser útil, utiliza el siguiente comando:
 
 ```bash
 kubectl logs <nombre-pod-ingress-controller> -n ingress-nginx
 ```
 
-- Revisa los servicios del controlador de Ingress. Si el servicio del controlador de Ingress está configurado como NodePort o LoadBalancer, verifica la IP y puerto:
+- Revisar los servicios del controlador de Ingress. Si el servicio del controlador de Ingress está configurado como NodePort o LoadBalancer, verificar la IP y puerto:
 
 ```bash
 kubectl get svc -n ingress-nginx
@@ -266,13 +263,13 @@ kubectl get svc -n ingress-nginx
 
 ### Paso 4. Probar el enrutamiento
 
-1. Verifica la IP del Ingress Controller
+1. Verificar la IP del Ingress Controller.
 
 ```bash 
 kubectl get svc -n ingress-nginx
 ```
 
-- Busca el servicio del controlador NGINX, que generalmente tiene un tipo `LoadBalancer` o `NodePort`. La columna ]]**EXTERNAL-IP** te indicará la IP pública del Ingress. Si el campo **EXTERNAL-IP** muestra <pending>, espera unos minutos o verifica la configuración del controlador.
+- Buscar el servicio del controlador NGINX, que generalmente tiene un tipo `LoadBalancer` o `NodePort`. La columna ]]**EXTERNAL-IP** te indicará la IP pública del Ingress. Si el campo **EXTERNAL-IP** muestra <pending>, espera unos minutos o verificar la configuración del controlador.
 
 - El estado `<pending>` en **EXTERNAL-IP** para el servicio `ingress-nginx-controller` significa que el clúster de Kubernetes no ha podido asignar una IP externa al Ingress Controller, esto debido a que no estás usando un proveedor de nube que soporte automáticamente balanceadores de carga (LoadBalancer), como GKE, EKS o AKS.
 
@@ -280,7 +277,7 @@ kubectl get svc -n ingress-nginx
 
 - Es muy probable que tengas que cambiar de el tipo de servicio a **NodePort**
 
-    a. Edita el servicio ingress-nginx-controller para cambiarlo a tipo NodePort, lo que le permitirá exponer el Ingress Controller a través de un puerto específico del nodo:
+    a. Editar el servicio ingress-nginx-controller para cambiarlo a tipo NodePort, lo que le permitirá exponer el Ingress Controller a través de un puerto específico del nodo:
 
     ```bash
     kubectl edit svc ingress-nginx-controller -n ingress-nginx
@@ -293,7 +290,7 @@ kubectl get svc -n ingress-nginx
       type: NodePort
     ```
 
-    c. Verifica los cambios, con el siguiente comando:
+    c. Verificar los cambios, con el siguiente comando:
 
     ```bash
     kubectl get svc -n ingress-nginx
@@ -301,7 +298,7 @@ kubectl get svc -n ingress-nginx
 
 <br/>
 
-2. Para que Ingress redirije correctamente el tráfico, debes especificar el nombre de host en el encabezado Host cuando uses curl. 
+2. Para que Ingress redirija correctamente el tráfico, debes especificar el nombre de host en el encabezado Host cuando uses curl. 
 
 ```bash
 # curl -H "Host: app1.example.com" http://<NODE_IP>:<NodePort>
