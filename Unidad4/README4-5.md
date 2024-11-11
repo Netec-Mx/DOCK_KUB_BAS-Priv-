@@ -1,21 +1,21 @@
-# Práctica 4.5 App Spring Boot
+# Práctica 4.5. App Spring Boot
 
 ## Objetivo
-Al finalizar esta práctica, serás capaz de desplegar una aplicación Spring Boot en K8s.
+- Desplegar una aplicación Spring Boot en K8s.
 
 
 ## Duración aproximada
-40 minutos
+- 40 minutos
 
 ## Instrucciones
 
 ### Paso 1. Configuración del espacio de nombres
 
-Crea un **Namespace** para organizar y aislar los recursos asociados a esta práctica.
+Crear un **Namespace** para organizar y aislar los recursos asociados a esta práctica.
 
-1. Crea una nueva directorio de trabajo en el nodo maestro, por ejemplo, **ws2**
+1. Crear un nuevo directorio de trabajo en el nodo maestro, por ejemplo, **ws2**
 
-2. Crea un archivo YAML llamado namespace.YAML
+2. Crear un archivo YAML llamado namespace.YAML
 
 ```yaml 
 apiVersion: v1
@@ -24,13 +24,13 @@ metadata:
   name: springboot-app-ns
 ```
 
-3. Aplica el YAML para crear el Namespace.
+3. Aplicar el YAML para crear el Namespace.
 
 ```bash
 kubectl apply -f namespace.yaml
 ```
 
-4. Verifica la creación del Namespace.
+4. Verificar la creación del Namespace.
 
 ```bash
 kubectl get namespaces
@@ -43,9 +43,9 @@ kubectl describe namespace springboot-app-ns
 
 ### Paso 2. Crear el ConfigMap
 
-Define un **ConfigMap** para almacenar las variables de configuración de la aplicación.
+Definir un **ConfigMap** para almacenar las variables de configuración de la aplicación.
 
-1. Crea un archivo YAML llamado **congigmap.yaml**
+1. Crear un archivo YAML llamado **congigmap.yaml**
 
 ```yaml
 apiVersion: v1
@@ -60,13 +60,13 @@ data:
   DK_PARTICIPANTE: "nombre"
 ```
 
-2. Aplica el archivo YAML para crear el **ConfigMap"**
+2. Aplicar el archivo YAML para crear el **ConfigMap"**.
 
 ```bash
 kubectl apply -f configmap.yaml
 ```
 
-3. Verifica la creación del **ConfigMap**
+3. Verificar la creación del **ConfigMap**.
 
 ```bash
 kubectl describe configmap springboot-app-config -n springboot-app-ns
@@ -83,7 +83,7 @@ kubectl get configmap springboot-app-config -n springboot-app-ns -o yaml
 
 El Deployment especificará que deseas tener dos réplicas de la aplicación, _distribuidas en dos Pods_.
 
-1. Crea un archivo YAML llamado deployent.yaml
+1. Crear un archivo YAML llamado deployent.yaml
 
 ```yaml
 
@@ -115,13 +115,13 @@ spec:
 
 - **Nota**:  Reemplaza <dockerhub-username>/springboot-app:latest con la URL de tu imagen en Docker Hub. Por ejemmplo la imagen creada en la práctica 1.6
 
-2. Aplica el archivo YAML para crear el **Deployment**
+2. Aplicar el archivo YAML para crear el **Deployment**
 
 ```bash
 kubectl apply -f deployment.yaml
 ```
 
-3. Verifica los detalles completos de un Deployment en Kubernetes
+3. Verificar los detalles completos de un Deployment en Kubernetes.
 
 ```bash
 kubectl describe deployment <deployment-name> -n <namespace-name>
@@ -129,15 +129,15 @@ kubectl get deployment <deployment-name> -n <namespace-name> -o yaml
 ```
 
 
-**Nota**:  Reemplaza `<deployment-name>` con el nombre de tu Deployment y `<namespace-name>` con el nombre del namespace donde se encuentra. 
+**Nota**:  Reemplazar `<deployment-name>` con el nombre de tu Deployment y `<namespace-name>` con el nombre del namespace donde se encuentra. 
 
 <br/>
 
 ### Paso 4. Exponer el Deployment con un Service
 
-Permitir el acceso a la aplicación desde dentro del clúster, crea un Service de tipo **ClusterIP**.
+Permitir el acceso a la aplicación desde dentro del clúster, crear un Service de tipo **ClusterIP**.
 
-1. Crea un archivo YAML llamado `service.yaml`:
+1. Crear un archivo YAML llamado `service.yaml`:
 
 ```yaml
 apiVersion: v1
@@ -155,7 +155,7 @@ spec:
   type: ClusterIP
 ```
 
-2. Aplica el archivo YAML para crear el Service.
+2. Aplicar el archivo YAML para crear el Service.
 
 ```bash
 kubectl apply -f service.yaml
@@ -177,13 +177,13 @@ kubectl get svc -n springboot-app-ns
 kubectl get pods -n springboot-app-ns
 ```
 
-2. Verifica que el servicio esté creado correctamente:
+2. Verificar que el servicio esté creado correctamente:
 
 ```bash
 kubectl get svc -n springboot-app-ns
 ```
 
-3. Valida los objetos creados en un Namespace específico, puedes utilizar el siguiente comando de Kubernetes
+3. Validar los objetos creados en un Namespace específico, puedes utilizar el siguiente comando de Kubernetes.
 
 ```bash
 kubectl get all -n <namespace-name>
@@ -210,7 +210,7 @@ Para consumir tu servicio con cur/wget desde dentro del clúster de Kubernetes, 
 
 <br/>
 
-#### Opción B. Usar el nombre del servicio en lugar de la IP
+#### Opción B. Usar el nombre del servicio en lugar de la IP.
 
 - En Kubernetes, los servicios pueden ser alcanzados por su nombre
 
@@ -220,16 +220,16 @@ Para consumir tu servicio con cur/wget desde dentro del clúster de Kubernetes, 
 
 <br/>
 
-#### Opción C. port-forward para consumir desde tu máquina local
+#### Opción C. port-forward para consumir desde la máquina local.
 
 
-- Si deseas acceder al servicio desde tu máquina local, utiliza el comando **port-forward** para mapear el puerto del servicio en tu máquina:
+- Si deseas acceder al servicio desde la máquina local, utilizar el comando **port-forward** para mapear el puerto del servicio en la máquina:
 
 ```bash
 kubectl port-forward svc/springboot-app-service 8095:8095 -n springboot-app-ns
 ```
 
-- Luego, puedes consumir el servicio con curl/wget en tu máquina local:
+- Luego, puedes consumir el servicio con curl/wget en la máquina local:
 
 ```bash
 wget http://localhost:8095
@@ -254,7 +254,7 @@ kubectl get namespaces
 <br/><br/>
 ## Resultado Esperado
 
-- Captura de pantalla que muestra el contenido del YAML para crear el espacio de nombes, la aplicación del YAML y vericación del mismo.
+- Captura de pantalla que muestra el contenido del YAML para crear el espacio de nombres, la aplicación del YAML y vericación del mismo.
 
 ![kubectl](../images/u4_5_1.png)
 
