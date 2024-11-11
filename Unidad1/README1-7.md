@@ -1,11 +1,12 @@
-# Práctica 1.7 Optimización
+# Práctica 1.7. Optimización
 
 ## Objetivo
-Al finalizar esta actividad, serás capaz de optimizar un Dockerfile aplicando prácticas recomendadas para reducir el tamaño de la imagen, mejorar la velocidad de construcción y minimizar el uso de recursos
+- Optimizar un Dockerfile aplicando prácticas recomendadas para reducir el tamaño de la imagen.
+- Mejorar la velocidad de construcción y minimizar el uso de recursos.
 
 
 ## Duración aproximada
-20 minutos
+20 minutos.
 
 <br/>
 
@@ -15,7 +16,7 @@ Al finalizar esta actividad, serás capaz de optimizar un Dockerfile aplicando p
 
 1. **Crear un Directorio de Trabajo:**
 
-    - Crea un nuevo directorio donde puedas trabajar en la optimización del Dockerfile.
+    - CreaR un nuevo directorio donde puedas trabajar en la optimización del Dockerfile.
 
 ```bash
 
@@ -31,7 +32,7 @@ cp -p <dir_proyecto>/target/ms_clients-0.0.1-SNAPSHOT.jar .
 
 2. **Copiar el Dockerfile Actual:**
 
-    - Crea un archivo Dockerfile en este directorio y copia el contenido actual:
+    - Crear un archivo Dockerfile en este directorio y copiar el contenido actual:
 
 ```dockerfile
 
@@ -46,9 +47,9 @@ ENTRYPOINT ["java", "-jar", "app.jar"]
 <br/>
 
 
-3. **Construir y Medir la Imagen Original:**
+3. **Construir y medir la imagen original:**
 
-    - Construye la imagen Docker con el siguiente comando y toma nota del tiempo de construcción.
+    - Construir la imagen Docker con el siguiente comando y tomar nota del tiempo de construcción.
 ```bash
  
 time docker build -t ms_clients_original .
@@ -63,19 +64,19 @@ Measure-Command { docker build -t ms_clients_original . }
 ```
 
 
-- Verifica el tamaño de la imagen usando:
+- Verificar el tamaño de la imagen usando:
 
 ```bash
  
 docker images  
 ```
 
-- Registra el tamaño de la imagen y el tiempo de construcción en la tabla como "Antes de Optimización".
+- Registrar el tamaño de la imagen y el tiempo de construcción en la tabla como "Antes de Optimización".
 
 
 <br/>
 
-### Paso 2: Cambiar la Imagen Base para Reducir el Tamaño
+### Paso 2: Cambiar la imagen base para reducir el tamaño
 
 
 1. **Cambiar de openjdk:21-jdk-slim a eclipse-temurin:21-jre-jammy:**
@@ -93,27 +94,27 @@ EXPOSE 9096
 ENTRYPOINT ["java", "-jar", "app.jar"]
 ```
 
-2. **Construir y Medir el Tamaño de la Nueva Imagen:**
+2. **Construir y medir el tamaño de la nueva imagen:**
 
-    - Guarda el Dockerfile y construye de nuevo la imagen.
+    - Guardar el Dockerfile y construir de nuevo la imagen.
 
 ```bash
  
 time docker build -t ms_clients_op1 .
 ```
 
-- Verifica el tamaño de la imagen y el tiempo de construcción con los mismos comandos de antes. Registra los resultados en la columna "Después de Optimización".
+- Verificar el tamaño de la imagen y el tiempo de construcción con los mismos comandos de antes. Registrar los resultados en la columna "Después de Optimización".
 
 
 <br/>
 
 ### Paso 3: Implementar Multi-Stage Build (Compilación en Varias Etapas)
 
-1. **Configurar Etapa de Compilación en el Dockerfile:**
+1. **Configurar etapa de compilación en el Dockerfile:**
 
-    - Modifica el `Dockerfile` para implementar una compilación en varias etapas. En esta configuración, usarás una imagen Maven para compilar el proyecto y luego solo copiarás el archivo JAR compilado a una imagen más ligera.
+    - Modificar el `Dockerfile` para implementar una compilación en varias etapas. En esta configuración, usarás una imagen Maven para compilar el proyecto y luego solo copiarás el archivo JAR compilado a una imagen más ligera.
 
-    - Cambia el `Dockerfile` a lo siguiente:
+    - Cambiar el `Dockerfile` a lo siguiente:
 
 ```dockerfile
 
@@ -140,48 +141,48 @@ ENTRYPOINT ["java", "-jar", "app.jar"]
 
 2. **Construir la Imagen Multi-Stage:**
 
-    - Guarda el archivo y construye la imagen.
+    - Guardar el archivo y construir la imagen.
 
 ```bash
  
 time docker build -t ms_clients_opt2 .
 ```
 
-- Verifica el tamaño de la imagen resultante y toma nota del tiempo de construcción.
+- Verificar el tamaño de la imagen resultante y tomar nota del tiempo de construcción.
 
 
 <br/>
 
 
-3. **Actualizar la Tabla de Resultados:**
+3. **Actualizar la tabla de resultados:**
 
-    - Registra los valores en la columna "Después de Optimización".
+    - Registrar los valores en la columna "Después de Optimización".
 
 
 <br/>
 
-### Paso 4: Verificar el Número de Capas
+### Paso 4: Verificar el número de capas
 
-1. **Inspeccionar las Capas de la Imagen:**
+1. **Inspeccionar las capas de la imagen:**
 
-    - Para verificar cuántas capas tiene la imagen, usa el siguiente comando:
+    - Para verificar cuántas capas tiene la imagen, usar el siguiente comando:
 
 ```bash
 
 docker history ms_clients_optimized_multistage
 ```
 
-    - Anota el número de capas en la tabla para la imagen antes y después de la optimización.
+    - Anotar el número de capas en la tabla para la imagen antes y después de la optimización.
 
 
 
 <br/>
 
-### Paso 5: Medir el Tiempo de Inicio del Contenedor
+### Paso 5: Medir el tiempo de inicio del contenedor
 
-1. **Ejecutar el Contenedor y Medir el Tiempo de Inicio:**
+1. **Ejecutar el contenedor y medir el tiempo de inicio:**
 
-    - Ejecuta el contenedor y mide el tiempo de inicio para ver cuánto tarda en estar listo en el puerto 9095.
+    - Ejecutar el contenedor y medir el tiempo de inicio para ver cuánto tarda en estar listo en el puerto 9095.
 
 ```bash
  
@@ -193,14 +194,14 @@ time docker run --rm -p 9095:9095 ms_clients_optimized_multistage
 <br/>
 
 
-2. **Actualizar la Tabla con el Tiempo de Inicio:**
+2. **Actualizar la tabla con el tiempo de inicio:**
 
-    - Anota el tiempo de inicio en la tabla.
+    - Anotar el tiempo de inicio en la tabla.
 
 
 <br/>
 
-### Paso 6: Observaciones y Conclusiones
+### Paso 6: Observaciones y conclusiones
 
 1. **Multi-Stage Build:** Asegúrate de registrar si se utilizó multi-stage build en la columna correspondiente de la tabla.
 
@@ -208,11 +209,11 @@ time docker run --rm -p 9095:9095 ms_clients_optimized_multistage
 <br/>
 
 
-2. **Comparación y Análisis:**
+2. **Comparación y análisis:**
 
-    - Compara los resultados antes y después de las optimizaciones.
+    - Comparar los resultados antes y después de las optimizaciones.
 
-    - Escribe una breve conclusión sobre cómo las optimizaciones afectaron el tamaño de la imagen, el tiempo de construcción y el tiempo de inicio.
+    - Escribir una breve conclusión sobre cómo las optimizaciones afectaron el tamaño de la imagen, el tiempo de construcción y el tiempo de inicio.
 
 
 <br/><br/>
