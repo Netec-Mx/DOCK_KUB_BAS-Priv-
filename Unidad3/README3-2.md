@@ -1,18 +1,18 @@
-# Práctica 3.2 Creación y Configuración de StatefulSets
+# Práctica 3.2. Creación y configuración de StatefulSets
 
 ## Objetivo
-Al finalizar la actividad, serás capaz de escribir y aplicar un archivo YAML para crear un StatefulSet.
+- Escribir y aplicar un archivo YAML para crear un StatefulSet.
 
 ## Duración aproximada
-30 minutos
+- 30 minutos
 
 ## Instrucciones
 
 ### Paso 1: Crear el archivo YAML del StatefulSet
 
-1. Abre un editor de texto y crea un archivo llamado `statefulset.yaml`.
+1. Abrir un editor de texto y crear un archivo llamado `statefulset.yaml`.
 
-2. Copia el siguiente contenido en el archivo:
+2. Copiar el siguiente contenido en el archivo:
 
    ```yaml
    apiVersion: apps/v1
@@ -58,7 +58,7 @@ Al finalizar la actividad, serás capaz de escribir y aplicar un archivo YAML pa
 ### Paso 2: Aplicar el archivo YAML para crear el StatefulSet
 
 - Asegúrate de que el clúster de Kubernetes esté activo y accesible.
-- Ejecuta el siguiente comando en la terminal para aplicar el archivo YAML y crear el StatefulSet:
+- Ejecutar el siguiente comando en la terminal para aplicar el archivo YAML y crear el StatefulSet:
 
 ```bash
 kubectl apply -f statefulset.yaml
@@ -69,7 +69,7 @@ kubectl apply -f statefulset.yaml
 
 ### Paso 3: Verificar la creación del StatefulSet
 
-- Para comprobar que el StatefulSet y sus pods han sido creados correctamente, ejecuta:
+- Para comprobar que el StatefulSet y sus pods han sido creados correctamente, ejecutar:
 
 ```bash
 kubectl get statefulsets
