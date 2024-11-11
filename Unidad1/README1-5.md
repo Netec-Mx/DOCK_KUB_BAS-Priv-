@@ -4,7 +4,7 @@
 - Consumir microservicios desde una aplicación cliente, utilizando llamadas HTTP para obtener, enviar y manipular datos.
 
 ## Duración aproximada
-15 minutos.
+- 15 minutos.
 
 <br/>
 
@@ -12,7 +12,7 @@
 
 1. **Verificar el puerto expuesto en el contenedor Docker**
 
-   - Lista los contenedores en ejecución para obtener el `CONTAINER ID` del microservicio:
+   - Listar los contenedores en ejecución para obtener el `CONTAINER ID` del microservicio:
 
      ```bash
 
@@ -142,15 +142,15 @@
 
 3. **Verificar respuestas**
 
-   - Confirma que cada operación devuelve la respuesta esperada (por ejemplo, una lista de clientes, detalles de un cliente específico, o un mensaje de éxito al crear, actualizar o eliminar un cliente).
+   - Confirmar que cada operación devuelve la respuesta esperada (por ejemplo, una lista de clientes, detalles de un cliente específico, o un mensaje de éxito al crear, actualizar o eliminar un cliente).
 
 
 <br/><br/>
 
-## Resultado Esperado
+## Resultado esperado
 
 
-- Captura de pantalla sobre el área del reporte de `docker inspect`
+- Captura de pantalla sobre el área del reporte de `docker inspect`.
 
 ![docker build](../images/u1_5_2.png)
 
