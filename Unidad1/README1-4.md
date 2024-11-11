@@ -1,4 +1,4 @@
-# Práctica 1.4 Construir imagen y contenedor Docker
+# Práctica 1.4. Construir imagen y contenedor Docker
 
 ## Objetivo
 
@@ -6,7 +6,7 @@
 
 ## Duración aproximada
 
-30 minutos
+30 minutos.
 
 <br/>
 
