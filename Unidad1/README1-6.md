@@ -6,10 +6,9 @@
 
 ## Duración aproximada
 
-20 minutos.
+- 20 minutos.
 
 <br/>
-
 
 ## Instrucciones
 
@@ -17,7 +16,7 @@
 ### 1. Configurar Docker Hub o Docker Registry Local
 
    - **Opción 1: Docker Hub**
-     1. Si aún no tienes una cuenta en Docker Hub, crea una en [https://hub.docker.com](https://hub.docker.com).
+     1. Si aún no tienes una cuenta en Docker Hub, crear una en [https://hub.docker.com](https://hub.docker.com).
 
 
      2. Iniciar sesión en Docker desde la terminal:
@@ -41,7 +40,7 @@
 <br/>
 
 
-### 2. Etiquetar la Imagen Docker
+### 2. Etiquetar la imagen Docker
 
    - Identificar el nombre de la imagen que creaste en prácticas previas.
 
@@ -64,7 +63,7 @@
 
 
 
-## Resultado Esperado
+## Resultado esperado
 
 
 - Captura de pantalla, en el registro de usuario a Docker Hub, la creación del TAG de la imagen y ls subida de a imagen
