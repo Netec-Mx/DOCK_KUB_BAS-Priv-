@@ -1,4 +1,4 @@
-# Práctica 1.3 Clonar, Importar, Analizar un Microservicio en Java
+# Práctica 1.3. Clonar, importar, analizar un Microservicio en Java
 
 ## Objetivo
 
