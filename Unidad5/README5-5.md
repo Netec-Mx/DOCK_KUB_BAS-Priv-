@@ -1,14 +1,14 @@
-# Práctica 5.5 Implementación de DaemonSets para Despliegues Especializados.
+# Práctica 5.5. Implementación de DaemonSets para despliegues especializados
 
 ## Objetivo
-Al finalizar esta práctica, serás capaz de implementar DaemonSets en Kubernetes, asegurando el despliegue de pods especializados en cada nodo o en nodos seleccionados.
+- Implementar DaemonSets en Kubernetes, asegurando el despliegue de pods especializados en cada nodo o en nodos seleccionados.
 
 ## Duración aproximada
-30 minutos
+- 30 minutos.
 
 ## Instrucciones
 
-### Paso 1. Verifica el estado de tus nodos en el clúster.
+### Paso 1. Verificar el estado de tus nodos en el clúster
 
 Asegúrate de tener al menos dos nodos en tu clúster. Puedes verificarlo con el siguiente comando:
 
@@ -18,14 +18,14 @@ kubectl get nodes
 
 <br/>
 
-### Paso 2: Crea el archivo YAML para el DaemonSet
+### Paso 2: Crear el archivo YAML para el DaemonSet
 
 En este paso, crearás un archivo YAML para el **DaemonSet**, el cual desplegará un Pod especializado en cada nodo de tu clúster. 
 
 Usamos un contenedor Nginx para el ejemplo, pero podrías personalizarlo según tus necesidades.
 
 
-1. Crea un archivo YAML llamado **daemonset-example.yaml**.
+1. Crear un archivo YAML llamado **daemonset-example.yaml**.
 
 ```yaml
 apiVersion: apps/v1
@@ -64,9 +64,9 @@ spec:
 
 <br/>
 
-### Paso 3: Aplica el DaemonSet en el clúster
+### Paso 3: Aplicar el DaemonSet en el clúster
 
-Ejecuta el siguiente comando para aplicar el archivo **daemonset-example.yaml** en tu clúster
+Ejecutar el siguiente comando para aplicar el archivo **daemonset-example.yaml** en tu clúster:
 
 ```bash
 kubectl apply -f daemonset-example.yaml
@@ -74,9 +74,9 @@ kubectl apply -f daemonset-example.yaml
 
 <br/>
 
-### Paso 4: Verifica el estado del DaemonSet
+### Paso 4: Verificar el estado del DaemonSet
 
-Comprueba que el DaemonSet esté ejecutándose en todos los nodos esperados.
+Comprobar que el DaemonSet esté ejecutándose en todos los nodos esperados.
 
 ```bash
 kubectl get daemonset specialized-daemonset
@@ -98,17 +98,17 @@ Aquí podrás ver que el **DaemonSet** ha desplegado un Pod en cada nodo del cl�
 <br/>
 
 
-### Paso 6: Limita el DaemonSet a nodos específicos (opcional)
+### Paso 6: Limitar el DaemonSet a nodos específicos (opcional)
 
-Si deseas que el DaemonSet solo se ejecute en nodos específicos (por ejemplo, solo en los nodos de trabajo), añade una etiqueta a los nodos y configúralo en el DaemonSet.
+Si deseas que el DaemonSet solo se ejecute en nodos específicos (por ejemplo, solo en los nodos de trabajo), añadir una etiqueta a los nodos y configurarlo en el DaemonSet.
 
-1. Etiqueta el nodo en el que deseas ejecutar el DaemonSet
+1. Etiquetar el nodo en el que deseas ejecutar el DaemonSet.
 
 ```bash
 kubectl label nodes worker-node1 deploy=specialized
 ```
 
-2. Actualiza o crea un nuevo archivo YAML **daemonset-example2.yaml** para incluir el selector de nodos:
+2. Actualizar o crear un nuevo archivo YAML **daemonset-example2.yaml** para incluir el selector de nodos:
 
 ```yaml
 
@@ -138,7 +138,7 @@ spec:
 ```
 <br/>
 
-3. Elimina y aplica nuevamente el archivo YAML para actualizar el **DaemonSet**
+3. Eliminar y aplicar nuevamente el archivo YAML para actualizar el **DaemonSet**.
 
 ```bash
 kubectl delete -f daemonset-example.yaml
@@ -151,7 +151,7 @@ kubectl apply -f daemonset-example2.yaml
 
 ### Paso 7: Verifica que el DaemonSet esté solo en nodos seleccionados
 
-Confirma que el DaemonSet se está ejecutando solo en los nodos con la etiqueta **deploy=specialized**
+Confirmar que el DaemonSet se está ejecutando solo en los nodos con la etiqueta **deploy=specialized**
 
 ```bash
 kubectl get pods -o wide -l app=specialized
@@ -167,7 +167,7 @@ kubectl get pods -o wide -l app=specialized
 
 <br/><br/>
 
-## Resultado Esperado
+## Resultado esperado
 
 - Captura de pantalla que muestra el estado actual del clúster, en este caso se encuentran tres Worker Node y un Node Master todos **Ready**
 
