@@ -1,65 +1,65 @@
-# Práctica 3.4 Escribiendo YAML de ResourceQuota.
+# Práctica 3.4. Escribiendo YAML de ResourceQuota
 
 ## Objetivo
 
-Al finalizar la actividad, serás capaz de escribir y aplicar un archivo YAML que defina una ResourceQuota en un namespace, limitando el consumo de recursos como CPU y memoria, para mejorar la gestión de recursos en el clúster.
+- Escribir y aplicar un archivo YAML que defina una ResourceQuota en un namespace, limitando el consumo de recursos como CPU y memoria, para mejorar la gestión de recursos en el clúster.
 
 
 ## Duración aproximada
 
-30 minutos
+- 30 minutos.
 
 
 ## Instrucciones
 
 1. **Crear un Namespace:**
 
-    - Define y crea un nuevo namespace en el clúster que servirá para aplicar la cuota de recursos. El nombre del namespace debe ser claro y relacionado con su propósito, por ejemplo, `limite-recursos`.
+    - Definir y crear un nuevo namespace en el clúster que servirá para aplicar la cuota de recursos. El nombre del namespace debe ser claro y relacionado con su propósito, por ejemplo, `limite-recursos`.
 
 <br/>
 
 2. **Definir la ResourceQuota:**
 
-    - Escribe un archivo YAML para la configuración de la `ResourceQuota`.
+    - Escribir un archivo YAML para la configuración de la `ResourceQuota`.
 
     - La configuración debe incluir límites tanto para el uso de **CPU** como de **Memory**.
 
-    - Establece las restricciones de recursos de forma que, dentro de este namespace, los pods no puedan exceder los límites establecidos.
+    - Establecer las restricciones de recursos de forma que, dentro de este namespace, los pods no puedan exceder los límites establecidos.
 
 <br/>
 
 3. **Parámetros a configurar:**
 
 
-    - Incluye en la ResourceQuota los siguientes parámetros:
+    - Incluir en la ResourceQuota los siguientes parámetros:
 
         - **CPU**: Define el límite de CPU en millicores (por ejemplo, 1000m para un núcleo completo).
 
         - **Memory**: Define el límite de memoria en MiB o GiB (por ejemplo, 512Mi).
 
-    - Establece tanto el límite máximo de recursos como el mínimo si deseas garantizar recursos mínimos para los pods en este namespace.
+    - Establecer tanto el límite máximo de recursos como el mínimo si deseas garantizar recursos mínimos para los pods en este namespace.
 
 <br/>
 
 4. **Aplicar la configuración**:
 
-    - Utiliza el comando kubectl apply -f <nombre_del_archivo>.yaml para aplicar el archivo YAML en el clúster.
+    - Utilizar el comando kubectl apply -f <nombre_del_archivo>.yaml para aplicar el archivo YAML en el clúster.
 
-    - Verifica que la ResourceQuota se haya creado correctamente en el namespace especificado.
+    - Verificar que la ResourceQuota se haya creado correctamente en el namespace especificado.
 
 <br/>
 
 5. **Validación de la ResourceQuota**:
 
-    - Confirma que la cuota de recursos se haya aplicado correctamente en el namespace usando `kubectl describe resourcequota <nombre_de_la_resourcequota> -n <namespace>`.
+    - Confirmar que la cuota de recursos se haya aplicado correctamente en el namespace usando `kubectl describe resourcequota <nombre_de_la_resourcequota> -n <namespace>`.
 
-    - Revisa que los límites se apliquen cuando intentes crear recursos que excedan las restricciones establecidas.
+    - Revisar que los límites se apliquen cuando intentes crear recursos que excedan las restricciones establecidas.
 
-Al finalizar, revisa los resultados y anota tus observaciones sobre cómo se comportan los pods cuando alcanzan los límites definidos en la **ResourceQuota**.
+Al finalizar, revisar los resultados y anotar tus observaciones sobre cómo se comportan los pods cuando alcanzan los límites definidos en la **ResourceQuota**.
 
 <br/>
 
-## Resultado Esperado
+## Resultado esperado
 
 - Cuando ejecutas el comando para crear el **test-pod** con recursos que exceden los límites definidos en la **ResourceQuota**, deberías ver una salida de error similar a la siguiente:
 
