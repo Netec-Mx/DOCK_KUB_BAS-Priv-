@@ -1,11 +1,11 @@
-# Práctica 3.5 Configuración de Autoscaling con Horizontal Pod Autoscaler (HPA)
+# Práctica 3.5. Configuración de Autoscaling con Horizontal Pod Autoscaler (HPA)
 
 ## Objetivo
-Al finalizar la actividad, serás capaz de escribir y aplicar un archivo YAML para configurar el escalado automático de Pods mediante Horizontal Pod Autoscaler (HPA).
+- Escribir y aplicar un archivo YAML para configurar el escalado automático de Pods mediante Horizontal Pod Autoscaler (HPA).
 
 
 ## Duración aproximada
-30 minutos
+- 30 minutos
 
 ## Instrucciones
 
@@ -43,7 +43,7 @@ spec:
         ports:
         - containerPort: 80
 
-    - Aplica el archivo del Deployment:
+    - Aplicar el archivo del Deployment:
 
 ```bash
  
@@ -82,7 +82,7 @@ spec:
 ```
 
 
-- Aplica el archivo del HPA:
+- Aplicar el archivo del HPA:
 
 ```bash
 
@@ -92,7 +92,7 @@ kubectl apply -f hpa.yaml
 <br/>
 
 
-### 3. Verificar el Estado del HPA
+### 3. Verificar el estado del HPA
 
 - Después de configurar el HPA, puedes verificar su estado y comportamiento usando el siguiente comando:
 
@@ -106,7 +106,7 @@ kubectl get hpa
 
 <br/>
 
-### 4. Crea un Servicio
+### 4. Crear un servicio
 
 - Para exponer tus Pods del Deployment, puedes crear un servicio de tipo ClusterIP (para acceso interno en el clúster) o NodePort (para acceso externo desde la IP del nodo). 
 
@@ -128,14 +128,14 @@ spec:
 
 ```
 
-- Aplica el archivo para crear el servicio
+- Aplicar el archivo para crear el servicio.
 
 ```bash
 
 kubectl apply -f service.yaml
 ```
 
-- Obtén la IP interna del servicio ejecutando el siguiente comando:
+- Obtener la IP interna del servicio ejecutando el siguiente comando:
 
 ```bash
 
@@ -147,7 +147,7 @@ kubectl get service sample-service
 
 <br/>
 
-### 5. Generar Carga de Prueba
+### 5. Generar carga de prueba
 
 - Para observar cómo el HPA escala los Pods, puedes generar una carga de prueba en el Deployment. Una forma de hacerlo es ejecutar un comando **kubectl exec** dentro de un Pod para enviar solicitudes al servicio o simular carga en la CPU.
 
@@ -166,7 +166,7 @@ kubectl run -i --tty load-generator --rm --image=busybox -- /bin/sh -c "while tr
 ### 6. Monitorear el Autoscaling
 
 
-- Mientras se ejecuta la carga de prueba, usa el siguiente comando para monitorear cómo el HPA escala los Pods:
+- Mientras se ejecuta la carga de prueba, usar el siguiente comando para monitorear cómo el HPA escala los Pods:
 
 ```bash
 kubectl get hpa -w
@@ -176,9 +176,9 @@ kubectl get hpa -w
 
 <br/>
 
-### 7. Limpiar los Recursos
+### 7. Limpiar los recursos
 
-    - Una vez completada la práctica, elimina los recursos creados para mantener limpio el clúster:
+    - Una vez completada la práctica, eliminar los recursos creados para mantener limpio el clúster:
 
 
 ```bash
@@ -190,7 +190,7 @@ kubectl get pods | grep load-generator | awk '{print $1}' | xargs kubectl delete
 <br/>
 <br/>
 
-## Resultado Esperado
+## Resultado esperado
 
 - Captura de pantalla que muestra el YAML para deployment
 
