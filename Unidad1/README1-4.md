@@ -1,8 +1,8 @@
-# Práctica 1.4 Construir Imagen y Contenedor Docker
+# Práctica 1.4 Construir imagen y contenedor Docker
 
 ## Objetivo
 
-Al finalizar esta actividad, serás capaz de crear una imagen Docker a partir de un Dockerfile y desplegar un contenedor basado en esa imagen.
+- Al finalizar esta actividad, serás capaz de crear una imagen Docker a partir de un Dockerfile y desplegar un contenedor basado en esa imagen.
 
 ## Duración aproximada
 
@@ -15,11 +15,11 @@ Al finalizar esta actividad, serás capaz de crear una imagen Docker a partir de
 
 1. **Crear un Dockerfile para la aplicación**
 
-   - Navega a la raíz del proyecto donde se encuentra tu aplicación Spring Boot.
+   - Navegar a la raíz del proyecto donde se encuentra tu aplicación Spring Boot.
 
-   - Crea un archivo llamado `Dockerfile` (sin extensión).
+   - Crear un archivo llamado `Dockerfile` (sin extensión).
    
-   - Abre el archivo `Dockerfile` y escribe las siguientes instrucciones básicas:
+   - Abrir el archivo `Dockerfile` y escribir las siguientes instrucciones básicas:
 
      ```dockerfile
      # Utilizar una imagen base de Java (ajusta la versión si es necesario)
@@ -38,16 +38,16 @@ Al finalizar esta actividad, serás capaz de crear una imagen Docker a partir de
      ENTRYPOINT ["java", "-jar", "app.jar"]
      ```
 
-   - Guarda el archivo `Dockerfile`.
+   - Guardar el archivo `Dockerfile`.
 
 
 <br/>
 
 2. **Construir la imagen Docker**
 
-   - Abre la terminal en el directorio raíz de tu proyecto.
+   - Abrir la terminal en el directorio raíz del proyecto.
 
-   - Asegúrate de que el archivo JAR de tu aplicación ya esté generado en la carpeta `target`. Si no está, ejecuta el siguiente comando para compilarlo:
+   - Asegúrate de que el archivo JAR de la aplicación ya esté generado en la carpeta `target`. Si no está, ejecutar el siguiente comando para compilarlo:
 
      ```bash
      mvn clean package
@@ -55,7 +55,7 @@ Al finalizar esta actividad, serás capaz de crear una imagen Docker a partir de
 
     - **Nota**: Puedes compilarlo y empaquetarlo como se vió en clase, esto es con, `mvnw` en lugar de `mvn`.
 
-   - Una vez que el archivo JAR esté listo, construye la imagen Docker con el siguiente comando (reemplaza `<nombre_de_imagen>` y `<versión>` por un nombre y versión para la imagen):
+   - Una vez que el archivo JAR esté listo, construir la imagen Docker con el siguiente comando (reemplaza `<nombre_de_imagen>` y `<versión>` por un nombre y versión para la imagen):
 
      ```bash
      docker build -t ms-clientes:v1 .
@@ -66,7 +66,7 @@ Al finalizar esta actividad, serás capaz de crear una imagen Docker a partir de
 
 3. **Verificar la imagen creada**
 
-   - Ejecuta el siguiente comando para ver la lista de imágenes y confirmar que tu imagen fue creada exitosamente:
+   - Ejecutar el siguiente comando para ver la lista de imágenes y confirmar que la imagen fue creada exitosamente:
 
      ```bash
      docker images
@@ -76,7 +76,7 @@ Al finalizar esta actividad, serás capaz de crear una imagen Docker a partir de
 
 4. **Desplegar un contenedor basado en la imagen**
 
-   - Inicia un contenedor a partir de la imagen creada, mapeando el puerto 8095 del contenedor al puerto 9095 de tu máquina local:
+   - Iniciar un contenedor a partir de la imagen creada, mapeando el puerto 8095 del contenedor al puerto 9095 de la máquina local:
 
      ```bash
      docker run -d -p 8095:9095 --name ms-clientes ms-clientes:v1
@@ -90,7 +90,7 @@ Al finalizar esta actividad, serás capaz de crear una imagen Docker a partir de
 
 5. **Verificar que el contenedor esté en ejecución**
 
-   - Usa el siguiente comando para listar los contenedores en ejecución y confirmar que tu aplicación está desplegada:
+   - Usar el siguiente comando para listar los contenedores en ejecución y confirmar que tu aplicación está desplegada:
 
      ```bash
 
@@ -102,7 +102,7 @@ Al finalizar esta actividad, serás capaz de crear una imagen Docker a partir de
 
 6. **Detener el contenedor**
 
-   - Si deseas detener el contenedor en ejecución, identifica el `CONTAINER ID` usando el comando `docker ps`, y luego ejecuta:
+   - Si deseas detener el contenedor en ejecución, identificar el `CONTAINER ID` usando el comando `docker ps`, y luego ejecutar:
 
      ```bash
      docker stop ms-clientes
@@ -114,7 +114,7 @@ Al finalizar esta actividad, serás capaz de crear una imagen Docker a partir de
 
 7. **Iniciar el contenedor**
 
-   - Si deseas levantar el contenedor nuevamente, identifica el `CONTAINER ID` usando el comando `docker ps`, y luego ejecuta:
+   - Si deseas levantar el contenedor nuevamente, identificar el `CONTAINER ID` usando el comando `docker ps`, y luego ejecutar:
 
      ```bash
      docker start ms-clientes
