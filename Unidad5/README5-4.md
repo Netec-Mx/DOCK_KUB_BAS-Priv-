@@ -1,18 +1,16 @@
-# Práctica 5.4 Escribiendo y Configurando YAML para Ingress Controller
-
+# Práctica 5.4 Escribiendo y configurando YAML para Ingress Controller
 
 ## Objetivo
-Al finalizar esta práctica, serás capaz de crear archivos YAML para el Ingress Controller en Kubernetes, configurando reglas de tráfico y rutas específicas para acceder a servicios dentro del clúster
+- Crear archivos YAML para el Ingress Controller en Kubernetes, configurando reglas de tráfico y rutas específicas para acceder a servicios dentro del clúster.
 
 
 ## Duración aproximada
 
-30 minutos
+- 30 minutos.
 
 ## Prerrequisitos
 
 - Haber realizado la **Práctica 5.3 Configuración de Kubernetes Ingress**
-
 <br/>
 
 ## Instrucciones
@@ -21,7 +19,7 @@ Al finalizar esta práctica, serás capaz de crear archivos YAML para el Ingress
 
 1. Dado que actualmente tienes configurados Hosts separados para cada aplicación (app1.example.com & app2.example.com).
 
-2. Elimina todas las rutas de Ingress asociadas a los servicios app1-service y app2-service.
+2. Eliminar todas las rutas de Ingress asociadas a los servicios app1-service y app2-service.
 
 <br/>
 
@@ -37,15 +35,15 @@ Al finalizar esta práctica, serás capaz de crear archivos YAML para el Ingress
 
 ## Paso 3. Probar las nuevas rutas
 
-1. Utiliza los comandos `curl` para verificar las rutas actualizadas.
+1. Utilizar los comandos `curl` para verificar las rutas actualizadas.
 
-    - Verifica la ruta /app1 en app1.example.com
+    - Verificar la ruta /app1 en app1.example.com
 
     ```bash
     curl -H "Host: example.com" http://<ip-master-node>:<puerto>/app1
     ```
 
-    - Verifica la ruta /app2 en app2.example.com
+    - Verificar la ruta /app2 en app2.example.com
 
     ```bash
     curl -H "Host: example.com" http://<ip-master-node>:<puerto>/app2
@@ -54,7 +52,7 @@ Al finalizar esta práctica, serás capaz de crear archivos YAML para el Ingress
 <br/>
 <br/>
 
-## Resultado Esperado
+## Resultado esperado
 
 - Capturas de pantallas que muestran la configuración previa.
 
