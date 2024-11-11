@@ -6,11 +6,10 @@
 
 ## Duración aproximada
 
-45 minutos
+- 45 minutos.
 
 
 <br/>
-
 
 ## Instrucciones
 
@@ -88,7 +87,7 @@
 
 6. **Consumir el microservicio**
 
-    - Usando Postman, Insomia o curl consume los endpoints de tu microservicio
+    - Usando Postman, Insomia o curl consume los endpoints de tu microservicio.
 
 | **Operación**                | **Método HTTP** | **URL**                                      | **Descripción**                                                |
 |------------------------------|-----------------|----------------------------------------------|----------------------------------------------------------------|
@@ -104,7 +103,7 @@
 <br/>
 
 
-## Resultado Esperado
+## Resultado esperado
 
 - Al analizar el microservicio, deberás encontrar carpetas similares a las siguientes:
 
