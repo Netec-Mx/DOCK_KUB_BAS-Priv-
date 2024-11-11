@@ -7,7 +7,7 @@
 
 ## Duración aproximada
 
-20 minutos.
+- 20 minutos.
 
 ## Instrucciones
 
@@ -23,7 +23,7 @@
 <br/>
 
 
-### 2. Descarga de imágenes de Docker Hub
+### 2. Descargar imágenes de Docker Hub
    - Descargar las siguientes imágenes adicionales para familiarizarte con diferentes sistemas y aplicaciones:
  
      - `mysql`: Sistema de gestión de bases de datos.
@@ -60,11 +60,11 @@
 
 
 ### 4. Visualización de imágenes y contenedores
-   - Lista todas las imágenes disponibles en tu sistema:
+   - Listar todas las imágenes disponibles en tu sistema:
      ```bash
      docker images
      ```
-   - Lista todos los contenedores, tanto activos como detenidos:
+   - Listar todos los contenedores, tanto activos como detenidos:
      ```bash
      docker ps -a
      ```
@@ -78,11 +78,11 @@
      docker ps
      docker port mysql_container
      ```
-   - **Sistema Operativo**: Inspecciona el sistema operativo de cada contenedor:
+   - **Sistema Operativo**: Inspeccionar el sistema operativo de cada contenedor:
      ```bash
      docker inspect <nombre_del_contenedor> | grep "Os"
      ```
-   - **Fecha y Hora**: Muestra la fecha y hora actual en uno de los contenedores:
+   - **Fecha y Hora**: Mostrar la fecha y hora actual en uno de los contenedores:
      ```bash
      docker exec mysql_container date
      ```
@@ -128,7 +128,7 @@
 <br/>
 <br/>
 
-## Resultado Esperado
+## Resultado esperado
 
 - Imágenes Docker
 
