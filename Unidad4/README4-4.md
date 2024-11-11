@@ -1,13 +1,12 @@
-# Práctica 4.4 Implementación de Probes & Policies en Pods.
-
+# Práctica 4.4. Implementación de Probes & Policies en Pods
 
 ## Objetivo
-Al finalizar esta práctica, serás capaz de configurar Liveness y Readiness Probes, y Restart Policies en Pods.
+- Configurar Liveness y Readiness Probes, y Restart Policies en Pods.
 
 
 ## Duración aproximada
 
-20 minutos
+- 20 minutos
 
 ## Instrucciones
 
@@ -17,9 +16,9 @@ Al finalizar esta práctica, serás capaz de configurar Liveness y Readiness Pro
 
     - **Liveness Probe**: Configura una sonda de liveness para verificar que la aplicación sigue funcionando. Esto ayudará a Kubernetes a reiniciar el contenedor si el **probe** falla.
 
-    - **Readiness Probe**: Configura el **readiness** para verificar que el contenedor está listo para recibir tráfico.
+    - **Readiness Probe**: Configurar el **readiness** para verificar que el contenedor está listo para recibir tráfico.
 
-    - **Restart Policy**: Configura una política de reinicio. Se ha movido al nivel de spec del Pod, fuera de la sección de containers. Esto asegura que Kubernetes aplique la política de reinicio al Pod completo y no a cada contenedor individual.
+    - **Restart Policy**: Configurar una política de reinicio. Se ha movido al nivel de spec del Pod, fuera de la sección de containers. Esto asegura que Kubernetes aplique la política de reinicio al Pod completo y no a cada contenedor individual.
 
 <br/>
 
@@ -27,7 +26,7 @@ Al finalizar esta práctica, serás capaz de configurar Liveness y Readiness Pro
 
 - Este archivo YAML define un Pod que contiene un contenedor ejecutando una aplicación web simple en el puerto **8080**. 
 
-- Configuraremos los probes de liveness y readiness, y estableceremos la política de reinicio.
+- Configurar los probes de liveness y readiness, y establecer la política de reinicio.
 
 ```yaml
 aapiVersion: v1
@@ -47,16 +46,16 @@ spec:
       httpGet:
         path: /
         port: 8080
-      initialDelaySeconds: 10      # Espera antes de iniciar el primer probe de liveness
-      periodSeconds: 5             # Intervalo de tiempo entre cada probe
-      failureThreshold: 3          # Número de fallos consecutivos para marcar el contenedor como no saludable
+      initialDelaySeconds: 10      # Esperar antes de iniciar el primer probe de liveness.
+      periodSeconds: 5             # Intervalo de tiempo entre cada probe.
+      failureThreshold: 3          # Número de fallos consecutivos para marcar el contenedor como no saludable.
     readinessProbe:
       httpGet:
         path: /
         port: 8080
-      initialDelaySeconds: 5       # Espera antes de iniciar el primer probe de readiness
-      periodSeconds: 3             # Intervalo de tiempo entre cada probe
-      failureThreshold: 2          # Número de fallos consecutivos para marcar el contenedor como no listo
+      initialDelaySeconds: 5       # Esperar antes de iniciar el primer probe de readiness.
+      periodSeconds: 3             # Intervalo de tiempo entre cada probe.
+      failureThreshold: 2          # Número de fallos consecutivos para marcar el contenedor como no listo.
 
 ```
 
@@ -88,7 +87,7 @@ spec:
 
 ### Paso 3. Aplicar el archivo YAML.
 
-- Para crear el Pod en Kubernetes, utiliza el siguiente comando en la terminal:
+- Para crear el Pod en Kubernetes, utilizar el siguiente comando en la terminal:
 
     ```bash
     kubectl apply -f pod-probes-policies.yaml
@@ -115,7 +114,7 @@ spec:
 
 ### Paso 5. Monitorear el Pod
 
-- Para observar cómo los probes afectan al Pod en tiempo real, usa el siguiente comando
+- Para observar cómo los probes afectan al Pod en tiempo real, usar el siguiente comando
 
     ```bash
     kubectl get pod pod-probes-policies -w
@@ -163,12 +162,12 @@ kubectl exec -it pod-probes-policies -- /bin/sh
 
 3. **Cerrar la sesión interactiva**:
 
-    - Cuando termines, simplemente cierra la sesión con `exit`.
+    - Al terminar, simplemente cerrar la sesión con `exit`.
 
 <br/>
 
 
-#### Opción B. Simulación de un alto consumo de recursos en el contenedor
+#### Opción B. Simulación de un alto consumo de recursos en el contenedor.
 
 1. **Puedes simular una alta carga de CPU o memoria dentro del contenedor:**
 
@@ -182,7 +181,7 @@ kubectl exec -it pod-probes-policies -- /bin/sh -c "while true; do :; done"
 
 2. **Verificar el Comportamiento del Pod**
 
-    - Vuelve a observar la salida de `kubectl get pod pod-probes-policies -w` para ver cómo responde Kubernetes. 
+    - Volver a observar la salida de `kubectl get pod pod-probes-policies -w` para ver cómo responde Kubernetes. 
 
     - Si los probes detectan que el contenedor ha fallado, verás que Kubernetes reiniciará el contenedor según la política de reinicio.
 
@@ -190,7 +189,7 @@ kubectl exec -it pod-probes-policies -- /bin/sh -c "while true; do :; done"
 
 ### Paso 7: Finalizar el Stress Test
 
-Cuando termines de observar el comportamiento de los probes y el reinicio, puedes detener el stress test cerrando la sesión interactiva o eliminando el Pod:
+Al terminar de observar el comportamiento de los probes y el reinicio, puedes detener el stress test cerrando la sesión interactiva o eliminando el Pod:
 
 ```bash
 kubectl delete pod pod-probes-policies
@@ -198,7 +197,7 @@ kubectl delete pod pod-probes-policies
  
 <br/><br/>
 
-## Resultado Esperado
+## Resultado esperado
 
 <br/>
 
