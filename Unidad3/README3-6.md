@@ -1,19 +1,18 @@
-# Práctica 3.6 YAML
+# Práctica 3.6. YAML
 
 ## Objetivo
-Al finalizar esta actividad, serás capaz de crear y gestionar múltiples recursos en Kubernetes, incluyendo Deployment, ResourceQuota, límites y solicitudes de recursos, HPA, VPA y varios tipos de Services.
-
+- Crear y gestionar múltiples recursos en Kubernetes, incluyendo Deployment, ResourceQuota, límites y solicitudes de recursos, HPA, VPA y varios tipos de Services.
 
 
 ## Duración aproximada
 
-40 minutos
+- 40 minutos.
 
 ## Instrucciones
 
 ### Paso 1. YAML
 
-- Crea un archivo YAML llamado **multi-resource.yaml** y copia el siguiente contenido en él. Este archivo definirá múltiples recursos en Kubernetes, incluyendo un Deployments, ResourceQuotas, HPA, y varios tipos de Services.
+- Crear un archivo YAML llamado **multi-resource.yaml** y copiar el siguiente contenido en él. Este archivo definirá múltiples recursos en Kubernetes, incluyendo un Deployments, ResourceQuotas, HPA, y varios tipos de Services.
 
 ```YAML
 #  
@@ -144,9 +143,9 @@ spec:
 
 <br/>
 
-### Paso 2. kubectl apply
+### Paso 2. Kubectl apply
 
-- Aplica el archivo YAML en tu clúeste de Kubernetes
+- Aplicar el archivo YAML en tu clúeste de Kubernetes.
 
 ```yaml
 kubectl apply -f multi-resource.yaml
