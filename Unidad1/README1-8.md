@@ -1,21 +1,21 @@
-# Práctica 1.8 Docker CLI (Opcional)
+# Práctica 1.8. Docker CLI (Opcional)
 
 ## Objetivo
 
-Al finalizar esta actividad, serás capaz de optimizar un Dockerfile aplicando prácticas recomendadas para reducir el tamaño de la imagen, mejorar la velocidad de construcción y minimizar el uso de recursos.
+- Optimizar un Dockerfile aplicando prácticas recomendadas para reducir el tamaño de la imagen, mejorar la velocidad de construcción y minimizar el uso de recursos.
 
 
 ## Duración aproximada
 
-20 minutos
+20 minutos.
 
 ## Instrucciones
 
 <br/>
 
-### 1. Preparación Inicial
-   - Abre una terminal y asegúrate de que Docker esté en funcionamiento.
-   - Verifica la versión de Docker:
+### 1. Preparación inicial
+   - Abrir una terminal y asegurarse de que Docker esté en funcionamiento.
+   - Verificar la versión de Docker:
      ```bash
      docker --version
      ```
@@ -23,8 +23,8 @@ Al finalizar esta actividad, serás capaz de optimizar un Dockerfile aplicando p
 <br/>
 
 
-### 2. Descarga de Imágenes de Docker Hub
-   - Descarga las siguientes imágenes adicionales para familiarizarte con diferentes sistemas y aplicaciones:
+### 2. Descarga de imágenes de Docker Hub
+   - Descargar las siguientes imágenes adicionales para familiarizarte con diferentes sistemas y aplicaciones:
  
      - `mysql`: Sistema de gestión de bases de datos.
      - `node`: Imagen base para aplicaciones Node.js.
@@ -40,8 +40,8 @@ Al finalizar esta actividad, serás capaz de optimizar un Dockerfile aplicando p
 <br/>
 
 
-### 3. Construcción de Contenedores
-   - Crea un contenedor a partir de cada imagen descargada:
+### 3. Construcción de contenedores
+   - Crear un contenedor a partir de cada imagen descargada:
       - **MySQL**:
        ```bash
        docker run -d --name mysql_container -e MYSQL_ROOT_PASSWORD=abcd12345 mysql
@@ -59,7 +59,7 @@ Al finalizar esta actividad, serás capaz de optimizar un Dockerfile aplicando p
 <br/>
 
 
-### 4. Visualización de Imágenes y Contenedores
+### 4. Visualización de imágenes y contenedores
    - Lista todas las imágenes disponibles en tu sistema:
      ```bash
      docker images
@@ -72,8 +72,8 @@ Al finalizar esta actividad, serás capaz de optimizar un Dockerfile aplicando p
 <br/>
 
 
-### 5. Inspección Detallada
-   - **Puertos HTTP expuestos**: Confirma qué contenedores exponen puertos HTTP:
+### 5. Inspección detallada
+   - **Puertos HTTP expuestos**: Confirmar qué contenedores exponen puertos HTTP:
      ```bash
      docker ps
      docker port mysql_container
@@ -90,7 +90,7 @@ Al finalizar esta actividad, serás capaz de optimizar un Dockerfile aplicando p
 <br/>
 
 
-### 6. Eliminación de Contenedores e Imágenes
+### 6. Eliminación de contenedores e imágenes
    - **Detener y eliminar todos los contenedores**:
      ```bash
      docker stop $(docker ps -aq)   #  S.O. Linux
@@ -105,12 +105,12 @@ Al finalizar esta actividad, serás capaz de optimizar un Dockerfile aplicando p
 
 
 ### 7. Reflexión sobre el Docker Daemon y el CLI
-   - Reflexiona sobre cómo la separación entre el Docker Daemon y el cliente CLI permite gestionar contenedores en otros servidores desde una máquina local.
+   - Reflexionar sobre cómo la separación entre el Docker Daemon y el cliente CLI permite gestionar contenedores en otros servidores desde una máquina local.
 
 
 <br/>
 
-### Preguntas al Finalizar la Práctica
+### Preguntas al finalizar la práctica
 
 1. ¿Cuántas imágenes Docker se generaron?
 
