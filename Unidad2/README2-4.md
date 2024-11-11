@@ -1,17 +1,17 @@
-# Práctica 2.4 Creación Declarativa de un Pod
+# Práctica 2.4. Creación declarativa de un Pod
 
 ## Objetivo
 
-Al finalizar esta actividad, serás capaz de crear un Pod en Kubernetes utilizando un enfoque declarativo mediante archivos YAML.
+- Crear un Pod en Kubernetes utilizando un enfoque declarativo mediante archivos YAML.
 
 ## Duración aproximada
 
-15 minutos
+15 minutos.
 
 ## Requisitos previos
 
 - Tener acceso a un clúster de Kubernetes en funcionamiento.
-- Contar con acceso a la CLI de Kubernetes (kubectl) desde tu terminal y permisos para aplicar configuraciones en el clúster.
+- Contar con acceso a la CLI de Kubernetes (kubectl) desde la terminal y permisos para aplicar configuraciones en el clúster.
 - Conocer los conceptos básicos de YAML y la estructura de archivos de configuración de Kubernetes.
 
 <br/>
@@ -20,7 +20,7 @@ Al finalizar esta actividad, serás capaz de crear un Pod en Kubernetes utilizan
 
 **Paso 1: Crear el archivo YAML para el Pod**
 
-1. Abre tu editor de texto preferido y crea un archivo llamado mipod.yaml.
+1. Abrir tu editor de texto preferido y crear un archivo llamado mipod.yaml.
 
 <br/>
 
@@ -43,7 +43,7 @@ spec:
 
 <br/>
 
-3. Contesta lo siguiente referente al YAML
+3. Contestar lo siguiente referente al YAML
 
     a. ¿Qué campo define la versión de la API de Kubernetes utilizada en el archivo de configuración?
     
@@ -66,11 +66,11 @@ spec:
 
 **Paso 2: Aplicar la configuración del Pod**
 
-1. Abre la terminal y navega al directorio donde guardaste mipod.yaml.
+1. Abrir la terminal y navegar al directorio donde guardaste mipod.yaml.
 
 <br/>
 
-2. Ejecuta el siguiente comando para aplicar la configuración en el clúster de Kubernetes:
+2. Ejecutar el siguiente comando para aplicar la configuración en el clúster de Kubernetes:
 
 ```bash
 
@@ -82,7 +82,7 @@ kubectl apply -f mipod.yaml
 
 <br/>
 
-3. Verifica que el Pod se ha creado correctamente con el siguiente comando:
+3. Verificar que el Pod se ha creado correctamente con el siguiente comando:
 
 ```bash
 
@@ -120,7 +120,7 @@ kubectl exec -it my-pod -- /bin/bash
 
 **Paso 4: Eliminar el Pod**
 
-- Una vez que hayas terminado, puedes eliminar el Pod para liberar recursos en el clúster. Ejecuta:
+- Una vez que hayas terminado, puedes eliminar el Pod para liberar recursos en el clúster. Ejecutar:
 
 ```bash
 
