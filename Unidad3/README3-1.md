@@ -1,18 +1,18 @@
-# Práctica 3.1 Escribiendo YAML de un Deployment
+# Práctica 3.1. Escribiendo YAML de un Deployment
 
 ## Objetivo 
-Al finalizar la actividad, serás capaz de escribir y aplicar un archivo YAML para crear un Deployment, configurando el número de réplicas, contenedores y puertos necesarios para desplegar aplicaciones en el clúster
+- Escribir y aplicar un archivo YAML para crear un Deployment, configurando el número de réplicas, contenedores y puertos necesarios para desplegar aplicaciones en el clúster.
 
 ## Duración aproximada
-20 minutos
+- 20 minutos.
 
 ## Instrucciones
 
 1. **Crear el archivo YAML**
 
-    a. Abre un editor de texto y crea un archivo llamado **deployment.yaml**.
+    a. Abrir un editor de texto y crea un archivo llamado **deployment.yaml**.
 
-    b. Escribe el siguiente YAML como ejemplo básico para un Deployment en Kubernetes. Este archivo describe la configuración necesaria para desplegar una aplicación.
+    b. Escribir el siguiente YAML como ejemplo básico para un Deployment en Kubernetes. Este archivo describe la configuración necesaria para desplegar una aplicación.
 
 ```yaml
 
@@ -51,16 +51,16 @@ spec:
 
 3. **Aplicar el Deployment en el clúster**
 
-    - Abre una terminal en la ubicación donde guardaste el archivo `deployment.yaml`.
+    - Abrir una terminal en la ubicación donde guardaste el archivo `deployment.yaml`.
 
-    - Ejecuta el siguiente comando para aplicar el archivo YAML en el clúster:
+    - Ejecutar el siguiente comando para aplicar el archivo YAML en el clúster:
 
 ```bash
  
 kubectl apply -f deployment.yaml
 ```
 
--   Verifica que el Deployment se haya creado correctamente ejecutando:
+-   Verificar que el Deployment se haya creado correctamente ejecutando:
 
 ```bash
  
