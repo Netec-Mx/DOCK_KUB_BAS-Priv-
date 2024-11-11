@@ -1,12 +1,12 @@
 
-# Práctica 1.1 Instalación Docker
+# Práctica 1.1. Instalación Docker
 
 
 ## Objetivo 
 Al finalizar esta actividad, serás capaz de instalar y configurar Docker en un entorno Linux utilizando máquinas virtuales.
 
 ## Duración aproximada
-35 minutos
+35 minutos.
 
 ## Requisitos del Sistema
 
@@ -34,9 +34,9 @@ Al finalizar esta actividad, serás capaz de instalar y configurar Docker en un 
 
 ## Instrucciones
 
-1. **Consulta con tu instructor**
+1. **Consulta con el instructor**
 
-Pregunta a tu instructor cómo acceder al entorno de prácticas del curso y asegúrate de entender todas las instrucciones necesarias para su acceso este día y los días siguientes de clase.
+Pregunta a el instructor cómo acceder al entorno de prácticas del curso y asegúrate de entender todas las instrucciones necesarias para su acceso este día y los días siguientes de clase.
 
     - ¿Cuántas máquinas virtuales tienes?
     - ¿Cuáles son los sistemas operativos que tienes en cada máquina?
@@ -44,7 +44,7 @@ Pregunta a tu instructor cómo acceder al entorno de prácticas del curso y aseg
 <br/>
 
 
-2. ***Actualiza e instala los paquetes requeridos:***
+2. ***Actualizar e instalar los paquetes requeridos:***
 
 ```bash
 sudo apt update
@@ -54,7 +54,7 @@ sudo apt install apt-transport-https ca-certificates curl software-properties-co
 <br/>
 
 
-3. ***Agrega la clave de Docker y el repositorio***
+3. ***Agregar la clave de Docker y el repositorio***
 
 ```bash
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
@@ -68,7 +68,7 @@ sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubun
 <br/>
 
 
-4. ***Actualiza de nuevo e instala Docker***
+4. ***Actualizar de nuevo e instalar Docker***
 ```bash
 sudo apt update
 apt-cache policy docker-ce
@@ -78,7 +78,7 @@ sudo apt install docker-ce
 <br/>
 
 
-5. ***Verifica de Docker*** 
+5. ***Verificar de Docker*** 
 
 ```bash
 sudo systemctl status docker
@@ -88,7 +88,7 @@ sudo systemctl status docker
 <br/>
 
 
-6. ***Configura adicionalmente***
+6. ***Configurar adicionalmente***
 
 ```bash
 docker --version
