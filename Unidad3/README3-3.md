@@ -1,13 +1,12 @@
-# Práctica 3.3 Comparación entre StatefulSets y Deployments con ResourceQuota
+# Práctica 3.3. Comparación entre StatefulSets y Deployments con ResourceQuota
 
 ## Objetivo
 
-Al finalizar la actividad, serás capaz de implementar y diferenciar un StatefulSet y un Deployment, aplicando una ResourceQuota.
-
+- Implementar y diferenciar un StatefulSet y un Deployment, aplicando una ResourceQuota.
 
 ## Duración aproximada
 
-30 minutos
+- 30 minutos.
 
 ## Instrucciones
 
@@ -154,7 +153,7 @@ kubectl apply -f statefulset.yaml
 
 <br/>
 
-### 5. Verificar el Comportamiento y los Recursos
+### 5. Verificar el comportamiento y los recursos
 
 1. Listar los pods creados en el Namespace:
 
@@ -181,7 +180,7 @@ kubectl describe pod <nombre_del_pod> -n practica-stateful-deployment
 kubectl get resourcequota practica-quota -n practica-stateful-deployment
 ```
 
-2. Comprobar si los límites de la ResourceQuota afectan la creación de réplicas adicionales en el Deployment o el StatefulSet al intentar modificar sus valores de replicas. Por ejemplo, intenta aumentar las réplicas del Deployment:
+2. Comprobar si los límites de la ResourceQuota afectan la creación de réplicas adicionales en el Deployment o el StatefulSet al intentar modificar sus valores de replicas. Por ejemplo, intentar aumentar las réplicas del Deployment:
 
 ```yaml
 spec:
@@ -198,17 +197,17 @@ kubectl get pods -n practica-stateful-deployment
 
 <br/>
 
-### 7. Analizar Resultados
+### 7. Analizar resultados
 
-1. Documenta las observaciones sobre cómo Kubernetes maneja las asignaciones de nombres de los pods en StatefulSet versus Deployment.
+1. Documentar las observaciones sobre cómo Kubernetes maneja las asignaciones de nombres de los pods en StatefulSet versus Deployment.
 
-2. Compara cómo cada uno responde a las restricciones impuestas por la ResourceQuota, tomando en cuenta el número de réplicas que permite crear sin superar los límites.
+2. Comparar cómo cada uno responde a las restricciones impuestas por la ResourceQuota, tomando en cuenta el número de réplicas que permite crear sin superar los límites.
 
 <br/>
 
 ### Conclusión
 
-- Reflexiona sobre las siguientes preguntas para comprender mejor la aplicación de StatefulSet y Deployment:
+- Reflexionar sobre las siguientes preguntas para comprender mejor la aplicación de StatefulSet y Deployment:
 
     a. ¿Cuál es la diferencia principal en el comportamiento de StatefulSet y Deployment cuando se aplican límites de recursos?
 
@@ -218,7 +217,7 @@ kubectl get pods -n practica-stateful-deployment
 
 <br/><br/>
 
-## Resultado Esperado
+## Resultado esperado
 
 - Captura de pantalla muestra el contenido del YAML para crear un espacio de nombres.
 
