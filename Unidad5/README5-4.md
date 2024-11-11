@@ -1,4 +1,4 @@
-# Práctica 5.4 Escribiendo y configurando YAML para Ingress Controller
+# Práctica 5.4. Escribiendo y configurando YAML para Ingress Controller
 
 ## Objetivo
 - Crear archivos YAML para el Ingress Controller en Kubernetes, configurando reglas de tráfico y rutas específicas para acceder a servicios dentro del clúster.
