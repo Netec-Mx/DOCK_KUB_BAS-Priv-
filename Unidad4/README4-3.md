@@ -1,19 +1,19 @@
-# Práctica 4.3 Configuración de Job e InitContainers
+# Práctica 4.3. Configuración de Job e InitContainers
 
 ## Objetivo
 
-Al finalizar esta práctica, serás capaz de configurar Jobs e InitContainers en Kubernetes para ejecutar tareas específicas o configuraciones previas.
+- Configurar Jobs e InitContainers en Kubernetes para ejecutar tareas específicas o configuraciones previas.
 
 
 ## Duración aproximada
 
-25 minutos
+- 25 minutos
 
 ## Instrucciones
 
 ### Paso 1. Crear un Namespace
 
-1. Crea un **Namespace** para organizar los recursos de esta práctica.
+1. Crear un **Namespace** para organizar los recursos de esta práctica.
 
 ```bash
 kubectl create namespace practica-job-init
@@ -25,7 +25,7 @@ kubectl create namespace practica-job-init
 
 Un InitContainer es un contenedor especial que se ejecuta antes de que el contenedor principal comience. Este tipo de contenedor es útil para tareas de configuración, como preparar archivos o verificar dependencias.
 
-1. Crea un archivo YAML para el Deployment que incluirá el InitContainer.
+1. Crear un archivo YAML para el Deployment que incluirá el InitContainer.
 
 
 ```yaml
@@ -57,7 +57,7 @@ spec:
 
 ```
 
-2. Aplica el archivo YAML
+2. Aplicar el archivo YAML
 
 ```bash
 kubectl apply -f init-container-deployment.yaml
@@ -72,7 +72,7 @@ kubectl apply -f init-container-deployment.yaml
 
 Un Job en Kubernetes se utiliza para ejecutar una tarea específica que debe completarse una vez. Un Job es ideal para tareas de mantenimiento o de procesamiento de datos.
 
-1. Crea un archivo YAML para el Job.
+1. Crear un archivo YAML para el Job.
 
 ```yaml
 apiVersion: batch/v1
@@ -91,7 +91,7 @@ spec:
   backoffLimit: 4
 ```
 
-2. Aplica el archivo
+2. Aplicar el archivo.
 
 ```bash
 kubectl apply -f job.yaml
@@ -103,14 +103,14 @@ kubectl apply -f job.yaml
 
 ### Paso 4. Verificación de los recursos creados
 
-1. Verifica el estado del **Deployment** y del **InitContainer**:
+1. Verificar el estado del **Deployment** y del **InitContainer**:
 
 ```bash
 kubectl get pods -n practica-job-init  # Localiza el nombre del Pod
 kubectl describe pod <nombre-del-pod> -n practica-job-init
 ```
 
-2. Verifica el estado del **Job**:
+2. Verificar el estado del **Job**:
 
 ```bash
 kubectl get jobs -n practica-job-init
@@ -129,7 +129,7 @@ kubectl logs job/my-job -n practica-job-init  # Job
 
 ### Paso 5. Limpieza 
 
-Una vez completada la práctica, elimina los recursos
+Una vez completada la práctica, eliminar los recursos
 
 ```bash
 kubectl delete namespace practica-job-init
@@ -137,7 +137,7 @@ kubectl delete namespace practica-job-init
 
 <br/><br/>
 
-## Resultado Esperado
+## Resultado esperado
 
 <br/>
 
