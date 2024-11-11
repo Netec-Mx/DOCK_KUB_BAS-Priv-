@@ -3,10 +3,10 @@
 
 
 ## Objetivo 
-Al finalizar esta actividad, serás capaz de instalar y configurar Docker en un entorno Linux utilizando máquinas virtuales.
+- Instalar y configurar Docker en un entorno Linux utilizando máquinas virtuales.
 
 ## Duración aproximada
-35 minutos.
+- 35 minutos.
 
 ## Requisitos del Sistema
 
@@ -27,7 +27,7 @@ Al finalizar esta actividad, serás capaz de instalar y configurar Docker en un 
 
 - Habilitar el módulo de overlay y overlay2, ya que Docker utiliza estos sistemas de archivos como el controlador de almacenamiento por defecto.
 
-- Permisos de Usuario
+- Permisos de Usuario.
     - Docker necesita permisos de administrador para su instalación y configuración. Usualmente, los comandos se ejecutan con **sudo**.
 
 <br/>
@@ -60,7 +60,7 @@ sudo apt install apt-transport-https ca-certificates curl software-properties-co
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
 ```
 
-Luego, agrega el repositorio
+Luego, agregar el repositorio.
 ```bash
 sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
 ```
@@ -101,7 +101,7 @@ cat /etc/group
 
 <br/><br/>
 
-## Resultado Esperado
+## Resultado esperado
 
 - docker --version
 
