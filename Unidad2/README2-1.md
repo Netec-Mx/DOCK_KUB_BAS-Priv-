@@ -1,10 +1,10 @@
-# Práctica 2.1 Verificación de Instalación del Master Node  
+# Práctica 2.1. Verificación de instalación del Master Node  
 
 ## Objetivo 
-Al finalizar esta actividad, serás capaz de verificar correctamente la instalación y configuración del nodo maestro (Master Node) en un clúster de Kubernetes
+- Verificar correctamente la instalación y configuración del nodo maestro (Master Node) en un clúster de Kubernetes.
 
 ## Duración aproximada
-15 minutos
+15 minutos.
 
 
 ## Requisitos previos:
@@ -15,18 +15,18 @@ Al finalizar esta actividad, serás capaz de verificar correctamente la instalac
 
 ## Instrucciones:
 
-1. **Acceso al nodo maestro**  
-   - Inicia sesión en el nodo maestro utilizando SSH:
+1. **Acceso al nodo maestro.**  
+   - Iniciar sesión en el nodo maestro utilizando SSH:
      ```bash
      ssh usuario@direccion-ip-del-master-node
      ```
-    - **Nota:** EL usuario y la contraseña de las máquinas podría ser `mnadmin`y `Netec_123` respectivamente, estas podrían cambiar, tu instructor lo coonfirmará.
+    - **Nota:** EL usuario y la contraseña de las máquinas podría ser `mnadmin`y `Netec_123` respectivamente, estas podrían cambiar, el instructor lo coonfirmará.
 
 <br/>
 
 
-2. **Verificar el estado del clúster**  
-   - Ejecuta el siguiente comando para verificar si el clúster de Kubernetes está activo y en funcionamiento:
+2. **Verificar el estado del clúster.**  
+   - Ejecutar el siguiente comando para verificar si el clúster de Kubernetes está activo y en funcionamiento:
      ```bash
      kubectl get nodes
      ```
@@ -35,30 +35,30 @@ Al finalizar esta actividad, serás capaz de verificar correctamente la instalac
 <br/>
 
 
-3. **Comprobar el estado de los componentes del nodo maestro**  
+3. **Comprobar el estado de los componentes del nodo maestro.**  
    - Para confirmar que todos los componentes del nodo maestro están operativos, ejecuta:
      ```bash
      kubectl get pods -n kube-system
      ```
-   - Verifica que todos los pods del sistema están en estado "Running" o "Completed".
+   - Verificar que todos los pods del sistema están en estado "Running" o "Completed".
 
 
 <br/>
 
 
-4. **Comprobar la versión de Kubernetes**  
-   - Confirma la versión de Kubernetes instalada en el nodo maestro:
+4. **Comprobar la versión de Kubernetes.**  
+   - Confirmar la versión de Kubernetes instalada en el nodo maestro:
      ```bash
      kubectl version 
      ```
-   - Anota la versión para validar que es la esperada para tu entorno.
+   - Anotar la versión para validar que es la esperada para tu entorno.
 
 
 <br/>
 
 
-5. **Verificar configuración de red**  
-   - Ejecuta el siguiente comando para verificar la configuración de red del nodo maestro:
+5. **Verificar configuración de red.**  
+   - Ejecutar el siguiente comando para verificar la configuración de red del nodo maestro:
      ```bash
      kubectl cluster-info
      ```
@@ -68,7 +68,7 @@ Al finalizar esta actividad, serás capaz de verificar correctamente la instalac
 
 
 6. **Validar la instalación del kubeconfig**  
-   - Verifica que el archivo de configuración `kubeconfig` esté en la ubicación predeterminada y contenga la configuración correcta para el nodo maestro:
+   - Verificar que el archivo de configuración `kubeconfig` esté en la ubicación predeterminada y contenga la configuración correcta para el nodo maestro:
      ```bash
      file ~/.kube/config
      cat ~/.kube/config
@@ -81,7 +81,7 @@ Al finalizar esta actividad, serás capaz de verificar correctamente la instalac
 
 
 7. **Verificación del SWAP**
-    - Ejecuta el siguiente comando para verificar el estado del swap
+    - Ejecutar el siguiente comando para verificar el estado del swap
 
     ```bash
      sudo swapon --show
@@ -92,7 +92,7 @@ Al finalizar esta actividad, serás capaz de verificar correctamente la instalac
     
     - El la salida del segundo comando, el valodr de la columna "Swap" debería ser cero si el swap está desactivado.
 
-    - Para asegurarte de que el swap se deshabilite permanentemente después de cada reinicio, verifica el contenido del archivo `/etc/fstab`, la(s) linea(s) con swap deberán de estar comentadas.
+    - Para asegurarte de que el swap se deshabilite permanentemente después de cada reinicio, verificar el contenido del archivo `/etc/fstab`, la(s) linea(s) con swap deberán de estar comentadas.
 
 
 
@@ -100,7 +100,7 @@ Al finalizar esta actividad, serás capaz de verificar correctamente la instalac
 
 
 8. **Finalizar**  
-   - Tras verificar todos los puntos anteriores, confirma que el nodo maestro está correctamente configurado y listo para operar en el clúster de Kubernetes.
+   - Tras verificar todos los puntos anteriores, confirmar que el nodo maestro está correctamente configurado y listo para operar en el clúster de Kubernetes.
 
 
 
