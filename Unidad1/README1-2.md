@@ -10,7 +10,7 @@
 
 ## Instrucciones
 
-Las siguientes instrucciones aplica en tu máquina máquina virtual con Windows asignada.
+Las siguientes instrucciones aplican en tu máquina máquina virtual con Windows asignada.
 
 1. **Configura Git**
 
