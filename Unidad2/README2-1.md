@@ -4,14 +4,13 @@
 - Verificar correctamente la instalación y configuración del nodo maestro (Master Node) en un clúster de Kubernetes.
 
 ## Duración aproximada
-15 minutos.
+- 15 minutos.
 
 
 ## Requisitos previos:
 - La instalación de Kubernetes ya está completada en un sistema Ubuntu Server 20.04.
 
 <br/>
-
 
 ## Instrucciones:
 
@@ -36,7 +35,7 @@
 
 
 3. **Comprobar el estado de los componentes del nodo maestro.**  
-   - Para confirmar que todos los componentes del nodo maestro están operativos, ejecuta:
+   - Para confirmar que todos los componentes del nodo maestro están operativos, ejecutar:
      ```bash
      kubectl get pods -n kube-system
      ```
@@ -107,7 +106,7 @@
 <br/>
 
 
-## Resultado Esperado
+## Resultado esperado
 
 - Captura de pantalla con el estado y version en los nodos y los pods en el espacio de nombre kube-system.
 
