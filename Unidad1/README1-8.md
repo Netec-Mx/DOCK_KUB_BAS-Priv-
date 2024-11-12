@@ -73,16 +73,16 @@
 
 
 ### 5. Inspección detallada
-   - **Puertos HTTP expuestos**: Confirmar qué contenedores exponen puertos HTTP:
+   - **Puertos HTTP expuestos**: Confirma qué contenedores exponen puertos HTTP:
      ```bash
      docker ps
      docker port mysql_container
      ```
-   - **Sistema Operativo**: Inspeccionar el sistema operativo de cada contenedor:
+   - **Sistema Operativo**: Inspecciona el sistema operativo de cada contenedor:
      ```bash
      docker inspect <nombre_del_contenedor> | grep "Os"
      ```
-   - **Fecha y Hora**: Mostrar la fecha y hora actual en uno de los contenedores:
+   - **Fecha y Hora**: Muestra la fecha y hora actual en uno de los contenedores:
      ```bash
      docker exec mysql_container date
      ```
@@ -130,20 +130,20 @@
 
 ## Resultado esperado
 
-- Imágenes Docker
+- Imágenes Docker.
 
 ![docker images](../images/u1_8_1.png)
 
 <br/>
 
 
-- Contenedores Docker
+- Contenedores Docker.
 
 ![docker ps -a](../images/u1_8_2.png)
 
 <br/>
 
 
-- Algunos comandos de Docker CLI
+- Algunos comandos de Docker CLI.
 
 ![docker ps -a](../images/u1_8_3.png)
