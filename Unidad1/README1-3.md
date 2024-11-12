@@ -16,7 +16,7 @@
 1. **Clonar el repositorio**
 
     - Acceder al repositorio inicial de las prácticas donde se encuentra el código.
-    - Clonar el repositorio en la máquina loca, si aún no lo has hecho, ejecutar el siguiente comando en la terminal:
+    - Clonar el repositorio en la máquina local, si aún no lo has hecho, ejecutar el siguiente comando en la terminal:
 
     ```bash
     
