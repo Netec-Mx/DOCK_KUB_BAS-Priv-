@@ -66,7 +66,7 @@
 ## Resultado esperado
 
 
-- Captura de pantalla, en el registro de usuario a Docker Hub, la creación del TAG de la imagen y ls subida de a imagen
+- Captura de pantalla, en el registro de usuario a Docker Hub, la creación del TAG de la imagen y la subida de la imagen.
 
 
 ![docker login ...](../images/u1_6_1.png)
@@ -93,7 +93,7 @@
 <br/>
 
 
--- Imagen en el Docker Hub
+-- Imagen en el Docker Hub.
 
 
 ![docker](../images/u1_6_4.png)
