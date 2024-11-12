@@ -6,7 +6,7 @@
 
 ## Duración aproximada
 
-15 minutos.
+- 15 minutos.
 
 ## Requisitos previos
 
@@ -141,13 +141,13 @@ kubectl delete -f my-pod.yaml
 
 ## Resultado Esperado
 
-- Captura de pantalla que muestra basicamente el contenido del YAML
+- Captura de pantalla que muestra basicamente el contenido del YAML.
 
 ![kubectl](../images/u2_4_1.png) 
 
 <br/>
 
-- Captura de pantalla que muestra el antes, durante y después de crear un Pod, de nombre: my-pod
+- Captura de pantalla que muestra el antes, durante y después de crear un Pod, de nombre: my-pod.
 
 ![kubectl](../images/u2_4_2.png) 
 
