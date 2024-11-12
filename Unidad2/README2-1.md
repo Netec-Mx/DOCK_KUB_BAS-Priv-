@@ -122,7 +122,7 @@
 <br/>
 
  
-- Captura de pantalla con la verificación del SWAP 
+- Captura de pantalla con la verificación del SWAP. 
 
 ![swap](../images/u2_1_3.png)
  
