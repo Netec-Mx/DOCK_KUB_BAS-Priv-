@@ -7,7 +7,7 @@
 
 ## Duración aproximada
 
-30 minutos.
+- 30 minutos.
 
 ## Instrucciones
 
@@ -46,7 +46,7 @@ net.bridge.bridge-nf-call-ip6tables = 1
 net.ipv4.ip_forward                 = 1
 EOF
 
-# Aplicar parámetros de sysctl
+# Aplicar parámetros de sysctl.
 sudo sysctl --system
 
 ```
@@ -200,7 +200,7 @@ sudo kubeadm join <ip-controlplane>:6443 --token <token> --discovery-token-ca-ce
 
 <br/><br/>
 
-## Resultado Esperado
+## Resultado esperado
 
 - Captura de pantalla con el estado inicial (esto es antes de iniciar las intrucciones documentadas arriba) del clúster.
 
