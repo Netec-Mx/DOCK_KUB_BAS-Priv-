@@ -59,12 +59,12 @@
      ```bash
      kubectl run nginx-test --image=nginx --restart=Never --node-selector="kubernetes.io/hostname=<worker-node-name>"
      ```
-   - **Observación**: Cambia `worker-node-name` por el nombre del Worker Node que aparece en `kubectl get nodes`. Luego, verifica el estado del pod con:
+   - **Observación**: Cambiar `worker-node-name` por el nombre del Worker Node que aparece en `kubectl get nodes`. Luego, verificar el estado del pod con:
 
      ```bash
      kubectl get pod nginx-test
      ```
-   - Si el pod no se ejecuta en el Worker Node, verifica la configuración de `kubelet` y los permisos del nodo.
+   - Si el pod no se ejecuta en el Worker Node, verificar la configuración de `kubelet` y los permisos del nodo.
 
 <br/>
 
