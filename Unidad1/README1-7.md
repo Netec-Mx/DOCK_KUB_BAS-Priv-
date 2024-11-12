@@ -16,7 +16,7 @@
 
 1. **Crear un Directorio de Trabajo:**
 
-    - CreaR un nuevo directorio donde puedas trabajar en la optimización del Dockerfile.
+    - Crear un nuevo directorio donde puedas trabajar en la optimización del Dockerfile.
 
 ```bash
 
