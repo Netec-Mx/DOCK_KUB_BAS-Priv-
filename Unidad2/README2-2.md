@@ -4,7 +4,7 @@
 - Verificar correctamente la instalación y configuración de un Worker Node en un clúster de Kubernetes.
 
 ## Duración aproximada
-15 minutos.
+- 15 minutos.
 
 <br/>
 
@@ -78,7 +78,7 @@
 <br/>
 
 
-## Resultado Esperado
+## Resultado esperado
 
 - Captura de pantalla para verificar los nodos del clúster, un mater node y worker node listos.
 ![kubectl](../images/u2_2_1.png)
