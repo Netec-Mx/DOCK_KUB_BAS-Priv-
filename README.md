@@ -1,7 +1,7 @@
-# Nombre del curso: Docker y Kubernetes nivel básico
+# Nombre del curso: Docker y Kubernetes Básico
 
 ## Descripción del curso: 
-El curso "Docker y Kubernetes, nivel básico" proporciona una base sólida para desarrolladores y profesionales interesados en aprender las tecnologías clave para la administración y despliegue de aplicaciones en contenedores. A través de cinco unidades, se cubren los conceptos fundamentales de Docker y Kubernetes, proporcionando un enfoque práctico que abarca desde la instalación y configuración hasta la optimización y el despliegue de aplicaciones.
+El curso "Docker y Kubernetes Básico" proporciona una base sólida para desarrolladores y profesionales interesados en aprender las tecnologías clave para la administración y despliegue de aplicaciones en contenedores. A través de cinco unidades, se cubren los conceptos fundamentales de Docker y Kubernetes, proporcionando un enfoque práctico que abarca desde la instalación y configuración hasta la optimización y el despliegue de aplicaciones.
  
 ## Índice:
  - [Capítulo 1. Docker Introducción.](./Unidad1/README.md)
