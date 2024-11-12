@@ -90,11 +90,11 @@
 
 <br/>
 
-- Captura de pantalla con la creación de un pod, el antes y despues de recrear el Pod
+- Captura de pantalla con la creación de un pod, el antes y despues de recrear el Pod.
 ![pod](../images/u2_2_3.png)
 
 <br/>
 
-- Captura de pantalla con la verificación del nodo donde fue creado el Pod. (10.36.0.1 worker/192.168.0.228)
+- Captura de pantalla con la verificación del nodo donde fue creado el Pod. (10.36.0.1 worker/192.168.0.228).
 ![swap](../images/u2_2_4.png)
 
