@@ -5,7 +5,7 @@
 
 
 ## Duración aproximada
-30 minutos.
+- 30 minutos.
 
 ## YAMLs
 
@@ -41,4 +41,4 @@
 10. **Realizar los cambios necesarios para que todos los Pods del Deployment `backend` estén en estado "Running".**
 
 
-## Resultado Esperado
+## Resultado esperado
