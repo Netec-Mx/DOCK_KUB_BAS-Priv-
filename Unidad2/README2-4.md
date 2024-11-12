@@ -20,11 +20,11 @@
 
 **Paso 1: Crear el archivo YAML para el Pod**
 
-1. Abrir tu editor de texto preferido y crear un archivo llamado mipod.yaml.
+1. Abrir un editor de texto preferido y crear un archivo llamado mipod.yaml.
 
 <br/>
 
-2. En este archivo, escribe el siguiente contenido YAML, que define un Pod simple con un contenedor de nginx:
+2. En este archivo, escribir el siguiente contenido YAML, que define un Pod simple con un contenedor de nginx:
 
 ```yaml
 apiVersion: v1
@@ -139,7 +139,7 @@ kubectl delete -f my-pod.yaml
 
 <br/><br/>
 
-## Resultado Esperado
+## Resultado esperado
 
 - Captura de pantalla que muestra basicamente el contenido del YAML.
 
