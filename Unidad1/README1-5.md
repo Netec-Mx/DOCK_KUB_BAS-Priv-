@@ -158,6 +158,6 @@
 <br/>
 
 
-- Captura de pantalla sobre verificación del contenedor Docker y el consumo del microservicio usando curt y el método POST
+- Captura de pantalla sobre verificación del contenedor Docker y el consumo del microservicio usando curt y el método POST.
 
 ![docker build](../images/u1_5_1.png)
