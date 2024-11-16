@@ -275,7 +275,7 @@ kubectl get svc -n ingress-nginx
 
 - Si estás ejecutando el clúster en un entorno local, como **Minikube** o una configuración de máquinas virtuales en VirtualBox, Kubernetes no puede asignar una IP externa automáticamente.  
 
-- Es muy probable que tengas que cambiar de el tipo de servicio a **NodePort**
+- Es muy probable que tengas que cambiar de el tipo de servicio a **NodePort**.
 
     a. Editar el servicio ingress-nginx-controller para cambiarlo a tipo NodePort, lo que le permitirá exponer el Ingress Controller a través de un puerto específico del nodo:
 
@@ -315,7 +315,7 @@ curl -H "Host: app2.example.com" http://192.168.0.3:32737
 ```
 
 <br/><br/>
-## Resultado Esperado 
+## Resultado esperado 
 
 
 - Captura de pantalla que muestra la verificacion del controlador Ingress funciona correctamente.
@@ -366,7 +366,7 @@ curl -H "Host: app2.example.com" http://192.168.0.3:32737
 
 <br/>
 
-- Captura de pantalla que muestra la configuración de Ingress Controller, con un **External Traffic Policy: Local**
+- Captura de pantalla que muestra la configuración de Ingress Controller, con un **External Traffic Policy: Local**.
 
 ![kubectl](../images/u5_3_14.png)  
 
@@ -379,7 +379,7 @@ curl -H "Host: app2.example.com" http://192.168.0.3:32737
 
 <br/>
 
-- Captura de pantalla que muestra la configuración actual de Ingress Controller, con un **External Traficc Policy: Cluster**
+- Captura de pantalla que muestra la configuración actual de Ingress Controller, con un **External Traficc Policy: Cluster**.
 
 ![kubectl](../images/u5_3_12.png)
 
@@ -400,7 +400,7 @@ curl -H "Host: app2.example.com" http://192.168.0.3:32737
 
 <br/>
 
-## Resumen de la configuración
+## Resumen de la configuración.
 
 1. Creaste dos aplicaciones en diferentes namespaces (app1 y app2).
 
@@ -435,7 +435,7 @@ Cada comando de esta lista se ha usado para configurar, diagnosticar o resolver 
 
 <br/>
 
-1. **Verificación de Pods y Servicios**:
+1. **Verificación de Pods y servicios**:
 
 ```bash
  
@@ -451,7 +451,7 @@ kubectl get ingress -n app2
 
 <br/>
 
-2. **Aplicar Archivos de Configuración (YAML)**:
+2. **Aplicar archivos de configuración (YAML)**:
 
 ```bash
  
@@ -462,7 +462,7 @@ kubectl apply -f app2-ingress.yaml
 <br/>
 
 
-3. **Editar Recursos en línea (Editor por defecto vi)**:
+3. **Editar recursos en línea (Editor por defecto vi)**:
 
 ```bash
 kubectl edit svc ingress-nginx-controller -n ingress-nginx
@@ -471,7 +471,7 @@ kubectl edit svc ingress-nginx-controller -n ingress-nginx
 <br/>
 
 
-4. **Reinicio de Recursos**:
+4. **Reinicio de recursos**:
 
 ```bash
 kubectl delete pod -l app.kubernetes.io/name=ingress-nginx -n ingress-nginx
@@ -492,7 +492,7 @@ kubectl logs -n ingress-nginx -l app.kubernetes.io/name=ingress-nginx
 <br/>
 
 
-6. **Redirección de Puerto (Port-Forwarding)**:
+6. **Redirección de puerto (Port-Forwarding)**:
 
 ```bash
 
@@ -503,7 +503,7 @@ kubectl port-forward -n app2 svc/app2-service 32737:80
 <br/>
 
 
-7. Eliminar y Volver a Instalar Ingress Controller:
+7. Eliminar y volver a instalar Ingress Controller:
 
 ```bash
 kubectl delete -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/main/deploy/static/provider/cloud/deploy.yaml
