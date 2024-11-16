@@ -32,15 +32,15 @@ kubectl get namespaces
 
 ### 2. Crear un nuevo Namespace
 
-Crear un nuevo Namespace llamado **development**
+Crear un nuevo Namespace llamado **development**.
 
 ```bash
 kubectl create namespace development
 
-# Verificar el namespace creado correctamente
+# Verificar el namespace creado correctamente.
 kubectl get namespaces
 
-# Verificar el namespace con el atajo
+# Verificar el namespace con el atajo.
 kubectl get ns
 ```
 
@@ -50,7 +50,7 @@ kubectl get ns
 
 Especificar el Namespace en el que quieres crear recursos. Aquí, crearemos un Deployment en el Namespace development.
 
-- Primero, crear un archivo YAML llamado **nginx-development.yaml**
+- Primero, crear un archivo YAML llamado **nginx-development.yaml**.
 
 ```yaml
 apiVersion: apps/v1
@@ -76,12 +76,12 @@ spec:
 
 ```
 
-- Aplicar este archivo para desplegar el Deployment en el Namespace **development**
+- Aplicar este archivo para desplegar el Deployment en el Namespace **development**.
 
 ```bash
 kubectl apply -f nginx-deployment.yaml
 
-# Verifica 
+# Verifica. 
 kubectl get deployments -n development
 ```
 
@@ -113,7 +113,7 @@ spec:
 ```bash
 kubectl apply -f nginx-service.yaml
 
-# Verificar
+# Verificar.
 kubectl get services -n development
 ```
 
