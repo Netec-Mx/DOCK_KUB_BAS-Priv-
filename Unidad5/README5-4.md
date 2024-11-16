@@ -10,7 +10,7 @@
 
 ## Prerrequisitos
 
-- Haber realizado la **Práctica 5.3 Configuración de Kubernetes Ingress**
+- Haber realizado la **Práctica 5.3 Configuración de Kubernetes Ingress**.
 <br/>
 
 ## Instrucciones
@@ -25,11 +25,11 @@
 
 ## Paso 2. Actualizar la configuración de Ingress
 
-1. Crea un nuevo YAML de tu Ingress para incluir los nuevos paths pada host: `app1.example.com` y `app2.example.com`. Llama a tu archivo `multi-hosts-ingress.yaml`, _en esta ocasión tu tendrás que crear el contenido del YAML_
+1. Crear un nuevo YAML del Ingress para incluir los nuevos paths pada host: `app1.example.com` y `app2.example.com`. Llamar al archivo `multi-hosts-ingress.yaml`, _en esta ocasión tu tendrás que crear el contenido del YAML_
 
     - Redirige `http://app1.example.com/app1` al servicio app1-servicio y `http://app2.example.com/app2` al servicio app2-servicio  
 
-2. Aplica YAML que creaste en el punto anterior.
+2. Aplica el YAML que creaste en el punto anterior.
 
 <br/>
 
@@ -78,7 +78,7 @@
 <br/>
 
 
-- Captura de pantalla que muestra se encuentran los paths en el consumo con la configuración previa a aplicar el nuevo YAML.
+- Captura de pantalla que muestra como se encuentran los paths en el consumo con la configuración previa a aplicar el nuevo YAML.
 
 ![kubectl](../images/u5_4_5.png)
 
@@ -90,7 +90,7 @@
 
 <br/>
 
-- Captura de pantalla que muestra el consumo exitoso de las rutas solicitadas, y como las anteriores rutas (las de la práctica previa ya no funcionan)
+- Captura de pantalla que muestra el consumo exitoso de las rutas solicitadas, y como las anteriores rutas (las de la práctica previa ya no funcionan).
 
 ![kubectl](../images/u5_4_8.png)
 
