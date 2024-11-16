@@ -108,11 +108,11 @@ spec:
 kubectl apply -f persistent-volume.yaml
 kubectl apply -f persistent-volume-claim.yaml
 
-# Para verificar su existencia
+# Para verificar su existencia.
 kubectl get pv
 kubectl get pvc
 
-# Verificación más detallada
+# Verificación más detallada.
 kubectl describe pvc pvc-volume
 
 ```
@@ -172,23 +172,23 @@ Una vez que el pod esté en ejecución, puedes verificar que los datos almacenad
 
 
 ```bash
-# Comando para acceder al Pod
+# Comando para acceder al Pod.
 kubectl exec -it pvc-pod -- /bin/sh
 
-# Comandos dentro del contendor
+# Comandos dentro del contendor.
 echo "Hola desde el volumen persistente!" > /mnt/data/hola.txt
 cat /mnt/data/hola.txt
 
-# Eliminamos el Pod pvc-pod 
+# Eliminamos el Pod pvc-pod.
 kubectl delete pod pvc-pod
 
-# Creamos nuevamente el Pod y accedemos de nuevo al contenedor
+# Creamos nuevamente el Pod y accedemos de nuevo al contenedor.
 kubectl apply -f pvc-pod.yaml
 
-# Acceder nuevamente al Pod
+# Acceder nuevamente al Pod.
 kubectl exec -it pvc-pod -- /bin/sh
 
-# Verifica la existencia y contenido del archivo hola.txt
+# Verifica la existencia y contenido del archivo `hola.txt`.
 ls -l /mnt/data
 cat /mnt/data/hola.txt
 ```
@@ -211,21 +211,21 @@ kubectl apply -f persistent-volume-claim.yaml
 ## Resultado Esperado
 
 
-- Captura de pantalla que muestra el estado del directorio /mnt/data sobre el nodo worker
+- Captura de pantalla que muestra el estado del directorio /mnt/data sobre el nodo worker.
 
 ![kubectl](../images/u5_1_1.png)
 
 <br/>
 
 
-- Captura de pantalla que muestra  el YAML hostpath-pod.yaml, la aplicación de este YAML, y los PVs creados
+- Captura de pantalla que muestra  el YAML hostpath-pod.yaml, la aplicación de este YAML, y los PVs creados.
 
 ![kubectl](../images/u5_1_2.png)
 
 <br/>
 
 
-- Captura de pantalla que muestra los YAMLs del PersistentVolume & PesistentVolumeClaim
+- Captura de pantalla que muestra los YAMLs del PersistentVolume & PesistentVolumeClaim.
 
 ![kubectl](../images/u5_1_3.png)
 
@@ -238,21 +238,21 @@ kubectl apply -f persistent-volume-claim.yaml
 <br/>
 
 
-- Captura de pantalla que muestra el antes y después de crear al Pod **pvc-pod**
+- Captura de pantalla que muestra el antes y después de crear al Pod **pvc-pod**.
 
 ![kubectl](../images/u5_1_5.png)
 
 <br/>
 
 
-- Captura de pantalla que muestra la conexión al contenedor del Pod **pvc-pod**, y la salida de algunos comandos Unix, en donde se crea un archivo llamado **hola.txt**
+- Captura de pantalla que muestra la conexión al contenedor del Pod **pvc-pod**, y la salida de algunos comandos Unix, en donde se crea un archivo llamado **hola.txt**.
 
 ![kubectl](../images/u5_1_6.png)
 
 <br/>
 
 
-- Captura de pantalla que muestra el borrado y la creación del Pod **pvc-pod** y como la información del archivo **hola.txt** persiste
+- Captura de pantalla que muestra el borrado y la creación del Pod **pvc-pod** y como la información del archivo **hola.txt** persiste.
 
 ![kubectl](../images/u5_1_7.png)
 
