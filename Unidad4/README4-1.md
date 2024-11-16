@@ -1,4 +1,4 @@
-# Práctica 4.1. Configuración de ConfigMaps & Variables de entorno
+# Práctica 4.1. Configuración de ConfigMaps & variables de entorno
 
 ## Objetivo 
 - Al finalizar esta práctica, serás capaz de crear y gestionar ConfigMaps a partir de archivos y variables de entorno en Kubernetes.
