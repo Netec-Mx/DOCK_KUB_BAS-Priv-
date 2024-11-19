@@ -43,7 +43,7 @@ spec:
 
 <br/>
 
-3. Contestar lo siguiente referente al YAML
+3. Contestar lo siguiente referente al YAML.
 
     a. ¿Qué campo define la versión de la API de Kubernetes utilizada en el archivo de configuración?
     
@@ -66,7 +66,7 @@ spec:
 
 **Paso 2: Aplicar la configuración del Pod**
 
-1. Abrir la terminal y navegar al directorio donde guardaste mipod.yaml.
+1. Abrir la terminal y navegar al directorio donde guardaste `mipod.yaml`.
 
 <br/>
 
@@ -147,7 +147,7 @@ kubectl delete -f my-pod.yaml
 
 <br/>
 
-- Captura de pantalla que muestra el antes, durante y después de crear un Pod, de nombre: my-pod.
+- Captura de pantalla que muestra el antes, durante y después de crear un Pod, de nombre: `my-pod`.
 
 ![kubectl](../images/u2_4_2.png) 
 
@@ -165,7 +165,7 @@ kubectl delete -f my-pod.yaml
 
 <br/>
 
-- Captura de pantalla que muestra la eliminación del Pod, así como la opción `apply-run=client`
+- Captura de pantalla que muestra la eliminación del Pod, así como la opción `apply-run=client`.
 
 ![kubectl](../images/u2_4_5.png) 
 
