@@ -5,7 +5,7 @@
 
 
 ## Duración aproximada
-- 30 minutos
+- 30 minutos.
 
 ## Instrucciones
 
@@ -32,7 +32,7 @@ spec:
     spec:
       containers:
       - name: sample-container
-        image: nginx  # Usa una imagen de ejemplo, o la que prefieras
+        image: nginx  # Usa una imagen de ejemplo, o la que prefieras.
         resources:
           requests:
             cpu: "100m"
@@ -78,7 +78,7 @@ spec:
       name: cpu
       target:
         type: Utilization
-        averageUtilization: 50  # Baja este valor en tu práctica
+        averageUtilization: 50  # Baja este valor en tu práctica.
 ```
 
 
@@ -123,8 +123,8 @@ spec:
     app: sample-app  # Asegúrate de que este selector coincide con las etiquetas del Deployment
   ports:
     - protocol: TCP
-      port: 80        # Puerto del servicio dentro del clúster
-      targetPort: 80  # Puerto en el que el contenedor está escuchando
+      port: 80        # Puerto del servicio dentro del clúster.
+      targetPort: 80  # Puerto en el que el contenedor está escuchando.
 
 ```
 
@@ -192,39 +192,39 @@ kubectl get pods | grep load-generator | awk '{print $1}' | xargs kubectl delete
 
 ## Resultado esperado
 
-- Captura de pantalla que muestra el YAML para deployment
+- Captura de pantalla que muestra el YAML para deployment.
 
 ![kubectl](../images/u3_5_1.png)
 
 <br/>
 
-- Captura de pantalla que muestra el YAML para **HorizontalPodAutoscaler**
+- Captura de pantalla que muestra el YAML para **HorizontalPodAutoscaler**.
 
 ![kubectl](../images/u3_5_2.png)
 
 <br/>
 
 
-- Captura de pantalla que muestra el YAML para **Service**
+- Captura de pantalla que muestra el YAML para **Service**.
 
 ![kubectl](../images/u3_5_11.png)
 
 <br/>
 
-- Captura de pantalla que muestra el servicio creado
+- Captura de pantalla que muestra el servicio creado.
 
 ![kubectl](../images/u3_5_12.png)
 
 <br/>
 
-- Captura de pantalla que muestra muestra el estado de los objetos en el clúster
+- Captura de pantalla que muestra muestra el estado de los objetos en el clúster.
 
 ![kubectl](../images/u3_5_7.png)
 
 <br/>
 
 
-- Captura de pantalla que muestra como aplicar y verificar **Metrics**  
+- Captura de pantalla que muestra como aplicar y verificar **Metrics**. 
 
 ![kubectl](../images/u3_5_8.png)
 
@@ -237,7 +237,7 @@ kubectl get pods | grep load-generator | awk '{print $1}' | xargs kubectl delete
 <br/>
 
 
-- Captura de pantalla que muestra los Pods *load-generator*
+- Captura de pantalla que muestra los Pods *load-generator*.
 
 ![kubectl](../images/u3_5_10.png)
 
