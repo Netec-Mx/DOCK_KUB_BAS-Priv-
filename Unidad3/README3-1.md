@@ -23,7 +23,7 @@ metadata:
   labels:
     app: mi-aplicacion
 spec:
-  replicas: 3  # Configuramos el número de réplicas
+  replicas: 3  # Configuramos el número de réplicas.
   selector:
     matchLabels:
       app: mi-aplicacion
@@ -34,9 +34,9 @@ spec:
     spec:
       containers:
       - name: mi-contenedor
-        image: nginx:1.21  # Imagen del contenedor
+        image: nginx:1.21  # Imagen del contenedor.
         ports:
-        - containerPort: 80  # Puerto expuesto dentro del contenedor
+        - containerPort: 80  # Puerto expuesto dentro del contenedor.
 ```
 
 <br/>
@@ -119,7 +119,7 @@ kubectl delete -f deployment.yaml
 <br/>
 
 
-## Resultado Esperado
+## Resultado esperado
 
 - Captura de pantalla con el YAML a aplicar en la práctica 3.1, además muestra el antes y después de aplicar el YAML.
 
