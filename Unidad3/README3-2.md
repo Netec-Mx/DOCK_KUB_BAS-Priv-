@@ -4,7 +4,7 @@
 - Escribir y aplicar un archivo YAML para crear un StatefulSet.
 
 ## Duración aproximada
-- 30 minutos
+- 30 minutos.
 
 ## Instrucciones
 
@@ -126,20 +126,20 @@ kubectl scale statefulset web-statefulset --replicas=5
 
 ## Resultado Esperado
 
-- Captura de pantalla con el YAML almacenado en el archivo **statefulset.yaml**
+- Captura de pantalla con el YAML almacenado en el archivo **statefulset.yaml**.
 
 ![YAML](../images/u3_2_1.png)
 
 <br/>
 
-- Captura de pantalla con el antes y después de aplicar el YAML **statefulset.yaml**
+- Captura de pantalla con el antes y después de aplicar el YAML **statefulset.yaml**.
 
 ![](../images/u3_2_2.png)
 
  
  <br/>
 
-- Captura de pantalla con el detalle del web-statefulset (SuccessfulCreate)
+- Captura de pantalla con el detalle del web-statefulset (SuccessfulCreate).
 
 ![](../images/u3_2_3.png)
 
