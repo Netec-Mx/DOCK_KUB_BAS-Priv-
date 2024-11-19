@@ -189,7 +189,7 @@ kubectl apply -f multi-resource.yaml
 
 <br/>
 
-- Captura de pantalla que muestra algunas caracteristicas iniciales del YAML, como la cantidad de lineas, las primeras 10 y las últimas 10 líneas del archivo YAML
+- Captura de pantalla que muestra algunas caracteristicas iniciales del YAML, como la cantidad de lineas, las primeras 10 y las últimas 10 líneas del archivo YAML.
 
 ![kubectl](../images/u3_6_2.png)
 
