@@ -80,7 +80,7 @@
 
 
 7. **Verificación del SWAP**
-    - Ejecutar el siguiente comando para verificar el estado del swap
+    - Ejecutar el siguiente comando para verificar el estado del swap.
 
     ```bash
      sudo swapon --show
