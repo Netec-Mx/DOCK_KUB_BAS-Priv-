@@ -254,7 +254,7 @@ kubectl get pods -n practica-stateful-deployment
 
 
 
-- Captura de pantalla que muestra la creación del **Deployment** y el antes y despues de la creacion de un **Statefulset**
+- Captura de pantalla que muestra la creación del **Deployment** y el antes y despues de la creacion de un **Statefulset**.
 
 ![YAML](../images/u3_3_6.png)
 
