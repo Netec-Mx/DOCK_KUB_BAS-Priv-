@@ -89,7 +89,7 @@
 
 5. **Verificar que el contenedor esté en ejecución**
 
-   - Usar el siguiente comando para listar los contenedores en ejecución y confirmar que tu aplicación está desplegada:
+   - Usar el siguiente comando para listar los contenedores en ejecución y confirmar que la aplicación está desplegada:
 
      ```bash
 
@@ -133,7 +133,7 @@
 
 <br/>
 
-- Captura de pantalla que verifica las imagens, verifica los contenedores, crea un nuevo contenedor y verifica el estado del nuevo contenedor.
+- Captura de pantalla que verifica las imagenes, verificar los contenedores, crear un nuevo contenedor y verificar el estado del nuevo contenedor.
 
 ![docker build](../images/u1_4_2.png)
 
