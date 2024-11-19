@@ -12,7 +12,7 @@
 
 Las siguientes instrucciones aplican en tu máquina máquina virtual con Windows asignada.
 
-1. **Configura Git**
+1. **Configurar Git**
 
 Asegúrate de tener configurados nombre y correo en Git. Esto se puede hacer con los siguientes comandos:
 
@@ -120,6 +120,6 @@ ssh mnadmin@192.168.0.3
 <br/>
 
 
-- Es complemento de YAML para VSC podría serte útil más adelante
+- Es complemento de YAML para VSC podría serte útil más adelante.
 
 ![Extensión: YAML](../images/u1_2_1.png)
