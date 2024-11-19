@@ -5,7 +5,7 @@
 
 
 ## Duración aproximada
-- 15 minutos
+- 15 minutos.
 
 ## Instrucciones
 
