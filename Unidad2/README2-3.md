@@ -185,7 +185,7 @@ kubeadm token create --print-join-command
 
 ```
 
-- Ejecutar el comando generado en el**Worker Node** para unirte al clúster:
+- Ejecutar el comando generado en el **Worker Node** para unirte al clúster:
 
 ```bash
 
