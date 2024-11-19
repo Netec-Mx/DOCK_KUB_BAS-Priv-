@@ -11,7 +11,7 @@
 
 ## Instrucciones
 
-**Paso 1: Intalar paquetería básica**
+**Paso 1: Instalar paquetería básica**
 
 - Actualizar los repositorios e instalar los paquetes necesarios para el transporte de paquetes HTTPS.
 
@@ -95,7 +95,7 @@ sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyring
 sudo chmod a+r /etc/apt/keyrings/docker.asc 
 ```
 
-- Agregar el repositorio de Docker a las fuentes de `apt`
+- Agregar el repositorio de Docker a las fuentes de `apt`.
 
 ```bash
 echo \
