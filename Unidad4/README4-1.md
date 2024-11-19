@@ -105,7 +105,7 @@ kubectl get pod app-pod
 kubectl exec -it app-pod -- env
 ```
 
-- La salida de este comando debería mostrar las variables de entorno configuradas desde los ConfigMaps y la variable **CUSTOM_ENV**
+- La salida de este comando debería mostrar las variables de entorno configuradas desde los ConfigMaps y la variable **CUSTOM_ENV**.
 
 
 <br/>
