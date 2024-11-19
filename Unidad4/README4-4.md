@@ -22,7 +22,7 @@
 
 <br/>
 
-### Paso 2. Escribir el YAML del POd con Probes y Políticas de Reinicio
+### Paso 2. Escribir el YAML del POd con Probes y políticas de reinicio
 
 - Este archivo YAML define un Pod que contiene un contenedor ejecutando una aplicación web simple en el puerto **8080**. 
 
@@ -36,7 +36,7 @@ metadata:
   labels:
     app: probe-example
 spec:
-  restartPolicy: Always         # Política de reinicio en caso de fallo del contenedor
+  restartPolicy: Always         # Política de reinicio en caso de fallo del contenedor.
   containers:
   - name: probe-container
     image: nginx:latest
@@ -48,14 +48,14 @@ spec:
         port: 8080
       initialDelaySeconds: 10      # Esperar antes de iniciar el primer probe de liveness.
       periodSeconds: 5             # Intervalo de tiempo entre cada probe.
-      failureThreshold: 3          # Número de fallos consecutivos para marcar el contenedor como no saludable.
+      failureThreshold: 3          # Número de fallos consecutivos para marcar el contenedor. como no saludable.
     readinessProbe:
       httpGet:
         path: /
         port: 8080
       initialDelaySeconds: 5       # Esperar antes de iniciar el primer probe de readiness.
       periodSeconds: 3             # Intervalo de tiempo entre cada probe.
-      failureThreshold: 2          # Número de fallos consecutivos para marcar el contenedor como no listo.
+      failureThreshold: 2          # Número de fallos consecutivos para marcar el contenedor. como no listo.
 
 ```
 
@@ -85,7 +85,7 @@ spec:
 
 <br/>
 
-### Paso 3. Aplicar el archivo YAML.
+### Paso 3. Aplicar el archivo YAML
 
 - Para crear el Pod en Kubernetes, utilizar el siguiente comando en la terminal:
 
@@ -96,7 +96,7 @@ spec:
 
 <br/>
 
-### Paso 4. Verificar la configuración del Pod.
+### Paso 4. Verificar la configuración del Pod
 
 - Puedes verificar el estado de los probes con el siguiente comando, el cual muestra detalles sobre el estado de los probes en el Pod:
 
@@ -201,20 +201,20 @@ kubectl delete pod pod-probes-policies
 
 <br/>
 
-- Captura de pantalla que muestra el antes y después de la creación del Pod **pod-probes-policies**
+- Captura de pantalla que muestra el antes y después de la creación del Pod **pod-probes-policies**.
 
 ![docker -run hello-world](../images/u4_4_1.png)
 
 
 <br/>
 
-- Captura de pantalla que muestra parter del despliegue detallado del Pod **pod-probes-policies**
+- Captura de pantalla que muestra parter del despliegue detallado del Pod **pod-probes-policies**.
 
 ![docker -run hello-world](../images/u4_4_2.png)
 
 <br/>
 
-- Captura de pantalla que muestra los estados del Pod **pod-probes-policies**
+- Captura de pantalla que muestra los estados del Pod **pod-probes-policies**.
 
 ![docker -run hello-world](../images/u4_4_3.png)
 
