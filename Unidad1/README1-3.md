@@ -2,7 +2,7 @@
 
 ## Objetivo
 
-- Clonar un repositorio de microservicio en Java, importarlo en el entorno de desarrollo y analizar su estructura y componentes principales
+- Clonar un repositorio de microservicio en Java, importarlo en el entorno de desarrollo y analizar su estructura y componentes principales.
 
 ## Duración aproximada
 
@@ -42,7 +42,7 @@
 
         - En VSC: Seleccionar Archivo > Abrir Carpeta..., navegar a la carpeta ms-clients y seleccionar Finish.
 
-    - Esperar a que el IDE cargue al **100%** todas las dependencias de Maven y compile el proyecto.
+    - Esperar a que el IDE cargue al **100%** todas las dependencias de Maven y compilar el proyecto.
 
 
 
@@ -114,7 +114,7 @@
 
 <br/>
 
-- **Contesta lo siguiente**
+- **Contestar lo siguiente**
 
     a. ¿Identificaste y comprendiste el propósito de cada uno de los paquetes principales, como entity, repository, service y controller, en la estructura del proyecto?
 
@@ -127,7 +127,7 @@
 
 
 
-- Al ejecutar tu proyecto deberás de ver una imagen similar a la siguiente:
+- Al ejecutar el proyecto deberás de ver una imagen similar a la siguiente:
 
 
 ![docker](../images/u1_3_1.png)
@@ -136,7 +136,7 @@
 <br/>
 
  
-- **Contesta lo siguiente**
+- **Contestar lo siguiente**
 
     a. ¿Identificaste la entidad principal, sus atributos y cómo está mapeada a la base de datos mediante JPA?
 
@@ -146,7 +146,7 @@
 <br/>
 
 
-- Consumo del servicio **ms-clients**
+- Consumo del servicio **ms-clients**.
 
 
 ![docker](../images/u1_3_3.png)
