@@ -220,24 +220,24 @@ time docker run --rm -p 9095:9095 ms_clients_optimized_multistage
 
 ## Resultado Esperado
 
-- Captura de pantalla para la creación de la primera imagen base, en este caso, ms_clientes_original
+- Captura de pantalla para la creación de la primera imagen base, en este caso, `ms_clientes_original`.
 
 ![docker ](../images/u1_7_1.png)
 
 <br/>
 
-- Captura de pantalla para la creación de la segunda imagen, cambiar solo la imagen base de Java, en este caso, ms_clientes_opt1
+- Captura de pantalla para la creación de la segunda imagen, cambiar solo la imagen base de Java, en este caso, `ms_clientes_opt1`.
 
 ![docker ](../images/u1_7_2.png)
 
 <br/>
 
-- Captura de pantalla para la creación de la tercera imagen, aplicar multi-stage, en este caso, ms_clientes_opt2
+- Captura de pantalla para la creación de la tercera imagen, aplicar multi-stage, en este caso, `ms_clientes_opt2`.
 
 ![docker ](../images/u1_7_3.png)
 
 <br/>
 
-- Captura de pantalla revisando las étapas de la imagen mx_clientes_opt2
+- Captura de pantalla revisando las étapas de la imagen `mx_clientes_opt2`.
 
 ![docker ](../images/u1_7_4.png)
