@@ -7,7 +7,7 @@
 
 ## Duración aproximada
 
-- 25 minutos
+- 25 minutos.
 
 ## Instrucciones
 
@@ -106,7 +106,7 @@ kubectl apply -f job.yaml
 1. Verificar el estado del **Deployment** y del **InitContainer**:
 
 ```bash
-kubectl get pods -n practica-job-init  # Localiza el nombre del Pod
+kubectl get pods -n practica-job-init  # Localiza el nombre del Pod.
 kubectl describe pod <nombre-del-pod> -n practica-job-init
 ```
 
@@ -129,7 +129,7 @@ kubectl logs job/my-job -n practica-job-init  # Job
 
 ### Paso 5. Limpieza 
 
-Una vez completada la práctica, eliminar los recursos
+Una vez completada la práctica, eliminar los recursos.
 
 ```bash
 kubectl delete namespace practica-job-init
@@ -148,7 +148,7 @@ kubectl delete namespace practica-job-init
 
 <br/>
 
-- Captura de pantalla que muestra el Pod creado en el espacio de nombres practica-job-init. Además lista los detalles del Pod en la sección **Init Containers**
+- Captura de pantalla que muestra el Pod creado en el espacio de nombres practica-job-init. Además lista los detalles del Pod en la sección **Init Containers**.
 
     - El nombre del InitContainer `init-myservice`.
     
@@ -163,14 +163,14 @@ kubectl delete namespace practica-job-init
 
 <br/>
 
-- Captura de pantalla que muestra el Pod en el espacio de nombre practica-job-init y la bitácora del Pod con el InitContainer
+- Captura de pantalla que muestra el Pod en el espacio de nombre practica-job-init y la bitácora del Pod con el InitContainer.
 
 ![kubectl](../images/u4_3_3.png)
 
 
 <br/>
 
-- Captura de pantalla que muestra el contenido del YAML para la creación del Job, además de com ose aplica el YAML, el Pod y el Job creado en este punto
+- Captura de pantalla que muestra el contenido del YAML para la creación del Job, además de com ose aplica el YAML, el Pod y el Job creado en este punto.
 
 ![kubectl](../images/u4_3_4.png)
 
