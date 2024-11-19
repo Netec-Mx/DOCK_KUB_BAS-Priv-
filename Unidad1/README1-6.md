@@ -93,7 +93,7 @@
 <br/>
 
 
--- Imagen en el Docker Hub.
+- Imagen en el Docker Hub.
 
 
 ![docker](../images/u1_6_4.png)
