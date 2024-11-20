@@ -6,7 +6,7 @@
 
 ## Duración aproximada
 
-- 20 minutos
+- 20 minutos.
 
 ## Instrucciones
 
@@ -114,7 +114,7 @@ spec:
 
 ### Paso 5. Monitorear el Pod
 
-- Para observar cómo los probes afectan al Pod en tiempo real, usar el siguiente comando
+- Para observar cómo los probes afectan al Pod en tiempo real, usar el siguiente comando:
 
     ```bash
     kubectl get pod pod-probes-policies -w
@@ -126,7 +126,7 @@ spec:
 
     - Esta instrucción mantendrá un seguimiento en tiempo real de los eventos del Pod. Verás si el contenedor se reinicia o cambia de estado según el estado de los probes y la política de reinicio.
 
-    - Para observar el comportamiento de los probes en el Pod, es una buena práctica generar un escenario donde los probes fallen y así ver cómo Kubernetes responde
+    - Para observar el comportamiento de los probes en el Pod, es una buena práctica generar un escenario donde los probes fallen y así ver cómo Kubernetes responde.
 
 <br/>
 
