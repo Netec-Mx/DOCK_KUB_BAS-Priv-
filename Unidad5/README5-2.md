@@ -50,7 +50,7 @@ kubectl get ns
 
 Especificar el Namespace en el que quieres crear recursos. Aquí, crearemos un Deployment en el Namespace development.
 
-- Primero, crear un archivo YAML llamado **nginx-development.yaml**.
+- Primero, crear un archivo YAML llamado `nginx-development.yaml`.
 
 ```yaml
 apiVersion: apps/v1
@@ -96,7 +96,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: nginx-service
-  namespace: development  # Espacio de nombre creado previamente
+  namespace: development  # Espacio de nombre creado previamente.
 spec:
   selector:
     app: nginx
