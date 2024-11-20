@@ -5,7 +5,7 @@
 
 
 ## Duración aproximada
-- 40 minutos
+- 40 minutos.
 
 ## Instrucciones
 
@@ -13,9 +13,9 @@
 
 Crear un **Namespace** para organizar y aislar los recursos asociados a esta práctica.
 
-1. Crear un nuevo directorio de trabajo en el nodo maestro, por ejemplo, **ws2**
+1. Crear un nuevo directorio de trabajo en el nodo maestro, por ejemplo, **ws2**.
 
-2. Crear un archivo YAML llamado namespace.YAML
+2. Crear un archivo YAML llamado `namespace.YAML`.
 
 ```yaml 
 apiVersion: v1
@@ -45,7 +45,7 @@ kubectl describe namespace springboot-app-ns
 
 Definir un **ConfigMap** para almacenar las variables de configuración de la aplicación.
 
-1. Crear un archivo YAML llamado **congigmap.yaml**
+1. Crear un archivo YAML llamado **configmap.yaml**.
 
 ```yaml
 apiVersion: v1
@@ -71,7 +71,7 @@ kubectl apply -f configmap.yaml
 ```bash
 kubectl describe configmap springboot-app-config -n springboot-app-ns
 
-# Detalles del ConfigMap
+# Detalles del ConfigMap.
 
 kubectl get configmap springboot-app-config -n springboot-app-ns -o yaml
 
@@ -83,7 +83,7 @@ kubectl get configmap springboot-app-config -n springboot-app-ns -o yaml
 
 El Deployment especificará que deseas tener dos réplicas de la aplicación, _distribuidas en dos Pods_.
 
-1. Crear un archivo YAML llamado deployent.yaml
+1. Crear un archivo YAML llamado `deployent.yaml`.
 
 ```yaml
 
@@ -113,9 +113,9 @@ spec:
 
 ```
 
-- **Nota**:  Reemplaza <dockerhub-username>/springboot-app:latest con la URL de tu imagen en Docker Hub. Por ejemmplo la imagen creada en la práctica 1.6
+- **Nota**:  Reemplaza <dockerhub-username>/springboot-app:latest con la URL de tu imagen en Docker Hub. Por ejemmplo la imagen creada en la práctica 1.6.
 
-2. Aplicar el archivo YAML para crear el **Deployment**
+2. Aplicar el archivo YAML para crear el **Deployment**.
 
 ```bash
 kubectl apply -f deployment.yaml
@@ -161,7 +161,7 @@ spec:
 kubectl apply -f service.yaml
 ```
 
-3. Verificar el servicio creado
+3. Verificar el servicio creado.
 
 ```bash
 kubectl get svc -n springboot-app-ns
@@ -212,7 +212,7 @@ Para consumir tu servicio con cur/wget desde dentro del clúster de Kubernetes, 
 
 #### Opción B. Usar el nombre del servicio en lugar de la IP.
 
-- En Kubernetes, los servicios pueden ser alcanzados por su nombre
+- En Kubernetes, los servicios pueden ser alcanzados por su nombre.
 
    ```bash
     curl curl http://springboot-app-service:8095
@@ -244,15 +244,15 @@ wget http://localhost:8095
 - Para limpiar todos los recursos de esta práctica en Kubernetes, eliminar el namespace en el que creaste los objetos es la forma más sencilla, ya que eso eliminará todos los recursos asociados dentro del mismo.  
 
 ```bash
-# Eliminación del namespace
+# Eliminación del namespace.
 kubectl delete namespace springboot-app-ns
 
-# Verificación
+# Verificación.
 kubectl get namespaces
 ```
 
 <br/><br/>
-## Resultado Esperado
+## Resultado esperado
 
 - Captura de pantalla que muestra el contenido del YAML para crear el espacio de nombres, la aplicación del YAML y vericación del mismo.
 
@@ -290,7 +290,7 @@ kubectl get namespaces
 
 <br/>
 
-- Captura de pantalla que muestra el contenido del JSON con las propiedades del objeto a insertar, la verificación de la cantidad y nombres de los Pods, la verificación de los detalles de conexión del servicio y el consumo, usando el comando **curl**
+- Captura de pantalla que muestra el contenido del JSON con las propiedades del objeto a insertar, la verificación de la cantidad y nombres de los Pods, la verificación de los detalles de conexión del servicio y el consumo, usando el comando **curl**.
 
 ![kubectl](../images/u4_5_7.png)
 
@@ -314,7 +314,7 @@ kubectl get namespaces
 
 <br/>
 
-- Captura de pantalla que muestra el consumo del servicio, usando la opción **port-forward**, observe como los consumos pueden realizarce usando _http://localhost_
+- Captura de pantalla que muestra el consumo del servicio, usando la opción **port-forward**, observe como los consumos pueden realizarce usando _http://localhost_ 
 
 ![kubectl](../images/u4_5_11.png)
 
@@ -326,7 +326,7 @@ kubectl get namespaces
 
 <br/>
 
-- Captura de pantalla que muestra la tarea de limpieza de los recursos creados en el namespace de la práctica
+- Captura de pantalla que muestra la tarea de limpieza de los recursos creados en el namespace de la práctica.
 
 ![kubectl](../images/u4_5_13.png)
 
