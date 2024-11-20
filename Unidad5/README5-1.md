@@ -79,7 +79,7 @@ spec:
 - El volumen se asocia al directorio /mnt/data del nodo.
 
 
-#### Archivo YAML para PersistentVolumeClaim
+#### Archivo YAML para PersistentVolumeClaim.
 
 ```yaml
 apiVersion: v1
@@ -102,7 +102,7 @@ spec:
 
 <br/>
 
-**Comando para aplicar ambos recursos**
+**Comando para aplicar ambos recursos**.
 
 ```bash
 kubectl apply -f persistent-volume.yaml
@@ -129,7 +129,7 @@ kubectl describe pvc pvc-volume
 
 Una vez creado el _reclamo_, puedes montar el volumen persistente en un Pod.
 
-Archivo YAML de configuración del Pod
+Archivo YAML de configuración del Pod.
 
 ```yaml
 apiVersion: v1
@@ -208,7 +208,7 @@ kubectl apply -f persistent-volume-claim.yaml
 
 <br/>
 
-## Resultado Esperado
+## Resultado esperado
 
 
 - Captura de pantalla que muestra el estado del directorio /mnt/data sobre el nodo worker.
