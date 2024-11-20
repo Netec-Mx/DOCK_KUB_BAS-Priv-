@@ -25,7 +25,7 @@
 
 ## Paso 2. Actualizar la configuración de Ingress
 
-1. Crear un nuevo YAML del Ingress para incluir los nuevos paths pada host: `app1.example.com` y `app2.example.com`. Llamar al archivo `multi-hosts-ingress.yaml`, _en esta ocasión tu tendrás que crear el contenido del YAML_
+1. Crear un nuevo YAML del Ingress para incluir los nuevos paths pada host: `app1.example.com` y `app2.example.com`. Llamar al archivo `multi-hosts-ingress.yaml`, _en esta ocasión tu tendrás que crear el contenido del YAML_.
 
     - Redirige `http://app1.example.com/app1` al servicio app1-servicio y `http://app2.example.com/app2` al servicio app2-servicio  
 
