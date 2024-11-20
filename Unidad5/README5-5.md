@@ -25,7 +25,7 @@ En este paso, crearás un archivo YAML para el **DaemonSet**, el cual desplegar�
 Usamos un contenedor Nginx para el ejemplo, pero podrías personalizarlo según tus necesidades.
 
 
-1. Crear un archivo YAML llamado **daemonset-example.yaml**.
+1. Crear un archivo YAML llamado `daemonset-example.yaml`.
 
 ```yaml
 apiVersion: apps/v1
@@ -66,7 +66,7 @@ spec:
 
 ### Paso 3: Aplicar el DaemonSet en el clúster
 
-Ejecutar el siguiente comando para aplicar el archivo **daemonset-example.yaml** en tu clúster:
+Ejecutar el siguiente comando para aplicar el archivo **daemonset-example.yaml** en el clúster:
 
 ```bash
 kubectl apply -f daemonset-example.yaml
@@ -87,7 +87,7 @@ kubectl get daemonset specialized-daemonset
 
 ### Paso 5: Verifica los Pods desplegados en cada nodo
 
-Para asegurarte de que el **DaemonSet** está desplegando un Pod en cada nodo, ejecuta:
+Para asegurarte de que el **DaemonSet** está desplegando un Pod en cada nodo, ejecutar:
 
 ```bash
 kubectl get pods -o wide -l app=specialized
@@ -143,7 +143,7 @@ spec:
 ```bash
 kubectl delete -f daemonset-example.yaml
 
-# Si actualizaste el primer YAML, entonces cambia el nombre del archivo por deamonset-exmple.yaml
+# Si actualizaste el primer YAML, entonces cambia el nombre del archivo por `deamonset-exmple.yaml`.
 kubectl apply -f daemonset-example2.yaml
 ```
 
@@ -151,7 +151,7 @@ kubectl apply -f daemonset-example2.yaml
 
 ### Paso 7: Verifica que el DaemonSet esté solo en nodos seleccionados
 
-Confirmar que el DaemonSet se está ejecutando solo en los nodos con la etiqueta **deploy=specialized**
+Confirmar que el DaemonSet se está ejecutando solo en los nodos con la etiqueta **deploy=specialized**.
 
 ```bash
 kubectl get pods -o wide -l app=specialized
@@ -169,13 +169,13 @@ kubectl get pods -o wide -l app=specialized
 
 ## Resultado esperado
 
-- Captura de pantalla que muestra el estado actual del clúster, en este caso se encuentran tres Worker Node y un Node Master todos **Ready**
+- Captura de pantalla que muestra el estado actual del clúster, en este caso se encuentran tres Worker Node y un Node Master todos **Ready**.
 
 ![kubectl](../images/u5_5_1.png)
 
 <br/>
 
-- Captura de pantalla que muestra el contenido de **daemonset-example.yaml**
+- Captura de pantalla que muestra el contenido de `daemonset-example.yaml`.
 
 ![kubectl](../images/u5_5_2.png)
 
@@ -216,14 +216,14 @@ kubectl get pods -o wide -l app=specialized
 
 <br/>
 
-- Captura de pantalla que muestra el nuevo **DaemonSet** a desplegar, definido en el YAML daemonset-example2.yaml
+- Captura de pantalla que muestra el nuevo **DaemonSet** a desplegar, definido en el YAML `daemonset-example2.yaml`.
 
 
 ![kubectl](../images/u5_5_6.png)
 
 <br/>
 
-- Captura de pantalla que muestra como solo en uno de los nodos (worker2) se esta ejecutando el **DaemonSet**  
+- Captura de pantalla que muestra como solo en uno de los nodos (worker2) se esta ejecutando el **DaemonSet**.  
 
 ![kubectl](../images/u5_5_7.png)
 
