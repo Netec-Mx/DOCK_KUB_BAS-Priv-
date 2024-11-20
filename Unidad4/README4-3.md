@@ -57,7 +57,7 @@ spec:
 
 ```
 
-2. Aplicar el archivo YAML
+2. Aplicar el archivo YAML.
 
 ```bash
 kubectl apply -f init-container-deployment.yaml
@@ -106,7 +106,7 @@ kubectl apply -f job.yaml
 1. Verificar el estado del **Deployment** y del **InitContainer**:
 
 ```bash
-kubectl get pods -n practica-job-init  # Localiza el nombre del Pod.
+kubectl get pods -n practica-job-init  # Localiza el nombre del Pod
 kubectl describe pod <nombre-del-pod> -n practica-job-init
 ```
 
