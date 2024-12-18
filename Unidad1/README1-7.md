@@ -19,7 +19,6 @@
     - Crear un nuevo directorio donde puedas trabajar en la optimización del Dockerfile.
 
 ```bash
-
 mkdir optimizacion
 cd optimizacion
 cp -rp <dir_proyecto>/src .
@@ -35,7 +34,6 @@ cp -p <dir_proyecto>/target/ms_clients-0.0.1-SNAPSHOT.jar .
     - Crear un archivo Dockerfile en este directorio y copiar el contenido actual:
 
 ```dockerfile
-
 FROM openjdk:21-jdk-slim
 WORKDIR /app
 COPY ms_clients-0.0.1-SNAPSHOT.jar app.jar
@@ -50,15 +48,14 @@ ENTRYPOINT ["java", "-jar", "app.jar"]
 3. **Construir y medir la imagen original:**
 
     - Construir la imagen Docker con el siguiente comando y tomar nota del tiempo de construcción.
+      
 ```bash
- 
 time docker build -t ms_clients_original .
 ```
 
 - **Nota:** Si estas en Windows puedes usar una terminal Power Shell con la siguiente instrucción:
 
 ```PowerShell
-
 Measure-Command { docker build -t ms_clients_original . }
 
 ```
@@ -67,7 +64,6 @@ Measure-Command { docker build -t ms_clients_original . }
 - Verificar el tamaño de la imagen usando:
 
 ```bash
- 
 docker images  
 ```
 
@@ -86,7 +82,6 @@ docker images
     - Modificar el `Dockerfile`:
 
 ```dockerfile
- 
 FROM eclipse-temurin:21-jre-jammy
 WORKDIR /app
 COPY ms_clients-0.0.1-SNAPSHOT.jar app.jar
@@ -99,7 +94,6 @@ ENTRYPOINT ["java", "-jar", "app.jar"]
     - Guardar el Dockerfile y construir de nuevo la imagen.
 
 ```bash
- 
 time docker build -t ms_clients_op1 .
 ```
 
@@ -117,7 +111,6 @@ time docker build -t ms_clients_op1 .
     - Cambiar el `Dockerfile` a lo siguiente:
 
 ```dockerfile
-
 # Etapa de construcción
 FROM maven:3.8-eclipse-temurin-21 AS builder
 WORKDIR /app
@@ -132,7 +125,7 @@ FROM eclipse-temurin:21-jre
 WORKDIR /app
 COPY --from=builder /app/target/ms_clients-0.0.1-SNAPSHOT.jar app.jar
 ENTRYPOINT ["java", "-jar", "app.jar"]
- 
+
 ```
 
 
@@ -144,7 +137,6 @@ ENTRYPOINT ["java", "-jar", "app.jar"]
     - Guardar el archivo y construir la imagen.
 
 ```bash
- 
 time docker build -t ms_clients_opt2 .
 ```
 
@@ -168,7 +160,6 @@ time docker build -t ms_clients_opt2 .
     - Para verificar cuántas capas tiene la imagen, usar el siguiente comando:
 
 ```bash
-
 docker history ms_clients_optimized_multistage
 ```
 
@@ -185,7 +176,6 @@ docker history ms_clients_optimized_multistage
     - Ejecutar el contenedor y medir el tiempo de inicio para ver cuánto tarda en estar listo en el puerto 9095.
 
 ```bash
- 
 time docker run --rm -p 9095:9095 ms_clients_optimized_multistage
 ```
 
