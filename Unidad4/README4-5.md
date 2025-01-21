@@ -13,7 +13,7 @@
 
 Crear un **Namespace** para organizar y aislar los recursos asociados a esta práctica.
 
-1. Crear un nuevo directorio de trabajo en el nodo maestro, por ejemplo, **ws2**.
+1. Crear un nuevo directorio de trabajo en el nodo maestro, por ejemplo, **ws2**
 
 2. Crear un archivo YAML llamado `namespace.yaml`.
 
@@ -21,8 +21,10 @@ Crear un **Namespace** para organizar y aislar los recursos asociados a esta pr�
 apiVersion: v1
 kind: Namespace
 metadata:
-  name: springboot-app-ns
+  name: springboot-app-ns  
 ```
+
+**Nota:** El nombre del namespace es solo una sugerencia; puedes elegir y utilizar el nombre que prefieras.
 
 3. Aplicar el YAML para crear el Namespace.
 
@@ -33,11 +35,14 @@ kubectl apply -f namespace.yaml
 4. Verificar la creación del Namespace.
 
 ```bash
+# Lista los namespaces
 kubectl get namespaces
 
-kubectl get namespace springboot-app-ns
+# Información básica del namespace
+kubectl get namespace <namespace>
 
-kubectl describe namespace springboot-app-ns
+# Información detallada del namespace
+kubectl describe namespace <namespace>
 ```
 
 <br/>
@@ -82,7 +87,7 @@ kubectl get configmap springboot-app-config -n springboot-app-ns -o yaml
 
 ### Paso 3. Definir el Deployment con dos réplicas
 
-El Deployment especificará que deseas tener dos réplicas de la aplicación, _distribuidas en dos Pods_.
+El deployment especificará que deseas tener dos réplicas de la aplicación, _distribuidas en dos Pods_.
 
 1. Crear un archivo YAML llamado `deployent.yaml`.
 
@@ -125,13 +130,18 @@ kubectl apply -f deployment.yaml
 3. Verificar los detalles completos del Deployment en Kubernetes.
 
 ```bash
+# Muestra un resumen del estado del Deployment espacificado en el Namespace indicado.
 kubectl get deployment <deploment-name> -n <namespace>
+
+# Proporciona detalles completos del Deployment
 kubectl describe deployment <deployment-name> -n <namespace>
+
+# Devuelve la definición completa del Deployment en formato YAML
 kubectl get deployment <deployment-name> -n <namespace> -o yaml
 ```
 
 
-**Nota**:  Reemplazar `<deployment-name>` con el nombre de tu Deployment y `<namespace>` con el nombre del namespace donde se encuentran tus componentes de Kubernetes.
+**Nota**: Sustituye `<deployment-name>` por el nombre de tu Deployment y `<namespace>` por el nombre del namespace donde se encuentran los componentes de Kubernetes.
 
 <br/>
 
@@ -166,8 +176,10 @@ kubectl apply -f service.yaml
 3. Verificar el servicio creado.
 
 ```bash
+# Forma abreviada
 kubectl get svc -n <namespace>
 
+# Forma completa
 kubectl get services -n <namespace>
 ```
 
@@ -187,7 +199,7 @@ kubectl get pods -n <namespace>
 kubectl get svc -n <namespace>
 ```
 
-3. Validar los objetos creados en un Namespace específico, puedes utilizar el siguiente comando de Kubernetes.
+3. Validar los todos objetos creados en un espacio de nombres específico, puedes utilizar el siguiente comando de Kubernetes.
 
 ```bash
 kubectl get all -n <namespace>
@@ -199,7 +211,7 @@ kubectl get all -n <namespace>
 
 ### Paso 6. Consumir el servicio
 
-Para consumir tu servicio utilizando `curl` o `wget` desde dentro del clúster de Kubernetes, puedes emplear la dirección IP del clúster (CLUSTER-IP) y el puerto expuesto (PORT) del servicio. En el caso de la documentación de esta práctica, el servicio `springboot-app-service` tiene asignada la dirección IP **10.111.232.187** y expone el puerto **8095**.
+Para consumir el servicio utilizando `curl` o `wget` desde dentro del clúster de Kubernetes, puedes emplear la dirección IP del clúster (CLUSTER-IP) y el puerto expuesto (PORT) del servicio. En el caso de la documentación de esta práctica, el servicio `springboot-app-service` tiene asignada la dirección IP **10.111.232.187** y expone el puerto **8095**.
 
 Realiza pruebas de consumo desde ambos nodos, tanto el nodo maestro (Master Node) como el nodo trabajador (Worker Node).
 
