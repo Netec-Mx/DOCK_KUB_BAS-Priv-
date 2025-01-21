@@ -119,7 +119,9 @@ spec:
 
 ```
 
-- **Nota**:  Reemplaza <dockerhub-username>/<springboot-app>:<versión> con la imagen en tu cuenta en Docker Hub. Por ejemmplo la imagen creada en la práctica 1.6.
+
+- **Nota**:  Reemplaza `<dockerhub-username>/<springboot-app>:<versión>` con la imagen en tu cuenta en Docker Hub. Por ejemmplo la imagen creada en la práctica 1.6.
+
 
 2. Aplicar el archivo YAML para crear el **Deployment**.
 
