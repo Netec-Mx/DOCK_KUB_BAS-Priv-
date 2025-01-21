@@ -281,17 +281,17 @@ wget http://localhost:<puerto-especificado>/api/clients
 2. La respuesta del servicio dependerá de la API que hayas incluido en tu imagen Docker. Si utilizaste la API sugerida en la práctica, es posible que la respuesta no contenga datos aún.
 3. El comando `kubectl port-forward` se utiliza para redirigir el tráfico desde un puerto local en tu máquina al puerto de un recurso (Pod o Service) en el clúster de Kubernetes.  
 
-  ```bash
-  kubectl port-forward [resource-type/resource-name] [local-port]:[remote-port] -n <namespace>
-  ```
-  
-  1. **Puerto local (`local-port`)**:  
-     - Es el puerto en tu máquina desde donde se redirigirán las solicitudes. 
-     - Por ejemplo, si especificas `8085`, puedes acceder al recurso en el clúster mediante `http://localhost:8085`.
-  
-  2. **Puerto remoto (`remote-port`)**:  
-     - Es el puerto en el recurso (Pod o Service) en el clúster al que se redirigirá el tráfico desde tu máquina.  
-     - Este puerto debe coincidir con el puerto en el que el recurso (por ejemplo, un Pod) está escuchando solicitudes.
+    ```bash
+    kubectl port-forward [resource-type/resource-name] [local-port]:[remote-port] -n <namespace>
+    ```
+    
+    a. **Puerto local (`local-port`)**:  
+       - Es el puerto en tu máquina desde donde se redirigirán las solicitudes. 
+       - Por ejemplo, si especificas `8085`, puedes acceder al recurso en el clúster mediante `http://localhost:8085`.
+    
+    b. **Puerto remoto (`remote-port`)**:  
+       - Es el puerto en el recurso (Pod o Service) en el clúster al que se redirigirá el tráfico desde tu máquina.  
+       - Este puerto debe coincidir con el puerto en el que el recurso (por ejemplo, un Pod) está escuchando solicitudes.
 
   
 <br/>
