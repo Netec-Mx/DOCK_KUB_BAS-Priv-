@@ -36,7 +36,6 @@ kubectl apply -f namespace.yaml
 kubectl get namespaces
 kubectl get namespace springboot-app-ns
 kubectl describe namespace springboot-app-ns
-
 ```
 
 <br/>
