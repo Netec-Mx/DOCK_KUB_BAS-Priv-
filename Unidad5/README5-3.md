@@ -98,7 +98,7 @@ spec:
       - name: app2
         image: hashicorp/http-echo
         args:
-          - "-text=Hello from App2"  # Mensaje para la aplicación 1
+          - "-text=Hello from App2"  # Mensaje para la aplicación 2
         ports:
           - containerPort: 5678
 
