@@ -304,7 +304,7 @@ kubectl get namespaces
 
 ## Resultado esperado
 
-- Captura de pantalla que incluya lo siguiente: 
+- Captura de pantalla que incluye lo siguiente: 
 
 1. El contenido del archivo YAML utilizado para crear el namespace.  
 2. La aplicación del archivo YAML mediante el comando `kubectl apply`.  
