@@ -89,7 +89,7 @@ kubectl get configmap springboot-app-config -n springboot-app-ns -o yaml
 
 El deployment especificará que deseas tener dos réplicas de la aplicación, _distribuidas en dos Pods_.
 
-1. Crear un archivo YAML llamado `deployent.yaml`.
+1. Crear un archivo YAML llamado `deployment.yaml`.
 
 ```yaml
 
@@ -261,7 +261,7 @@ Realiza pruebas de consumo desde ambos nodos, tanto el nodo maestro (Master Node
 kubectl port-forward svc/<nombre-del-servicio> <puerto-imagen-Docker>:<puerto-servicio> -n <namespace>
 
 # En la documentación de la práctica quedaron los valores siguientes:
-kubectl port-forward svc/springboot-app-service 9095:8080 -n springboot-app-ns
+kubectl port-forward svc/springboot-app-service <puerto-especificado>:8095 -n springboot-app-ns
 ```
 
 - Luego, puedes consumir el servicio con `curl` o con `wget` en la máquina local:
@@ -271,7 +271,7 @@ kubectl port-forward svc/springboot-app-service 9095:8080 -n springboot-app-ns
 wget http://localhost:<puerto-servicio>/<api-path>
 
 # En la documentación de la práctica quedaron los valores siguientes:
-wget http://localhost:8080/api/clients
+wget http://localhost:<puerto-especificado>/api/clients
 ```
 
 **Notas:**
@@ -299,82 +299,183 @@ kubectl get namespaces
 ```
 
 <br/><br/>
+
 ## Resultado esperado
 
-- Captura de pantalla que muestra el contenido del YAML para crear el espacio de nombres, la aplicación del YAML y vericación del mismo.
+- Captura de pantalla que incluya lo siguiente: 
+
+1. El contenido del archivo YAML utilizado para crear el namespace.  
+2. La aplicación del archivo YAML mediante el comando `kubectl apply`.  
+3. La verificación de que el namespace se ha creado correctamente utilizando `kubectl get namespaces`.  
+4. La comprobación de que el namespace recién creado no contiene objetos aún, mediante `kubectl get all -n <nombre-del-namespace>`.  
 
 ![kubectl](../images/u4_5_1.png)
 
-<br/>
+<br/><br/>
 
-- Captura de pantalla que muestra el contenido del YAML para crear un ConfigMap, la aplicación del YAML y los detalles del ConfigMap después de crearlo.
+
+- Captura de pantalla que incluye lo siguiente:
+
+1. Muestra el archivo que define el ConfigMap, incluyendo sus claves y valores.  
+2. Evidencia el uso del comando `kubectl apply -f <archivo-yaml>` para crear el ConfigMap en Kubernetes.  
+3. Usa el comando `kubectl describe configmap <nombre-del-configmap> -n <namespace>` para visualizar los detalles del ConfigMap recién creado, como sus datos y metadatos asociados.  
 
 ![kubectl](../images/u4_5_2.png)
 
-<br/>
+<br/><br/>
 
-- Captura de pantalla que muestra el contenido del YAML para crear un Deployment, la aplicación del YAML y verificación de la creación del mismo.
+- La captura de pantalla siguiente:
+
+1. Muestra el archivo YAML que define el Deployment. Debe incluir las especificaciones básicas, como el nombre del Deployment, las réplicas, la imagen del contenedor, los puertos, etc.
+
+2. Demuestra el uso del comando `kubectl apply -f <archivo-yaml>` para desplegar el Deployment en Kubernetes.
+
+3. Muestra el resultado del comando `kubectl get deployments -n <namespace>` donde se observa que:
+     - La columna **READY** muestra `2/2` indicando que las dos réplicas están listas.
+     - La columna **UP-TO-DATE** indica `2` confirmando que las dos réplicas están actualizadas.
+     - La columna **AVAILABLE** indica `2`, validando que las dos réplicas están disponibles y funcionando correctamente.
 
 ![kubectl](../images/u4_5_3.png)
 
-<br/>
+<br/><br/>
 
-- Captura de pantalla que muestra los detalles del Deployment creado en el punto anterior.
+- Captura de pantalla que muestra los detalles del Deployment creado en el punto anterior, obtenidos mediante el comando: 
+
+```bash
+kubectl describe deployment spring-app-deployment -n springboot-app-ns
+```
+
+- La captura incluye información detallada de los eventos, las especificaciones del Deployment, y el estado actual de los Pods asociados.
 
 ![kubectl](../images/u4_5_4.png)
 
-<br/>
+<br/><br/>
 
-- Captura de pantalla que muestra el contenido del YAML para crear el Service, la aplicación del YAML y la verificación del Servicio, nombre, IP y puerto del servicio.
+- Captura de pantalla que incluye lo siguiente:
 
+1. **Contenido del archivo YAML**: Muestra la definición del Service, incluyendo el tipo de servicio (ClusterIP, NodePort, LoadBalancer), el selector que apunta a los Pods, y los puertos expuestos.
+
+2. **Aplicación del archivo YAML**: Evidencia el uso del comando `kubectl apply -f <archivo-yaml>` para crear el Service en el clúster.
+
+3. **Verificación del Service**:
+   - Utiliza el comando `kubectl get svc <nombre-del-servicio> -n <namespace>` para confirmar su creación.
+   - La salida incluye el **nombre del servicio**, la **ClusterIP**, y el **puerto expuesto**, demostrando que está correctamente configurado y disponible para su uso.
+   
+   
 ![kubectl](../images/u4_5_5.png)
 
-<br/>
+<br/><br/>
 
-- Captura de pantalla que muestra nuevamente la creación del servcio, así como la salida de `kubectl describe` del Service. 
+- La captura de pantalla que incluye lo siguiente:
+
+1. **Comando para crear nuevamente el servicio**: Muestra el uso del comando `kubectl apply -f <archivo-yaml>` para reiterar la creación del servicio, reforzando que el archivo YAML está configurado correctamente.
+
+2. **Salida del comando `kubectl get svc`**:
+   - Incluye el nombre del servicio, tipo, IP del clúster, puerto expuesto y edad del servicio para verificar su existencia y disponibilidad.
+
+3. **Detalles del servicio con `kubectl describe`**:
+   - Evidencia la información completa del servicio, como:
+     - **Nombre del servicio**: Confirma que corresponde al creado.
+     - **ClusterIP y puertos**: Verifica los valores configurados.
+     - **Endpoints**: Muestra los Pods asociados al servicio.
+     - **Eventos**: Asegúrate de que no haya errores o advertencias relacionadas.
 
 ![kubectl](../images/u4_5_6.png)
 
-<br/>
+<br/><br/>
 
-- Captura de pantalla que muestra el contenido del JSON con las propiedades del objeto a insertar, la verificación de la cantidad y nombres de los Pods, la verificación de los detalles de conexión del servicio y el consumo, usando el comando **curl**.
+- Captura de pantalla que incluye lo siguiente:
+
+1. **Contenido del JSON**: Muestra las propiedades del objeto que será insertado, especificando los campos y valores que se enviarán al servicio.
+
+2. **Verificación de Pods**: Utiliza el comando `kubectl get pods -n <namespace>` para confirmar la cantidad y los nombres de los Pods que están en ejecución y asociados al servicio.
+
+3. **Detalles del Servicio**: Usa `kubectl describe svc <nombre-del-servicio> -n <namespace>` para mostrar los detalles de conexión, como la dirección IP, el puerto expuesto y los endpoints asociados.
+
+4. **Consumo del servicio**: Muestra el resultado de ejecutar el comando `curl` para consumir el servicio y validar que la operación (como la inserción del objeto) se realizó correctamente.
 
 ![kubectl](../images/u4_5_7.png)
 
-<br/>
+<br/><br/>
 
-- Captura de pantalla que muestra el contenido JSON de un segundo objeto a insertar en el servicio y la verificación de los objetos insertados.
+- La captura de pantalla siguiente incluye lo siguiente:
 
+1. **Contenido del JSON del segundo objeto**: 
+   - Muestra la estructura y propiedades del segundo objeto que será insertado en el servicio, asegurando que incluye todos los campos requeridos.
+
+2. **Ejecución del comando para insertar el segundo objeto**: 
+   - Evidencia el uso de un comando como `curl -X POST` o similar, que envía el objeto al servicio utilizando su endpoint correspondiente.
+
+3. **Verificación de los objetos insertados**:
+   - Muestra el uso de un comando como `curl -X GET <url-del-servicio>` para consultar todos los objetos insertados, verificando que tanto el primero como el segundo objeto se encuentren en la respuesta del servicio. 
+   - Opcionalmente, se utiliza un formato limpio (e.g., `jq`) para mejorar la legibilidad de la salida.
+   
 ![kubectl](../images/u4_5_8.png)
 
-<br/>
+<br/><br/>
 
-- Captura de pantalla que muestra las inconsistencias al tener una replica de ambos servicios, y al gestionar la base de datos en memoria. Observe como una misma petición se encuentra balanceada entre las replicas creadas y los datos en cada solicitud pueden ser diferentes.
+- La siguiente captura de pantalla evidencia las inconsistencias que surgen al trabajar con réplicas de servicios que gestionan una base de datos en memoria. Las peticiones realizadas al servicio muestran cómo las respuestas varían entre las réplicas debido al balanceo de carga. 
+
+- **Consumo del endpoint `/api/clients`**: Se observa que las respuestas cambian en contenido dependiendo de la réplica que atiende cada solicitud. Por ejemplo:
+  - En algunas respuestas, los datos devueltos incluyen un cliente con `id=1` y `name=Nombre1`.
+  - En otras respuestas, el cliente con `id=2` aparece sin incluir al cliente anterior, indicando que las réplicas no comparten un estado consistente.
+
+- **Demostración del balanceo de carga**: A pesar de que todas las peticiones son enviadas al mismo endpoint (`http://10.111.232.187:8095/api/clients`), el balanceador de carga distribuye las solicitudes entre las distintas réplicas del servicio, cada una con su propia base de datos en memoria.
+
+- **Conclusión**: La falta de persistencia centralizada en una base de datos compartida provoca que cada réplica tenga un conjunto de datos distinto, lo que genera inconsistencias en las respuestas al cliente. Este comportamiento destaca la importancia de diseñar estrategias adecuadas de persistencia en arquitecturas con múltiples réplicas.
 
 ![kubectl](../images/u4_5_9.png)
 
-<br/>
+<br/><br/>
 
 - Captura de pantalla que muestra el consumo del servicio desde un Pod temporal, utilizando el comando **wget** y **springboot-app-service** en lugar de la IP.
 
 ![kubectl](../images/u4_5_10.png)
 
-<br/>
+<br/><br/>
 
-- Captura de pantalla que muestra el consumo del servicio, usando la opción **port-forward**, observe como los consumos pueden realizarce usando _http://localhost_ 
+
+- Captura de pantalla que ilustra cómo consumir un servicio en Kubernetes utilizando la funcionalidad de `port-forward`, lo que permite acceder al servicio a través de `http://localhost`.
+
+1. **Configuración de `port-forward`**:  
+   - Se utiliza el comando:
+     ```bash
+     kubectl port-forward svc/springboot-app-service 8095:8095 -n springboot-app-ns
+     ```
+     Esto redirige las solicitudes locales en el puerto `8095` al puerto del servicio `springboot-app-service` en el clúster, haciendo que el servicio sea accesible desde `http://localhost:8095`.
+
+2. **Consumo del servicio**:  
+   - Se realizan varias solicitudes a los endpoints del servicio usando `curl`, como:
+     ```bash
+     curl http://localhost:8095/api/clients/1
+     ```
+     y 
+     ```bash
+     curl http://localhost:8095/api/clients/2
+     ```
+     Las respuestas devueltas muestran los datos correspondientes de la base de datos.
+
+3. **Observaciones**:  
+   - El comando `port-forward` facilita probar servicios dentro de Kubernetes desde el entorno local sin necesidad de exponerlos externamente.
+   - Las solicitudes realizadas a `http://localhost` interactúan directamente con el servicio a través del puerto redirigido.
+
+**Conclusión**: Este enfoque es útil para pruebas y depuración, ya que permite interactuar con servicios del clúster como si estuvieran ejecutándose localmente.
+
+ 
 
 ![kubectl](../images/u4_5_11.png)
 
-<br/>
+<br/><br/>
 
-- Captura de pantalla que muestra un listado de todos los YAMLs usados en esta práctica.
+- Captura de pantalla que muestra un listado completo de todos los archivos YAML y JSON utilizados en esta práctica.
+
 
 ![kubectl](../images/u4_5_12.png)
 
-<br/>
+<br/><br/>
 
-- Captura de pantalla que muestra la tarea de limpieza de los recursos creados en el namespace de la práctica.
+- Captura de pantalla que muestre el proceso completo de limpieza de los recursos creados en el namespace utilizado durante la práctica.
 
 ![kubectl](../images/u4_5_13.png)
 
-<br/>
+<br/><br/>
