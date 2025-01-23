@@ -89,10 +89,7 @@ sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyring
 sudo chmod a+r /etc/apt/keyrings/docker.asc
 
 # Agrega the repository to Apt sources:
-echo \
-  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
-  $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \
-  sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 sudo apt-get update
 
 sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
@@ -132,12 +129,11 @@ sudo apt-get install -y apt-transport-https ca-certificates curl gpg
 8. Descargar y agregar repositorios de kubernetes.
 
 ```bash
-curl -fsSL https://pkgs.k8s.io/core:/stable:/v1.30/deb/Release.key | \
-sudo gpg --dearmor -o /etc/apt/keyrings/kubernetes-apt-keyring.gpg
+curl -fsSL https://pkgs.k8s.io/core:/stable:/v1.30/deb/Release.key | sudo gpg --dearmor -o /etc/apt/keyrings/kubernetes-apt-keyring.gpg
+
 # This overwrites any existing configuration in /etc/apt/sources.list.d/kubernetes.list
-echo 'deb [signed-by=/etc/apt/keyrings/kubernetes-apt-keyring.gpg]  \
-https://pkgs.k8s.io/core:/stable:/v1.30/deb/ /' | \
-sudo tee /etc/apt/sources.list.d/kubernetes.list    
+echo 'deb [signed-by=/etc/apt/keyrings/kubernetes-apt-keyring.gpg] https://pkgs.k8s.io/core:/stable:/v1.30/deb/ /' | sudo tee /etc/apt/sources.list.d/kubernetes.list
+
 ```
 
 <br/>
@@ -146,7 +142,9 @@ sudo tee /etc/apt/sources.list.d/kubernetes.list
 
 ```bash
 sudo apt-get update
+
 sudo apt-get install -y kubelet kubeadm kubectl
+
 sudo apt-mark hold kubelet kubeadm kubectl
 ```
 
@@ -157,7 +155,8 @@ sudo apt-mark hold kubelet kubeadm kubectl
     - **Nota:** Cambiar la IP por la reportada en el comando `ip add`
 
 ```bash
-ip add 
+ip add
+
 sudo kubeadm init --pod-network-cidr=10.244.0.0/16 --apiserver-advertise-address=<ip de control plane>
 ```
 
@@ -166,8 +165,10 @@ sudo kubeadm init --pod-network-cidr=10.244.0.0/16 --apiserver-advertise-address
 11. Habilitar cluster para cualquier usuario.
 
 ```bash
-mkdir -p $HOME/.kube 
-sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config 
+mkdir -p $HOME/.kube
+
+sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+
 sudo chown $(id -u):$(id -g) $HOME/.kube/config
 ```
 
@@ -215,6 +216,7 @@ EOF
 sudo sysctl --system
 
 lsmod | grep br_netfilter
+
 lsmod | grep overlay
 
 sysctl net.bridge.bridge-nf-call-iptables net.bridge.bridge-nf-call-ip6tables net.ipv4.ip_forward
@@ -243,14 +245,13 @@ sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyring
 sudo chmod a+r /etc/apt/keyrings/docker.asc 
 
 # Add the repository to Apt sources: 
-echo \
-  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
-  $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \
-  sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 
 # Update 
-sudo apt-get update 
+sudo apt-get update
+
 sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+
 ```
 
 <br/>
@@ -278,8 +279,10 @@ sudo systemctl restart containerd
 
 ```bash
 sudo apt-get update
+
 # apt-transport-https may be a dummy package; if so, you can skip that package
 sudo apt-get install -y apt-transport-https ca-certificates curl gpg
+
 ```
 
 <br/>
@@ -287,6 +290,7 @@ sudo apt-get install -y apt-transport-https ca-certificates curl gpg
 8. Descargar y agregar repositorios de kubernetes.
 ```bash
 curl -fsSL https://pkgs.k8s.io/core:/stable:/v1.30/deb/Release.key | sudo gpg --dearmor -o /etc/apt/keyrings/kubernetes-apt-keyring.gpg
+
 # This overwrites any existing configuration in /etc/apt/sources.list.d/kubernetes.list
 echo 'deb [signed-by=/etc/apt/keyrings/kubernetes-apt-keyring.gpg] https://pkgs.k8s.io/core:/stable:/v1.30/deb/ /' | sudo tee /etc/apt/sources.list.d/kubernetes.list    
 ```
@@ -297,7 +301,9 @@ echo 'deb [signed-by=/etc/apt/keyrings/kubernetes-apt-keyring.gpg] https://pkgs.
 
 ```bash
 sudo apt-get update
+
 sudo apt-get install -y kubelet kubeadm kubectl
+
 sudo apt-mark hold kubelet kubeadm kubectl
 ```
 
