@@ -56,3 +56,24 @@
 5. [Cómo configurar y ajustar CoreDNS](https://coredns.io/plugins/bufsize/)
 6. [Cómo exponer aplicaciones con kubectl expose](https://kubernetes.io/docs/reference/kubectl/generated/kubectl_expose/)
 7. [Guía de Weave Net para Kubernetes](https://github.com/weaveworks/weave/blob/master/site/kubernetes/kube-addon.md)
+
+
+<br/><br/>
+
+## Releases Kubernetes
+
+
+1. [Releases oficiales de Kubernetes](https://github.com/kubernetes/kubernetes/releases)
+
+Este enlace es el repositorio oficial de Kubernetes en GitHub, donde puedes encontrar:
+- Todas las versiones lanzadas de Kubernetes.
+- Notas de lanzamiento detalladas para cada versión, incluyendo mejoras, nuevas funcionalidades y correcciones de errores.
+- Archivos binarios y de configuración relacionados con cada versión.
+
+
+2. [Releases Kubernetes](https://kubernetes.io/releases/)
+
+En este enlace podrás:
+- Comprender el estado de soporte de una versión específica de Kubernetes.
+- Acceder rápidamente a las notas de lanzamiento.
+- Obtener una visión clara del **ciclo de vida** de las versiones de Kubernetes, asegurando que utilices versiones compatibles y actualizadas.
