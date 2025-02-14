@@ -132,7 +132,7 @@ sudo apt-get install -y apt-transport-https ca-certificates curl gpg
 
 <br/>
 
-8. Descargar y agregar repositorios de kubernetes, tener cuidado al copiar la líena de instrucción con `echo` es muy larga.
+8. Descargar y agregar repositorios de kubernetes, tener cuidado al copiar la línea de instrucción con `echo` es muy larga.
 
 ```bash
 curl -fsSL https://pkgs.k8s.io/core:/stable:/v1.30/deb/Release.key | sudo gpg --dearmor -o /etc/apt/keyrings/kubernetes-apt-keyring.gpg
