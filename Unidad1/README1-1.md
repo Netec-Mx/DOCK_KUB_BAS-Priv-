@@ -1,14 +1,16 @@
-
 # Práctica 1.1. Instalación Docker
 
+## Objetivo:
 
-## Objetivo 
+Al finalizar la práctica, serás capaz de: 
+
 - Instalar y configurar Docker en un entorno Linux utilizando máquinas virtuales.
 
-## Duración aproximada
+## Duración aproximada:
+
 - 35 minutos.
 
-## Requisitos del Sistema
+## Requisitos del sistema:
 
 - Docker se puede instalar en varias distribuciones de Linux, incluyendo:
     - Ubuntu (versión 18.04 o posterior es recomendada)
@@ -27,112 +29,81 @@
 
 - Habilitar el módulo de overlay y overlay2, ya que Docker utiliza estos sistemas de archivos como el controlador de almacenamiento por defecto.
 
-- Permisos de Usuario.
+- Permisos de Usuario:
     - Docker necesita permisos de administrador para su instalación y configuración. Usualmente, los comandos se ejecutan con **sudo**.
 
-<br/>
+## Instrucciones:
 
-## Instrucciones
+1. **Consulta con el instructor:**
 
-1. **Consulta con el instructor**
-
-Pregunta a el instructor cómo acceder al entorno de prácticas del curso y asegúrate de entender todas las instrucciones necesarias para su acceso este día y los días siguientes de clase.
+    Pregunta a el instructor cómo acceder al entorno de prácticas del curso y asegúrate de entender todas las instrucciones necesarias para su acceso este día y los días siguientes de clase.
 
     - ¿Cuántas máquinas virtuales tienes?
     - ¿Cuáles son los sistemas operativos que tienes en cada máquina?
 
-<br/>
+2. **Actualizar e instalar los paquetes requeridos:**
 
+    ```bash
+    sudo apt update
+    sudo apt upgrade
+    sudo apt install apt-transport-https ca-certificates curl software-properties-common
+    ```
 
-2. ***Actualizar e instalar los paquetes requeridos:***
+3. **Agregar la clave de Docker y el repositorio:**
 
-```bash
-sudo apt update
-sudo apt upgrade
-sudo apt install apt-transport-https ca-certificates curl software-properties-common
-```
-<br/>
+    ```bash
+    curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+    ```
 
+    Luego, agrega el repositorio.
 
-3. ***Agregar la clave de Docker y el repositorio***
+    ```bash
+    sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs)     stable"
+    ```
 
-```bash
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
-```
+4. **Actualizar de nuevo e instalar Docker:**
 
-Luego, agregar el repositorio.
-```bash
-sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
-```
+    ```bash
+    sudo apt update
+    apt-cache policy docker-ce
+    sudo apt install docker-ce
+    ```
 
-<br/>
+5. **Verificar de Docker:**
 
+    ```bash
+    sudo systemctl status docker
+    ```
 
-4. ***Actualizar de nuevo e instalar Docker***
-```bash
-sudo apt update
-apt-cache policy docker-ce
-sudo apt install docker-ce
-```
+6. **Configurar adicionalmente:**
 
-<br/>
+    ```bash
+    docker --version
+    id -nG
+    sudo usermod -aG docker <usuario>  # Reemplaza <usuario> con el nombre de tu usuario
+    cat /etc/group
+    ```
 
+    **Nota:** Para que los cambios en el grupo se apliquen, es recomendable cerrar y volver a abrir la sesión del usuario o ejecutar `newgrp docker`.
 
-5. ***Verificar de Docker*** 
-
-```bash
-sudo systemctl status docker
-```
-
-
-<br/>
-
-
-6. ***Configurar adicionalmente***
-
-```bash
-docker --version
-id -nG
-sudo usermod -aG docker <usuario>  # Reemplaza <usuario> con el nombre de tu usuario
-cat /etc/group
-```
-
-***Nota:*** Para que los cambios en el grupo se apliquen, es recomendable cerrar y volver a abrir la sesión del usuario o ejecutar `newgrp docker`
-
-<br/><br/>
-
-## Resultado esperado
+## Resultado esperado:
 
 - docker --version
 
 ![docker --version](../images/u1_1_1.png)
 
-***Nota:*** La versión de Docker podría cambiar.
-
-<br/>
-
+**Nota:** La versión de Docker podría cambiar.
 
 - sudo systemctl status docker
 
-
 ![sudo systemctl status docker](../images/u1_1_2.png)
-
-
-<br/>
-
 
 - docker info
 
 <img src="../images/u1_1_3.png" alt="Descripción de la imagen" style="width:75%;"/>
 
- 
-<br/>
-
-
 - docker run hello-world
 
-
 ![docker -run hello-world](../images/u1_1_4.png)
- 
 
-
+---
