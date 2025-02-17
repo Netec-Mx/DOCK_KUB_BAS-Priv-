@@ -74,9 +74,7 @@
 
 - Para persistir la configuración de **swapoff -a** se debe editar el archivo **/etc/fstab**, comentar la linea asignada a swap y luego reiniciar la máquina. 
 
-<br/>
-
- 4. Instalar containerd (Las líneas de instrucciones son largas, tener cuidado al copiar toda la línea)
+5. Instalar containerd (las líneas de instrucciones son largas, ten cuidado al copiar toda la línea).
 
     ```bash
 
