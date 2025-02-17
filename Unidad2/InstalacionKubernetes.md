@@ -305,10 +305,10 @@
 
 En caso de no haber guardado la instrucción, la instrucción siguiente, genera un token de autenticación y muestra el comando completo necesario para unir un nodo trabajador (worker node) o un nodo maestro al clúster de Kubernetes.
 
-    ```bash
-    # Master Node / Control Pane
-    kubeadm token create --print-join-command
-    ```
+```bash
+# Master Node / Control Pane
+kubeadm token create --print-join-command
+```
 
 - **Notas:**
   1. Asegúrate de que el puerto 6443 esté accesible desde el nodo trabajador hacia el nodo maestro.
