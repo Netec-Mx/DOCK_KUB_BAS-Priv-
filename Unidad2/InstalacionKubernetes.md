@@ -34,8 +34,6 @@ sudo apt-get update
 sudo apt install apt-transport-https curl -y
 ```
 
-<br/>
-
 2. Preconfigurar la red. 
 
 ```bash
