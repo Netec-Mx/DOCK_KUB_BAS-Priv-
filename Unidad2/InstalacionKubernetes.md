@@ -1,4 +1,4 @@
-## Instalación de Kubernetes*
+## Instalación de Kubernetes
 
 ### versión 1.1
 
@@ -36,9 +36,9 @@
 
 2. Preconfigurar la red. 
 
-    ```bash
-    cat <<EOF | sudo tee /etc/modules-load.d/k8s.conf
-    overlay
+```bash
+cat <<EOF | sudo tee /etc/modules-load.d/k8s.conf
+overlay
 br_netfilter
 EOF
 
