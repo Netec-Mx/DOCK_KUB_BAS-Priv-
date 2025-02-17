@@ -1,4 +1,4 @@
-## Instalación de Kubernetes
+## Instalación de Kubernetes*
 
 ### versión 1.1
 
@@ -74,7 +74,7 @@
 
 - Para persistir la configuración de **swapoff -a** se debe editar el archivo **/etc/fstab**, comentar la linea asignada a swap y luego reiniciar la máquina. 
 
-5. Instalar containerd (las líneas de instrucciones son largas, ten cuidado al copiar toda la línea).
+4. Instalar containerd (las líneas de instrucciones son largas, ten cuidado al copiar toda la línea).
 
     ```bash
 
@@ -93,9 +93,7 @@
 
     sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
     ```
-
-<br/>
-
+    
 5. Habilitar containerd como Container Runtime, sustituir el contenido del archivo **/etc/containerd/config.toml**, por lo siguiente:
 
     ```
