@@ -15,7 +15,7 @@ Las siguientes instrucciones aplican en tu máquina máquina virtual con Windows
 
 1. **Configurar Git:**
 
-Asegúrate de tener configurados nombre y correo en Git. Esto se puede hacer con los siguientes comandos:
+    Asegúrate de tener configurados nombre y correo en Git. Esto se puede hacer con los siguientes comandos:
 
     ```bash
     git config --global user.name "Tu Nombre"
