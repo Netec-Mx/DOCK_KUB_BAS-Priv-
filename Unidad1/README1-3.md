@@ -1,19 +1,18 @@
-# Práctica 1.3. Clonar, importar, analizar un Microservicio en Java
+# Práctica 1.3. Clonar, importar, analizar un microservicio en Java
 
-## Objetivo
+## Objetivo:
+
+Al finalizar la práctica, serás capaz de:
 
 - Clonar un repositorio de microservicio en Java, importarlo en el entorno de desarrollo y analizar su estructura y componentes principales.
 
-## Duración aproximada
+## Duración aproximada:
 
 - 45 minutos.
 
+## Instrucciones:
 
-<br/>
-
-## Instrucciones
-
-1. **Clonar el repositorio**
+1. **Clonar el repositorio:**
 
     - Acceder al repositorio inicial de las prácticas donde se encuentra el código.
     - Clonar el repositorio en la máquina local, si aún no lo has hecho, ejecutar el siguiente comando en la terminal:
@@ -30,11 +29,7 @@
     cd <nombre_del_repositorio>/unidad1/code/ms-clients
     ```
 
-
-<br/>
-
-
-2. **Importar el proyecto en el entorno de desarrollo**
+2. **Importar el proyecto en el entorno de desarrollo:**
 
     - Abrir el entorno de desarrollo integrado (IDE), como STS o VSC.
     - Importar el proyecto:
@@ -43,11 +38,6 @@
         - En VSC: Seleccionar Archivo > Abrir Carpeta..., navegar a la carpeta ms-clients y seleccionar Finish.
 
     - Esperar a que el IDE cargue al **100%** todas las dependencias de Maven y compilar el proyecto.
-
-
-
-<br/>
-
 
 3. **Analizar la estructura del microservicio**
 
@@ -60,12 +50,7 @@
 
     - Familiarízate con la estructura de carpetas, especialmente las carpetas src/main/java y src/main/resources.
 
-
-<br/>
-
-
-
-4. **Ejecutar y verificar la configuración**
+4. **Ejecutar y verificar la configuración:**
 
     - Si es posible, ejecutar el microservicio desde el IDE para asegurarse de que la configuración inicial es correcta. Puedes hacerlo desde la clase principal del microservicio, generalmente una clase anotada con @SpringBootApplication.
     
