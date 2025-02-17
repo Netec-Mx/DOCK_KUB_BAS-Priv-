@@ -1,4 +1,4 @@
-## Instalación de Kubernetes
+## Instalación de Kubernetes*
 
 ### versión 1.1
 
@@ -29,16 +29,16 @@
 
 1. Instalar paquetería básica.
 
-```bash
-sudo apt-get update  
-sudo apt install apt-transport-https curl -y
-```
+    ```bash
+    sudo apt-get update  
+    sudo apt install apt-transport-https curl -y
+    ```
 
 2. Preconfigurar la red. 
 
-```bash
-cat <<EOF | sudo tee /etc/modules-load.d/k8s.conf
-overlay
+    ```bash
+    cat <<EOF | sudo tee /etc/modules-load.d/k8s.conf
+    overlay
 br_netfilter
 EOF
 
