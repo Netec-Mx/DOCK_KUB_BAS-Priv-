@@ -27,14 +27,14 @@
 
 ## Control Plane:
 
-1. Instalar paquetería básica..
+ 1. Instalar paquetería básica..
    
 ```bash
 sudo apt-get update  
 sudo apt install apt-transport-https curl -y
 ```
 
-2. Preconfigurar la red. 
+ 2. Preconfigurar la red. 
 
 ```bash
 cat <<EOF | sudo tee /etc/modules-load.d/k8s.conf
