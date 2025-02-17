@@ -1,4 +1,4 @@
-## Instalación de Kubernetes*
+## Instalación de Kubernetes
 
 ### versión 1.1
 
@@ -72,7 +72,7 @@
     sudo swapoff -a
     ```
 
-- Para persistir la configuración de **swapoff -a** se debe editar el archivo **/etc/fstab**, comentar la linea asignada a swap y luego reiniciar la máquina. 
+    - Para persistir la configuración de **swapoff -a** se debe editar el archivo **/etc/fstab**, comentar la linea asignada a swap y luego reiniciar la máquina. 
 
 4. Instalar containerd (las líneas de instrucciones son largas, ten cuidado al copiar toda la línea).
 
