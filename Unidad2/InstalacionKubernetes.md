@@ -172,15 +172,15 @@
 
 **Opción 1**. Weave 2.29
 
-    ```bash
-    kubectl apply -f https://reweave.azurewebsites.net/k8s/v1.30/net.yaml
-    ```
+```bash
+kubectl apply -f https://reweave.azurewebsites.net/k8s/v1.30/net.yaml
+```
 
 **Opción 2**. Calico 3.25.1
 
-    ```bash
-      kubectl apply -f https://docs.projectcalico.org/v3.25/manifests/calico.yaml
-    ```
+```bash
+kubectl apply -f https://docs.projectcalico.org/v3.25/manifests/calico.yaml
+```
 
 ## Worker Node:
 
