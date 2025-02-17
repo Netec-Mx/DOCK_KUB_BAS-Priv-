@@ -1,4 +1,4 @@
-## Instalación de Kubernetes*
+## Instalación de Kubernetes
 
 ### versión 1.1
 
