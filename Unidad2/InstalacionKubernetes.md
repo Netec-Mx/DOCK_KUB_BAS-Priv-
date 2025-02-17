@@ -27,7 +27,7 @@
 
 ## Control Plane:
 
- 1. Instalar paquetería básica..
+1. Instalar paquetería básica.
    
 ```bash
 sudo apt-get update  
