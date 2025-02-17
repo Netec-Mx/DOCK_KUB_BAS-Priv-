@@ -28,7 +28,7 @@
 ## Control Plane:
 
 1. Instalar paquetería básica.
-   
+
 ```bash
 sudo apt-get update  
 sudo apt install apt-transport-https curl -y
@@ -64,8 +64,6 @@ lsmod | grep overlay
 # Verifica los valores actuales 
 sysctl net.bridge.bridge-nf-call-iptables net.bridge.bridge-nf-call-ip6tables net.ipv4.ip_forward
 ```
-
-<br/>
 
 3. Swap
 
