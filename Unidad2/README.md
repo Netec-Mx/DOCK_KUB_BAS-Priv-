@@ -21,7 +21,7 @@
 
 - [Práctica 2.5 Ejercicios Básicos K8s](README2-5.md)
 
-<br/></br>
+<br/>
 
 ---
 
