@@ -29,14 +29,16 @@
 
 1. Instalar paquetería básica.
    
-```bash
+```
+bash
 sudo apt-get update  
 sudo apt install apt-transport-https curl -y
 ```
 
- 2. Preconfigurar la red. 
+2. Preconfigurar la red. 
 
-```bash
+```
+bash
 cat <<EOF | sudo tee /etc/modules-load.d/k8s.conf
 overlay
 br_netfilter
@@ -67,7 +69,7 @@ sysctl net.bridge.bridge-nf-call-iptables net.bridge.bridge-nf-call-ip6tables ne
 
 <br/>
 
- 3. Swap
+3. Swap
 
 ```bash
 # Apagar el swap
