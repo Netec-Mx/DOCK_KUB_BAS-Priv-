@@ -1,4 +1,4 @@
-## Instalación de Kubernetes
+## Instalación de Kubernetes*
 
 ### versión 1.1
 
@@ -36,41 +36,41 @@
 
 2. Preconfigurar la red. 
 
-```bash
-cat <<EOF | sudo tee /etc/modules-load.d/k8s.conf
-overlay
-br_netfilter
-EOF
+    ```bash
+    cat <<EOF | sudo tee /etc/modules-load.d/k8s.conf
+    overlay
+    br_netfilter
+    EOF
 
-# Carga los módulos para almacenamiento de contenedores y enrutamiento del tráfico de redes
-sudo modprobe overlay
-sudo modprobe br_netfilter
+    # Carga los módulos para almacenamiento de contenedores y enrutamiento del tráfico de redes
+    sudo modprobe overlay
+    sudo modprobe br_netfilter
 
 
-# sysctl params 
-cat <<EOF | sudo tee /etc/sysctl.d/k8s.conf
-net.bridge.bridge-nf-call-iptables  = 1
-net.bridge.bridge-nf-call-ip6tables = 1
-net.ipv4.ip_forward                 = 1
-EOF
+    # sysctl params 
+    cat <<EOF | sudo tee /etc/sysctl.d/k8s.conf
+    net.bridge.bridge-nf-call-iptables  = 1
+    net.bridge.bridge-nf-call-ip6tables = 1
+    net.ipv4.ip_forward                 = 1
+    EOF
 
-# Aplicando los parámetros
-sudo sysctl --system
+    # Aplicando los parámetros
+    sudo sysctl --system
 
-# Verificación de módulos
-lsmod | grep br_netfilter
-lsmod | grep overlay
+    # Verificación de módulos
+    lsmod | grep br_netfilter
+    lsmod | grep overlay
 
-# Verifica los valores actuales 
-sysctl net.bridge.bridge-nf-call-iptables net.bridge.bridge-nf-call-ip6tables net.ipv4.ip_forward
-```
+    # Verifica los valores actuales 
+    sysctl net.bridge.bridge-nf-call-iptables net.bridge.bridge-nf-call-ip6tables net.ipv4.ip_forward
+    ```
 
 3. Swap
 
-```bash
-# Apagar el swap
-sudo swapoff -a
-```
+    ```bash
+    # Apagar el swap
+    sudo swapoff -a
+    ```
 
 - Para persistir la configuración de **swapoff -a** se debe editar el archivo **/etc/fstab**, comentar la linea asignada a swap y luego reiniciar la máquina. 
 
