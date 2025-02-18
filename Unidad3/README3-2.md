@@ -1,14 +1,16 @@
 # Práctica 3.2. Creación y configuración de StatefulSets
 
-## Objetivo
+## Objetivo:
+
+Al finalizar la práctica, serás capaz de:
 - Escribir y aplicar un archivo YAML para crear un StatefulSet.
 
-## Duración aproximada
+## Duración aproximada:
 - 30 minutos.
 
 ## Instrucciones
 
-### Paso 1: Crear el archivo YAML del StatefulSet
+### Paso 1: Crear el archivo YAML del StatefulSet.
 
 1. Abrir un editor de texto y crear un archivo llamado `statefulset.yaml`.
 
@@ -39,9 +41,6 @@
            - containerPort: 80
              name: http
 
-<br/>
-
-
 -   **Observaciones** 
 
     -   `apiVersion` y `kind`: Especifican el tipo de recurso, en este caso, un StatefulSet de versión `apps/v1`.
@@ -51,10 +50,6 @@
     - `template`: Define el pod que el StatefulSet creará, incluyendo las etiquetas y especificación del contenedor.
     - `containers`: Define el contenedor que se utilizará en el StatefulSet. Se usa la imagen `nginx:latest` para simular una aplicación simple, expuesta en el puerto 80.
 
-
-
-<br/>
-
 ### Paso 2: Aplicar el archivo YAML para crear el StatefulSet
 
 - Asegúrate de que el clúster de Kubernetes esté activo y accesible.
@@ -63,9 +58,6 @@
 ```bash
 kubectl apply -f statefulset.yaml
 ```
-
-
-<br/>
 
 ### Paso 3: Verificar la creación del StatefulSet
 
@@ -77,9 +69,6 @@ kubectl get pods -l app=web
 ```
 
 - Esto mostrará el StatefulSet y los pods con el nombre secuencialmente numerado, por ejemplo, `web-statefulset-0`, `web-statefulset-1`, `web-statefulset-2`.
-
-
-<br/>
 
 ### Paso 4: Detalles adicionales y observación de los pods
 
@@ -97,8 +86,6 @@ kubectl get pods -l app=web
   kubectl logs web-statefulset-0
   ```
 
-<br/>
-
 ### Paso 5: Escalar el StatefulSet (Opcional)
 
 - Si deseas aumentar o reducir el número de réplicas, puedes editar el archivo YAML o usar el comando scale de kubectl:
@@ -109,12 +96,9 @@ kubectl scale statefulset web-statefulset --replicas=5
 
 - Este comando ajustará el número de réplicas a cinco.
 
-<br/>
-
 ### Paso 6: Eliminar el StatefulSet (Limpieza)
 
 - Una vez finalizada la práctica, puedes eliminar el StatefulSet con el siguiente comando:
-
 
 ```bash
  kubectl delete -f statefulset.yaml
@@ -122,36 +106,27 @@ kubectl scale statefulset web-statefulset --replicas=5
 
 - Esto eliminará el StatefulSet y todos los pods asociados a él.
 
-<br/>
 
-## Resultado Esperado
+## Resultado esperado:
 
 - Captura de pantalla con el YAML almacenado en el archivo **statefulset.yaml**.
 
 ![YAML](../images/u3_2_1.png)
 
-<br/>
-
 - Captura de pantalla con el antes y después de aplicar el YAML **statefulset.yaml**.
 
 ![](../images/u3_2_2.png)
-
- 
- <br/>
 
 - Captura de pantalla con el detalle del web-statefulset (SuccessfulCreate).
 
 ![](../images/u3_2_3.png)
 
-<br/>
-
-- Captura de pantalla la bitácora de uno de los statefulset. Además con la escalada a cinco replicas.
+- Captura de pantalla la bitácora de uno de los statefulset. Además con la escalada a cinco réplicas.
 
 ![](../images/u3_2_4.png)
-
-<br/>
 
 - Captura de pantalla con el antes y después de eliminar el **statefulset.yaml**
 
 ![](../images/u3_2_5.png)
  
+---
