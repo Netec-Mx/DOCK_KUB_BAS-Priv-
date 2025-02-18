@@ -1,16 +1,16 @@
 # Práctica 1.5. Consumir Microservicios
 
-## Objetivo
+## Objetivo:
+
+Al finalizar la práctica, serás capaz de:
 - Consumir microservicios desde una aplicación cliente, utilizando llamadas HTTP para obtener, enviar y manipular datos.
 
-## Duración aproximada
+## Duración aproximada:
 - 15 minutos.
 
-<br/>
+## Instrucciones:
 
-## Instrucciones
-
-1. **Verificar el puerto expuesto en el contenedor Docker**
+1. **Verificar el puerto expuesto en el contenedor Docker.**
 
    - Listar los contenedores en ejecución para obtener el `CONTAINER ID` del microservicio:
 
@@ -32,10 +32,7 @@
 
    - Buscar la sección `"Ports"` en la salida para confirmar el mapeo de puertos (interno y externo). El puerto externo será el que podrás usar para realizar las llamadas HTTP (por ejemplo, `9095`).
 
-<br/>
-
-
-2. **Consumir el microservicio**
+2. **Consumir el microservicio.**
 
    Puedes realizar las siguientes solicitudes HTTP para probar el microservicio desde Postman, Insomnia o `curl`. Asegúrate de reemplazar `{id}` con el valor del ID específico del cliente cuando sea necesario.
 
@@ -136,28 +133,18 @@
        - Método: `DELETE`
        - URL: `http://localhost:8095/api/clients/{id}`
 
-
-<br/>
-
-
-3. **Verificar respuestas**
+3. **Verificar respuestas.**
 
    - Confirmar que cada operación devuelve la respuesta esperada (por ejemplo, una lista de clientes, detalles de un cliente específico, o un mensaje de éxito al crear, actualizar o eliminar un cliente).
 
-
-<br/><br/>
-
-## Resultado esperado
-
+## Resultado esperado:
 
 - Captura de pantalla sobre el área del reporte de `docker inspect`.
 
 ![docker build](../images/u1_5_2.png)
 
-
-<br/>
-
-
 - Captura de pantalla sobre verificación del contenedor Docker y el consumo del microservicio usando curt y el método POST.
 
 ![docker build](../images/u1_5_1.png)
+
+---
