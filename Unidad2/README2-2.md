@@ -20,8 +20,6 @@ Al finalizar la práctica, serás capaz de:
         - Asegúrate de que la dirección IP sea correcta y que tengas permisos de usuario con privilegios adecuados en el nodo, wnadmin y contraseña Netec_123.
         - Para realizar estas actividades tienes que tener una conexión ssh a ambos nodos (Master & Worker Nodes)
 
-<br/>
-
 2. **Verificar conexión con el Master Node.**
    - Comprobar si el Worker Node está correctamente unido al clúster usando el siguiente comando en el **Master Node**:
      ```bash
