@@ -1,24 +1,26 @@
-# Práctica 2.5. Ejercicios Básicos K8s
+# Práctica 2.5. Ejercicios básicos K8s
 
-## Objetivo
+## Objetivo:
+
+Al finalizar la práctica, serás capaz de:
 - Aplicar comandos y configuraciones básicas en Kubernetes para gestionar y monitorear recursos como Pods, Namespaces y Deployments.
 
 
-## Duración aproximada
+## Duración aproximada:
 - 30 minutos.
 
-## YAMLs
+### YAMLs
 
 - podsP3.yaml
 
 ```yaml
 ```
 
-## Instrucciones
+## Instrucciones:
 
-- Realizar los siguientes ejercicios:
+- Realiza los siguientes ejercicios:
 
-# Cuestionario de Kubernetes - Unidad 2
+# Cuestionario de Kubernetes: Unidad 2.
 
 1. **Listar la cantidad de Pods que se encuentran dentro del namespace `kube-system`.**
 
@@ -40,5 +42,6 @@
 
 10. **Realizar los cambios necesarios para que todos los Pods del Deployment `backend` estén en estado "Running".**
 
+## Resultado esperado:
 
-## Resultado esperado
+---
