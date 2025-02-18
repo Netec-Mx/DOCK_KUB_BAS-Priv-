@@ -21,8 +21,6 @@ sudo apt-get update
 sudo apt install apt-transport-https curl -y
 ```
 
-<br/>
-
 **Paso 2: Preconfigurar el Networking.**
 
 - Configurar los módulos necesarios para Kubernetes y aplicar los parámetros de red.
