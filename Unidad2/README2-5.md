@@ -42,6 +42,4 @@ Al finalizar la práctica, serás capaz de:
 
 10. **Realizar los cambios necesarios para que todos los Pods del Deployment `backend` estén en estado "Running".**
 
-## Resultado esperado:
-
 ---
