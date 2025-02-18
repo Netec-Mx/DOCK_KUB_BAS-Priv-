@@ -1,18 +1,18 @@
 # Práctica 1.4. Construir imagen y contenedor Docker
 
-## Objetivo
+## Objetivo:
+
+Al finalizar la práctica, serás capaz de:
 
 - Crear una imagen Docker a partir de un Dockerfile y desplegar un contenedor basado en esa imagen.
 
-## Duración aproximada
+## Duración aproximada:
 
 - 30 minutos.
 
-<br/>
+### Instrucciones:
 
-### Instrucciones
-
-1. **Crear un Dockerfile para la aplicación**
+1. **Crear un Dockerfile para la aplicación.**
 
    - Navegar a la raíz del proyecto donde se encuentra tu aplicación Spring Boot.
 
@@ -39,9 +39,6 @@
 
    - Guardar el archivo `Dockerfile`.
 
-
-<br/>
-
 2. **Construir la imagen Docker**
 
    - Abrir la terminal en el directorio raíz del proyecto.
@@ -59,10 +56,7 @@
      ```bash
      docker build -t ms-clientes:v1 .
      ```
-
-
-<br/>
-
+     
 3. **Verificar la imagen creada**
 
    - Ejecutar el siguiente comando para ver la lista de imágenes y confirmar que la imagen fue creada exitosamente:
@@ -70,8 +64,6 @@
      ```bash
      docker images
      ```
-
-<br/>
 
 4. **Desplegar un contenedor basado en la imagen**
 
@@ -83,10 +75,6 @@
 
    - La aplicación debería estar disponible en `http://localhost:8095`.
 
-
-<br/>
-
-
 5. **Verificar que el contenedor esté en ejecución**
 
    - Usar el siguiente comando para listar los contenedores en ejecución y confirmar que la aplicación está desplegada:
@@ -97,8 +85,6 @@
      docker logs ms-clientes
      ```
 
-<br/>
-
 6. **Detener el contenedor**
 
    - Si deseas detener el contenedor en ejecución, identificar el `CONTAINER ID` usando el comando `docker ps`, y luego ejecutar:
@@ -106,10 +92,6 @@
      ```bash
      docker stop ms-clientes
      ```
-
-
-<br/>
-
 
 7. **Iniciar el contenedor**
 
@@ -119,28 +101,18 @@
      docker start ms-clientes
      ```
 
-
-<br/>
-<br/>
-
-## Resultado esperado
+## Resultado esperado:
 
 - Captura de pantalla al construir la imagen Docker.
 
 ![docker build](../images/u1_4_1.png)
 
-
-
-<br/>
-
 - Captura de pantalla que verifica las imagenes, verificar los contenedores, crear un nuevo contenedor y verificar el estado del nuevo contenedor.
 
 ![docker build](../images/u1_4_2.png)
 
-
-
-<br/>
-
 - Captura de pantalla que verifica que el contenedor Docker se encuentre en ejecución.
 
 ![docker build](../images/u1_4_3.png)
+
+---
