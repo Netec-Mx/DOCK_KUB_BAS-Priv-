@@ -1,16 +1,16 @@
 # Práctica 2.2. Verificación de instalación del Worker Node  
 
-## Objetivo
+## Objetivo:
+
+Al finalizar la práctica, serás capaz de:
 - Verificar correctamente la instalación y configuración de un Worker Node en un clúster de Kubernetes.
 
-## Duración aproximada
+## Duración aproximada:
 - 15 minutos.
 
-<br/>
+## Instrucciones:
 
-## Instrucciones
-
-1. **Acceso al Worker Node**
+1. **Acceso al Worker Node.**
    - Ingresar al Worker Node usando SSH:
      ```bash
      ssh usuario@ip_worker_node
@@ -22,14 +22,12 @@
 
 <br/>
 
-2. **Verificar conexión con el Master Node**
+2. **Verificar conexión con el Master Node.**
    - Comprobar si el Worker Node está correctamente unido al clúster usando el siguiente comando en el **Master Node**:
      ```bash
      kubectl get nodes
      ```
    - **Observación**: Deberías ver el Worker Node listado como `Ready`. Si aparece como `NotReady`, es posible que haya problemas con la configuración de red o de `kubelet` en el nodo trabajador.
-
-<br/>
 
 3. **Verificar el estado del servicio Kubelet en el Worker Node**
    - Ejecutar el siguiente comando en el Worker Node para comprobar el estado del `kubelet`:
@@ -40,7 +38,6 @@
      ```bash
      sudo systemctl restart kubelet
      ```
-<br/>
 
 4. **Verificar el registro en el clúster**
    - Ejecutar este comando en el Worker Node para verificar que el nodo está registrado:
@@ -51,8 +48,6 @@
    ```bash
      sudo journalctl -u kubelet -n 50
      ```
-
-<br/>
 
 5. **Validar que el nodo puede ejecutar pods**
    - En el Master Node, desplegar un pod de prueba en el Worker Node:
@@ -66,35 +61,28 @@
      ```
    - Si el pod no se ejecuta en el Worker Node, verificar la configuración de `kubelet` y los permisos del nodo.
 
-<br/>
-
 7. **Eliminar el Pod de Prueba**
    - Una vez verificada la correcta ejecución del pod, eliminar el pod de prueba:
      ```bash
      kubectl delete pod nginx-test
      ```
-
-
-<br/>
-
-
-## Resultado esperado
+     
+## Resultado esperado:
 
 - Captura de pantalla para verificar los nodos del clúster, un mater node y worker node listos.
+
 ![kubectl](../images/u2_2_1.png)
 
-<br/>
-
 - Captura de pantalla en el nodo worker, `kubelet` activo.
+
 ![kubelet](../images/u2_2_2.png)
 
-<br/>
-
 - Captura de pantalla con la creación de un pod, el antes y despues de recrear el Pod.
+
 ![pod](../images/u2_2_3.png)
 
-<br/>
-
 - Captura de pantalla con la verificación del nodo donde fue creado el Pod. (10.36.0.1 worker/192.168.0.228).
+
 ![swap](../images/u2_2_4.png)
 
+---
