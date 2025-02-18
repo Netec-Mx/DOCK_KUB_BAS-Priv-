@@ -16,30 +16,30 @@ Al finalizar la práctica, serás capaz de:
 
     b. Escribir el siguiente YAML como ejemplo básico para un Deployment en Kubernetes. Este archivo describe la configuración necesaria para desplegar una aplicación.
 
-```yaml
+    ```yaml
 
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: mi-aplicacion
-  labels:
-    app: mi-aplicacion
-spec:
-  replicas: 3  # Configuramos el número de réplicas.
-  selector:
-    matchLabels:
-      app: mi-aplicacion
-  template:
+    apiVersion: apps/v1
+    kind: Deployment
     metadata:
+      name: mi-aplicacion
       labels:
         app: mi-aplicacion
     spec:
-      containers:
-      - name: mi-contenedor
-        image: nginx:1.21  # Imagen del contenedor.
-        ports:
-        - containerPort: 80  # Puerto expuesto dentro del contenedor.
-```
+      replicas: 3  # Configuramos el número de réplicas.
+      selector:
+        matchLabels:
+          app: mi-aplicacion
+      template:
+        metadata:
+          labels:
+            app: mi-aplicacion
+        spec:
+          containers:
+          - name: mi-contenedor
+            image: nginx:1.21  # Imagen del contenedor.
+            ports:
+            - containerPort: 80  # Puerto expuesto dentro del contenedor.
+    ```
 
 2. **Configurar los valores según la aplicación.**
 
