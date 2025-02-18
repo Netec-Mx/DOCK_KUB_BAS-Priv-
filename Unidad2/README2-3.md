@@ -1,17 +1,18 @@
 # Práctica 2.3. Agregación de un nuevo Worker Node al Clúster
 
-## Objetivo
+## Objetivo:
 
+Al finalizar la práctica serás capaz de:
 - Verificar correctamente la instalación y configuración de un Worker Node en un clúster de Kubernetes.
 
 
-## Duración aproximada
+## Duración aproximada:
 
 - 30 minutos.
 
-## Instrucciones
+## Instrucciones:
 
-**Paso 1: Instalar paquetería básica**
+**Paso 1: Instalar paquetería básica.**
 
 - Actualizar los repositorios e instalar los paquetes necesarios para el transporte de paquetes HTTPS.
 
@@ -22,7 +23,7 @@ sudo apt install apt-transport-https curl -y
 
 <br/>
 
-**Paso 2: Preconfigurar el Networking**
+**Paso 2: Preconfigurar el Networking.**
 
 - Configurar los módulos necesarios para Kubernetes y aplicar los parámetros de red.
 
@@ -67,9 +68,7 @@ sysctl net.bridge.bridge-nf-call-iptables net.bridge.bridge-nf-call-ip6tables ne
 
 ```
 
-<br/>
-
-**Paso 3: Deshabilitar el Swap**
+**Paso 3: Deshabilitar el Swap.**
 
 - Desactivar el uso de swap temporalmente.
 
@@ -79,8 +78,6 @@ sudo swapoff -a
 ```
 
 - Para que esta configuración sea permanente, editar el archivo `/etc/fstab` y comentar la línea correspondiente a swap. Luego, reiniciar la máquina.
-
-<br/>
 
 **Paso 4: Intalar containerd**
 
@@ -112,8 +109,6 @@ sudo apt-get update
 sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 ```
 
-<br/>
-
 **Paso 5: Habilitar containerd como Runtime de Contenedor**
 
 - Modificar el archivo de configuración de containerd para habilitar `SystemdCgroup`.
@@ -124,7 +119,6 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin 
     SystemdCgroup = true
 
 ```
-<br/>
 
 **Paso 6: Reiniciar containerd**
 
@@ -134,8 +128,6 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin 
 
 sudo systemctl restart containerd
 ```
-
-<br/>
 
 **Paso 7: Actualizar e instalar paquetería necesaria**
 
@@ -147,7 +139,6 @@ sudo apt-get update
 sudo apt-get install -y apt-transport-https ca-certificates curl gpg
 
 ```
-<br/>
 
 **Paso 8: Descargar y agregar repositorios de Kubernetes**
 
@@ -159,7 +150,6 @@ curl -fsSL https://pkgs.k8s.io/core:/stable:/v1.30/deb/Release.key | sudo gpg --
 echo 'deb [signed-by=/etc/apt/keyrings/kubernetes-apt-keyring.gpg] https://pkgs.k8s.io/core:/stable:/v1.30/deb/ /' | sudo tee /etc/apt/sources.list.d/kubernetes.list    
 
 ```
-<br/>
 
 **Paso 9: Instalar kubelet, kubeadm y kubectl**
 
@@ -172,8 +162,6 @@ sudo apt-get install -y kubelet kubeadm kubectl
 sudo apt-mark hold kubelet kubeadm kubectl
 
 ```
-
-<br/>
 
 **Paso 10: Unir el Worker Node al Control Plane**
 
@@ -193,33 +181,26 @@ sudo kubeadm join <ip-controlplane>:6443 --token <token> --discovery-token-ca-ce
 
 ```
 
-
 **Nota:** 
 
 - Asegúrate de reemplazar `<ip-controlplane>`, `<token>` y `<hash>` con los valores correctos generados en el nodo maestro.
 
-<br/><br/>
-
-## Resultado esperado
+## Resultado esperado:
 
 - Captura de pantalla con el estado inicial (esto es antes de iniciar las intrucciones documentadas arriba) del clúster.
 
 ![kubectl](../images/u2_3_1.png)
 
-<br/>
-
 - Captura de pantalla en el nodo maestro para obtener el token e instrucción completa del **join**.
 
 ![kubectl](../images/u2_3_2.png)
-
-<br/>
 
 - Captura de pantalla en el nodo worker con la instrucción del **join**.
 
 ![kubectl](../images/u2_3_3.png)
 
-<br/>
-
 - Captura de pantalla en el nodo maestros, con `kubectl get nodes`, monitoreado en varios instantes hasta que los nodos se han agregado.
 
 ![kubectl](../images/u2_3_4.png)
+
+---
