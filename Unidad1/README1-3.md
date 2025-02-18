@@ -56,19 +56,11 @@ Al finalizar la práctica, serás capaz de:
     
     - Acceder a la consola para revisar cualquier mensaje de error o éxito que confirme la correcta inicialización del servicio.
 
-
-<br/>
-
-
 5. **Conclusión y análisis**
 
     - Reflexionar sobre los componentes y su función en la arquitectura del microservicio.
     - Anotar cualquier pregunta o área que desees profundizar en relación con el microservicio o la estructura general de una aplicación en Spring Boot. 
     - Preguntar a el instructor cualquier duda de Java.
-
-
-<br/>
-
 
 6. **Consumir el microservicio**
 
@@ -82,22 +74,11 @@ Al finalizar la práctica, serás capaz de:
 | Actualizar un cliente        | `PUT`           | `http://localhost:9095/api/clients/{id}`     | Actualiza los datos de un cliente existente, identificado por su `id`. |
 | Eliminar un cliente          | `DELETE`        | `http://localhost:9095/api/clients/{id}`     | Elimina un cliente específico, identificado por su `id`.        |
 
- 
-
-<br/>
-<br/>
-
-
-## Resultado esperado
+## Resultado esperado:
 
 - Al analizar el microservicio, deberás encontrar carpetas similares a las siguientes:
 
-
 ![docker](../images/u1_3_2.png)
-
-
-
-<br/>
 
 - **Contestar lo siguiente**
 
@@ -107,31 +88,18 @@ Al finalizar la práctica, serás capaz de:
 
     c. ¿Entendiste la función de cada endpoint en el controlador y cómo se mapean a las operaciones CRUD en el servicio?
 
-
-<br/>
-
-
-
 - Al ejecutar el proyecto deberás de ver una imagen similar a la siguiente:
-
 
 ![docker](../images/u1_3_1.png)
 
-
-<br/>
-
- 
 - **Contestar lo siguiente**
 
     a. ¿Identificaste la entidad principal, sus atributos y cómo está mapeada a la base de datos mediante JPA?
 
     b. ¿Cuál es el puerto asignado a este microservicio?
 
-
-<br/>
-
-
 - Consumo del servicio **ms-clients**.
 
-
 ![docker](../images/u1_3_3.png)
+
+---
