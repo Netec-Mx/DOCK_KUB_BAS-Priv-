@@ -41,7 +41,7 @@ Al finalizar la práctica, serás capaz de:
     - ¿Cuántas máquinas virtuales tienes?
     - ¿Cuáles son los sistemas operativos que tienes en cada máquina?
 
-2. **Actualizar e instalar los paquetes requeridos:**
+2. **Actualizar e instalar los paquetes requeridos dentro del Nodo Master:**
 
     ```bash
     sudo apt update
