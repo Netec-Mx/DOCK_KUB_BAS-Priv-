@@ -41,7 +41,7 @@ Al finalizar la práctica, serás capaz de:
            ports:
            - containerPort: 80 # Puerto expuesto dentro del contenedor.
              name: http
-  ```
+   ```
 
  <br/>
 
