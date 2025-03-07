@@ -41,11 +41,11 @@ Al finalizar la práctica, serás capaz de:
            ports:
            - containerPort: 80 # Puerto expuesto dentro del contenedor.
              name: http
-  ```
+   ```
 
  <br/>
 
--   **Observaciones** 
+### **Observaciones** 
 
     -   `apiVersion` y `kind`: Especifican el tipo de recurso, en este caso, un StatefulSet de versión `apps/v1`.
     - `metadata`: Incluye el nombre y etiquetas del StatefulSet.
