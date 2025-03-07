@@ -24,7 +24,7 @@ Al finalizar la práctica, serás capaz de:
      labels:
        app: web
    spec:
-     serviceName: "web-service"
+     serviceName: web-service
      replicas: 3
      selector:
        matchLabels:
@@ -36,9 +36,9 @@ Al finalizar la práctica, serás capaz de:
        spec:
          containers:
          - name: web-container
-           image: nginx:latest
+           image: nginx:latest # Imagen del contenedor. 
            ports:
-           - containerPort: 80
+           - containerPort: 80 # Puerto expuesto dentro del contenedor.
              name: http
 
 -   **Observaciones** 
