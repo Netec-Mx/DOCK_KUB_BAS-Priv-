@@ -17,6 +17,7 @@ Al finalizar la práctica, serás capaz de:
 2. Copiar el siguiente contenido en el archivo:
 
    ```yaml
+   
    apiVersion: apps/v1
    kind: StatefulSet
    metadata:
@@ -40,6 +41,7 @@ Al finalizar la práctica, serás capaz de:
            ports:
            - containerPort: 80 # Puerto expuesto dentro del contenedor.
              name: http
+  ```
 
 -   **Observaciones** 
 
