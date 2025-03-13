@@ -17,7 +17,7 @@ Al finalizar la práctica serás capaz de:
 
 ## Instrucciones:
 
-**Paso 1: Crear el archivo YAML para el Pod.**
+**Paso 1: Crear el archivo YAML para el Pod. "dentro del Nodo Master"**
 
 1. Abrir un editor de texto preferido y crear un archivo llamado mipod.yaml.
 
