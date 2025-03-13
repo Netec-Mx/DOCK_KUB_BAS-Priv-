@@ -10,7 +10,7 @@ Al finalizar la práctica, serás capaz de:
 
 ## Instrucciones:
 
-1. **Crear el archivo YAML.**
+1. **Crear el archivo YAML dentro del Nodo Master.**
 
     a. Abrir un editor de texto y crea un archivo llamado **deployment.yaml**.
 
